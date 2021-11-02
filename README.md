@@ -4,13 +4,13 @@
 
 [<img src="https://github-readme-streak-stats.herokuapp.com/?user=77ivan&theme=default&hide_border=true&fire=e25822&currStreakLabel=e25822&dates=aaa&background=fff">](#bottom)
 
-![스크린샷 2021-11-02 오후 6 19 33](https://user-images.githubusercontent.com/93528918/139819645-bba101e1-8908-42b3-863e-0170a914f8d1.png)
 
 
 
 ## 다국어 지원 
 
-<img src = "https://user-images.githubusercontent.com/93528918/139819590-8d35dd4d-6ee2-497a-bfb0-cb84866d496e.png" width="30%" height="30%"><img src = "https://user-images.githubusercontent.com/93528918/139819617-c7c354e8-f7fd-4767-926f-284ae31e1ada.png" width="30%" height="30%"><img src = "https://user-images.githubusercontent.com/93528918/139819645-bba101e1-8908-42b3-863e-0170a914f8d1.png" width="30%" height="30%">
+![스크린샷 2021-11-02 오후 6 22 46](https://user-images.githubusercontent.com/93528918/139820369-038475c9-a2e9-4e7b-aebf-e200c96f89e0.png)
+
 
 ```swift
 enum LocalizableStrings: String {
