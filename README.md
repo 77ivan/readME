@@ -8,7 +8,7 @@
 
 ## 다국어 지원 
 
-<img src = "https://user-images.githubusercontent.com/93528918/139818539-d79b7474-e7e3-4c12-8843-fc8adaf51611.png" width="30%" height="40%"><img src = "https://user-images.githubusercontent.com/93528918/139818543-e7d91ef9-012a-4135-bbec-16f918f71fea.png" width="30%" height="40%"><img src = "https://user-images.githubusercontent.com/93528918/139818548-7b0e48df-aca9-4904-a272-7865aae59d9c.png" width="30%" height="40%">
+<img src = "https://user-images.githubusercontent.com/93528918/139818539-d79b7474-e7e3-4c12-8843-fc8adaf51611.png" width="30%" height="40%"><img src = "https://user-images.githubusercontent.com/93528918/139818543-e7d91ef9-012a-4135-bbec-16f918f71fea.png" width="30%" height="50%"><img src = "https://user-images.githubusercontent.com/93528918/139818548-7b0e48df-aca9-4904-a272-7865aae59d9c.png" width="30%" height="60%">
 
 ```swift
 enum LocalizableStrings: String {
@@ -61,17 +61,17 @@ navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Ke
 
 ***한국어***
 
-<img src = "https://user-images.githubusercontent.com/93528918/139818762-b4f65961-0f21-482f-bd59-e774faf1d459.png" width="20%" height="20%"><img src = "https://user-images.githubusercontent.com/93528918/139818770-c5c6cc11-2d11-44f8-bb3b-1ed9fd9c0292.png" width="20%" height="20%">
+<img src = "https://user-images.githubusercontent.com/93528918/139818762-b4f65961-0f21-482f-bd59-e774faf1d459.png" width="30%" height="30%"><img src = "https://user-images.githubusercontent.com/93528918/139818770-c5c6cc11-2d11-44f8-bb3b-1ed9fd9c0292.png" width="20%" height="20%">
 
 
 ***일본어***
 
-<img src = "https://user-images.githubusercontent.com/93528918/139818786-1c76e721-5ebf-454c-9734-b57eaaba4f9f.png" width="20%" height="20%"><img src = "https://user-images.githubusercontent.com/93528918/139818795-cb334076-8687-47ed-bc8a-412bf71e1541.png" width="20%" height="20%">
+<img src = "https://user-images.githubusercontent.com/93528918/139818786-1c76e721-5ebf-454c-9734-b57eaaba4f9f.png" width="30%" height="30%"><img src = "https://user-images.githubusercontent.com/93528918/139818795-cb334076-8687-47ed-bc8a-412bf71e1541.png" width="20%" height="20%">
 
 
 ***영어***
 
-<img src = "https://user-images.githubusercontent.com/93528918/139818800-9187c76e-6e2b-4a3e-832f-d2903f7ec908.png" width="30%" height="30%"><img src = "https://user-images.githubusercontent.com/93528918/139818811-c038ce80-a7e0-4410-9646-cc551ce1a19b.png" width="20%" height="20%">
+<img src = "https://user-images.githubusercontent.com/93528918/139818800-9187c76e-6e2b-4a3e-832f-d2903f7ec908.png" width="30%" height="30%"><img src = "https://user-images.githubusercontent.com/93528918/139818811-c038ce80-a7e0-4410-9646-cc551ce1a19b.png" width="30%" height="30%">
 
 
 
