@@ -13,6 +13,7 @@
 - (필터) Alert의 ActionSheet를 통해 할 일 기준 정렬, 즐겨찾기순 정렬, 제목순 정렬 기능
 ```
 
+---
 
 ### #1 Realm Database에 저장, 저장된 데이터 TableView에 띄우기
 
@@ -77,7 +78,7 @@ override func viewDidLoad() {
 
 https://user-images.githubusercontent.com/93528918/140048119-b0b41f3a-d1b9-465e-a3a7-0c3f5a1d5085.mov
 
-
+---
 
 
 ### #2 즐겨찾기, 할 일 완료
@@ -175,7 +176,7 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
 
 https://user-images.githubusercontent.com/93528918/140048260-cd128d37-03c1-485c-884e-591fb078ddd2.mov
 
-
+---
 
 ### #3 스와이프로 할 일을 삭제
 
@@ -199,9 +200,9 @@ override func tableView(_ tableView: UITableView, commit editingStyle: UITableVi
 
 https://user-images.githubusercontent.com/93528918/140048279-e1f83f41-4cfb-4c08-971a-530620dca2b5.mov
 
+---
 
-
-### 필터별로 정렬
+### #4 필터별로 정렬
 
 ***정렬기준별로 케이스 설정***
 
