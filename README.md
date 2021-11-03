@@ -1,21 +1,25 @@
 
+## ShoppingList Realm Database 구현하기
 
 ```swift
-ShoppingList Realm Database 구현하기
 - ShoppingList 데이터(즐겨찾기, 할 일 완료 여부, 할 일 목록 등)를 Realm Database에 저장
+
 - 저장된 데이터를 가져와서 테이블뷰에 띄우기
+
 - 즐겨찾기, 할 일 완료 여부 버튼을 클릭
+
 - 스와이프로 할 일을 삭제
+
 - (필터) Alert의 ActionSheet를 통해 할 일 기준 정렬, 즐겨찾기순 정렬, 제목순 정렬 기능
 ```
 
 
-### Realm Database에 저장, 저장된 데이터 TableView에 띄우기
+### #1 Realm Database에 저장, 저장된 데이터 TableView에 띄우기
 
-- `ShoppingList` 테이블을 작성
+***`ShoppingList` 테이블을 작성***
 
 ```swift
-***ShoppingList***
+ShoppingList
 
 import Foundation
 import RealmSwift
@@ -36,10 +40,10 @@ class ShoppingList: Object {
 }
 ```
 
-- ViewController에서 값 저장 및 로드
+***ViewController에서 값 저장 및 로드***
 
 ```swift
-***ViewController***
+ViewController
 
 let localRealm = try! Realm()
 var tasks: Results<ShoppingList>!
@@ -71,19 +75,17 @@ override func viewDidLoad() {
 }
 ```
 
-
-
 https://user-images.githubusercontent.com/93528918/140048119-b0b41f3a-d1b9-465e-a3a7-0c3f5a1d5085.mov
 
 
 
 
-### 즐겨찾기, 할 일 완료
+### #2 즐겨찾기, 할 일 완료
 
 **Delegation 패턴을 이용하여 Cell내부의 버튼 이벤트 처리**
 
 ```swift
-***Cell***
+Cell
 
 protocol ShoppingCellDelegate: AnyObject {
     func isChecked(_ cell: ShoppingCell)
@@ -107,7 +109,7 @@ weak var delegate: ShoppingCellDelegate?
 - 각 버튼 클릭 시, check, star의 Bool값을 toggle해서 값 업데이트
 
 ```swift
-***ViewController***
+ViewController
 
 extension ShoppingListVC: ShoppingCellDelegate {
     func isChecked(_ cell: ShoppingCell) {
@@ -175,7 +177,7 @@ https://user-images.githubusercontent.com/93528918/140048260-cd128d37-03c1-485c-
 
 
 
-### 스와이프로 할 일을 삭제
+### #3 스와이프로 할 일을 삭제
 
 ```swift
 override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -201,7 +203,7 @@ https://user-images.githubusercontent.com/93528918/140048279-e1f83f41-4cfb-4c08-
 
 ### 필터별로 정렬
 
-- 정렬기준별로 케이스 설정
+***정렬기준별로 케이스 설정***
 
 ```swift
 enum ShoppingListOptions: Int, CaseIterable {
