@@ -20,17 +20,17 @@ func documentDirectoryPath() -> String? {
 
 2. 백업할 파일 주소(**/default.realm**)를 추가하고, 파일 존재 여부를 확인한 뒤에 URL배열 (백업할 파일에 대한 URL배열) 에 추가한다.
 
-<aside>
-👉 Users/camosss/Library/Developer/ ... /Documents/**default.realm**
-</aside>
+```swift
+Users/camosss/Library/Developer/ ... /Documents/default.realm
+```
 
-1. 압축 진행
+3. 압축 진행
 - `Zip` 프레임워크를 사용해서 백업할 파일 압축을 진행한다.
 - UIActivityViewController를 통해 백업을 완료한 파일을 공유할 수 있다!
 
 ```swift
 do {
-	// 압축 경로
+    // 압축 경로
     let zipFilePath = try Zip.quickZipFiles(urlPaths, fileName: "archive") // Zip
     presentActivityViewController()
 } catch {
@@ -57,11 +57,11 @@ https://user-images.githubusercontent.com/93528918/140302304-6148ed63-384c-4283-
 
 ```swift
 try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil,
- progress: { progress in
-     // 복구가 완료됨을 알림
-}, fileOutputHandler: { unzippedFile in
-     print("unzippedFile \(unzippedFile)")
-})
+    progress: { progress in
+        // 복구가 완료됨을 알림
+    }, fileOutputHandler: { unzippedFile in
+        print("unzippedFile \(unzippedFile)")
+    })
 ```
 
 - 파일이 해당 document에 저장되어있지 않다면, document 폴더에 옮겨준다.
@@ -78,8 +78,7 @@ https://user-images.githubusercontent.com/93528918/140302312-63587b81-ecde-4101-
 
 cf. **SandBox**
 
-SandBox란 커널 수준에서 강제 적용되는 맥 OS의 접근 제어 기술이다.
-
+> SandBox란 커널 수준에서 강제 적용되는 맥 OS의 접근 제어 기술이다.
 사용자의 파일앱에 저장하는 방법을 알기전에, 샌드박싱의 개념을 알고가야 한다.
 
 예를 들어, 하나의 폰에서 실행중인 두개의 앱을 실행중이다. 그런데, 하나의 앱에 악성 소프트웨어가 있는데 같은 폰에 있는 다른 앱을 감염시키려 한다. iOS에서는 이 문제를 샌드박싱으로 해결한다.
