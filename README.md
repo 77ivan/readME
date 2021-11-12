@@ -48,10 +48,12 @@ https://user-images.githubusercontent.com/93528918/141429293-84513224-8b71-4a5f-
 - 검색 결과를 스크롤 하거나 키보드의 검색 버튼을 누르면 키보드가 내려감
 
 
-Uploading 8_search.mov…
+
+https://user-images.githubusercontent.com/93528918/141432767-e6ee7e36-5823-4375-b101-f77dac17dc13.mov
 
 
-Uploading 13max_search.mov…
+https://user-images.githubusercontent.com/93528918/141432769-4c5c4dd2-f568-4531-ab8c-dd0e47c660b4.mov
+
 
 
 
