@@ -4,6 +4,7 @@
 
 <img src = "https://user-images.githubusercontent.com/93528918/141433307-9f005873-b08a-4b57-bef9-187ee8872637.png" width="50%" height="50%">
 
+![스크린샷 2021-11-13 오전 2 48 25](https://user-images.githubusercontent.com/93528918/141511900-43a69b8c-f523-4e37-b1b1-cddab48a27ef.png)
 
 ‼️ 남은 기능 ‼️
 - 고정된 메모 다섯개 이상이면 토스트 띄우기
