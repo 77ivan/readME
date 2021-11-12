@@ -34,6 +34,7 @@ https://user-images.githubusercontent.com/93528918/141428630-e8ff0260-132b-4a3d-
 
 <aside>
 👉 고정된 목록에 추가
+ 
 </aside>
 
 - 고정된 메모가 없으면 섹션 없애기
@@ -41,6 +42,7 @@ https://user-images.githubusercontent.com/93528918/141428630-e8ff0260-132b-4a3d-
 
 <aside>
 👉 스와이프
+ 
 </aside>
 
 - Leading Swipe - 고정, Trailing Swipe - 삭제
@@ -59,6 +61,7 @@ https://user-images.githubusercontent.com/93528918/141512325-d55920fc-ff55-409a-
 
 <aside>
 👉 메모를 실시간 검색
+ 
 </aside>
 
 - 검색 결과 갯수는 섹션헤더에 표시
