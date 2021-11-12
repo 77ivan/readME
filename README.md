@@ -11,15 +11,17 @@ https://user-images.githubusercontent.com/93528918/141428630-e8ff0260-132b-4a3d-
 
 ### 2. 메모 추가
 
+-  타이틀: 저장된 메모 수로 띄우기 (1,000개 넘으면 콤마 추가) [NumberFormatter]
+
+<img src = "https://user-images.githubusercontent.com/93528918/141432455-31b240c7-6f0e-43e9-af86-0bee1f226b0a.png" width="30%" height="30%"><img src = "https://user-images.githubusercontent.com/93528918/141432465-93b4103d-85d9-4f57-9420-4757a57518c7.png" width="30%" height="30%">
+
+
 - 리턴키를 입력하기 전까지 제목, 나머지는 내용으로 저장
 - 메모 추가 (add 뷰 들어가면 키보드 자동으로 올리기, 키보드 내려가지 않음)
 - 메모 추가 완료하고 메인 뷰로 넘어가기 (백버튼 눌러도 메모 저장됨, 아무내용 없으면 저장x)
 - 최신순 정렬
 - 날짜 포맷 형태 (전체, 이번주, 오늘)
 
--  타이틀: 저장된 메모 수로 띄우기 (1,000개 넘으면 콤마 추가) [NumberFormatter]
-
-<img src = "https://user-images.githubusercontent.com/93528918/141432455-31b240c7-6f0e-43e9-af86-0bee1f226b0a.png" width="30%" height="30%"><img src = "https://user-images.githubusercontent.com/93528918/141432465-93b4103d-85d9-4f57-9420-4757a57518c7.png" width="30%" height="30%">
 
 
 https://user-images.githubusercontent.com/93528918/141428891-ffc1bf9b-0c18-45a4-b52b-35ff8e92b381.mov
