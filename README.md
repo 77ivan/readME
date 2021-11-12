@@ -1,5 +1,20 @@
 
+### 진행 상황
 
+
+[메모앱](https://www.notion.so/990cc4b3c0314a8fa6ac7ec3f8799d5e)
+
+<img src = "https://user-images.githubusercontent.com/93528918/141433004-da34facb-ef8f-41eb-bfa4-5001f6b8176e.png" width="50%" height="50%"
+
+
+‼️ 남은 기능 ‼️
+- 고정된 메모 다섯개 이상이면 토스트 띄우기
+- 검색한 키워드 텍스트 컬러 변경
+- 메모 수정해서 업데이트
+     
+
+---
+     
 ### 1. 최초 팝업 화면
 
 `앱 처음 실행 때 팝업화면 띄우기 (최초 1회만 뜨고, 이후에는 뜨지 않음)`
@@ -8,6 +23,8 @@ https://user-images.githubusercontent.com/93528918/141428626-3e270931-6eab-4628-
 
 https://user-images.githubusercontent.com/93528918/141428630-e8ff0260-132b-4a3d-ad05-6434e5558f74.mov
 
+  
+---
 
 ### 2. 메모 추가
 
@@ -29,6 +46,8 @@ https://user-images.githubusercontent.com/93528918/141428891-ffc1bf9b-0c18-45a4-
 https://user-images.githubusercontent.com/93528918/141428895-7ff6708e-cbf7-4818-bd2d-208a597a2c95.mov
 
 
+---
+
 ### 3. Swipe
 
 `swipe (Leading Swipe - 고정, Trailing Swipe - 삭제)`
@@ -40,6 +59,8 @@ https://user-images.githubusercontent.com/93528918/141429291-dfb2dd9b-d9c6-4413-
 
 https://user-images.githubusercontent.com/93528918/141429293-84513224-8b71-4a5f-a5cc-ec45933f5cbb.mov
 
+
+---
 
 ### 4. 검색
 
@@ -55,7 +76,7 @@ https://user-images.githubusercontent.com/93528918/141432767-e6ee7e36-5823-4375-
 https://user-images.githubusercontent.com/93528918/141432769-4c5c4dd2-f568-4531-ab8c-dd0e47c660b4.mov
 
 
-
+---
 
 ### 5. 작성, 수정화면, 공유
 
