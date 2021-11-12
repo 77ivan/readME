@@ -17,6 +17,10 @@ https://user-images.githubusercontent.com/93528918/141428630-e8ff0260-132b-4a3d-
 - 최신순 정렬
 - 날짜 포맷 형태 (전체, 이번주, 오늘)
 
+-  타이틀: 저장된 메모 수로 띄우기 (1,000개 넘으면 콤마 추가) [NumberFormatter]
+
+<img src = "https://user-images.githubusercontent.com/93528918/141432455-31b240c7-6f0e-43e9-af86-0bee1f226b0a.png" width="30%" height="30%"><img src = "https://user-images.githubusercontent.com/93528918/141432465-93b4103d-85d9-4f57-9420-4757a57518c7.png" width="30%" height="30%">
+
 
 https://user-images.githubusercontent.com/93528918/141428891-ffc1bf9b-0c18-45a4-b52b-35ff8e92b381.mov
 
