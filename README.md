@@ -2,7 +2,7 @@
 ### 진행 상황
 
 
-<img src = "https://user-images.githubusercontent.com/93528918/141433307-9f005873-b08a-4b57-bef9-187ee8872637.png" width="50%" height="50%"
+<img src = "https://user-images.githubusercontent.com/93528918/141433307-9f005873-b08a-4b57-bef9-187ee8872637.png" width="50%" height="50%">
 
 
 ‼️ 남은 기능 ‼️
