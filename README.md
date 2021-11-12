@@ -2,9 +2,7 @@
 ### 진행 상황
 
 
-[메모앱](https://www.notion.so/990cc4b3c0314a8fa6ac7ec3f8799d5e)
-
-<img src = "https://user-images.githubusercontent.com/93528918/141433004-da34facb-ef8f-41eb-bfa4-5001f6b8176e.png" width="50%" height="50%"
+<img src = "https://user-images.githubusercontent.com/93528918/141433307-9f005873-b08a-4b57-bef9-187ee8872637.png" width="50%" height="50%"
 
 
 ‼️ 남은 기능 ‼️
