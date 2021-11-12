@@ -32,18 +32,17 @@ https://user-images.githubusercontent.com/93528918/141428630-e8ff0260-132b-4a3d-
 - 최신순 정렬
 - 날짜 포맷 형태 (오늘, 이번주, 그외)
 
-<aside>
-👉 고정된 목록에 추가
+
+👉  ***고정된 목록에 추가***
  
-</aside>
+
 
 - 고정된 메모가 없으면 섹션 없애기
 - 다섯개 이상이면 토스트 띄우기
 
-<aside>
-👉 스와이프
+
+👉 ***스와이프***
  
-</aside>
 
 - Leading Swipe - 고정, Trailing Swipe - 삭제
 - Leading Swipe를 통해 메모가 고정되거나 해제 (이미지 변경)
@@ -59,10 +58,8 @@ https://user-images.githubusercontent.com/93528918/141512325-d55920fc-ff55-409a-
 
 ### 3. 검색
 
-<aside>
-👉 메모를 실시간 검색
+👉 ***메모를 실시간 검색***
  
-</aside>
 
 - 검색 결과 갯수는 섹션헤더에 표시
 - 검색 결과를 스크롤 하거나 키보드의 검색 버튼을 누르면 키보드가 내려간다.
