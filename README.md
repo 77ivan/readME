@@ -37,17 +37,17 @@
 
 **Category**
 
-✅   뉴스**(비즈니스, 정치, products, 건강)
+- **뉴스**(비즈니스, 정치, products, 건강)
 
-✅   **연예**(영화 및 티비, 음악)
+- **연예**(영화 및 티비, 음악)
 
-✅   **스포츠**(축구, NBA(농구), MLB(야구), NFL(내셔널 풋볼리그), 골프, 테니스, NHL(하키))
+- **스포츠**(축구, NBA(농구), MLB(야구), NFL(내셔널 풋볼리그), 골프, 테니스, NHL(하키))
 
-✅   **테크놀로지**(기술, 과학)
+- **테크놀로지**(기술, 과학)
 
-✅   **US**(Northeast, South, Midwest, West)
+- **US**(Northeast, South, Midwest, West)
 
-✅  **World**(아메리카, 유럽, 아시아, 아프리카, 중동)
+- **World**(아메리카, 유럽, 아시아, 아프리카, 중동)
 
 
 ![category](https://user-images.githubusercontent.com/93528918/142337141-98d5c096-cffb-4899-ba69-c7b89f53ea25.png)
