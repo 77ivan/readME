@@ -26,13 +26,16 @@
 
 **Bing News Search API**
 
-![스크린샷 2021-11-18 오전 10.38.14.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/556d0356-a541-4238-97cf-c9dc680a5a5b/스크린샷_2021-11-18_오전_10.38.14.png)
+![스크린샷 2021-11-18 오전 10 38 14](https://user-images.githubusercontent.com/93528918/142337102-7210e5dd-7258-4227-a7eb-221ed29f819e.png)
+
+
 
 **Trending**
 
-![Trending.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbc6f839-f349-46a3-b40b-05bb2b37333b/Trending.png)
+![Trending](https://user-images.githubusercontent.com/93528918/142337119-cb4cd120-e30b-4ecf-9344-bd6ddc6305fa.png)
 
-**Category
+
+**Category**
 
 ✅   뉴스**(비즈니스, 정치, products, 건강)
 
@@ -46,4 +49,5 @@
 
 ✅  **World**(아메리카, 유럽, 아시아, 아프리카, 중동)
 
-![category.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fb8775b8-5ed8-451f-aba6-1f7a970d6ffd/category.png)
+
+![category](https://user-images.githubusercontent.com/93528918/142337141-98d5c096-cffb-4899-ba69-c7b89f53ea25.png)
