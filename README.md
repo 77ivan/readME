@@ -7,8 +7,6 @@
 	<div markdown="1">  
 	API 탐색 및 테스트
 	
-	</div>
-	</details>
 </div>
 </details>
 
