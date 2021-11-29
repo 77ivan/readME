@@ -144,11 +144,12 @@ extension EditInfoVC: EditNameDelegate {
 // EditInfoVC
 extension EditInfoVC: EditNameDelegate {
     func changeName(_ cell: EditInfoCell) {
-				...
+	...
 				
-				// 키체인 업데이트
-				let edit = cell.infoText.text ?? ""
-        self.tk.update("\(tkUrl)", value: edit)
+	// 키체인 업데이트
+	let edit = cell.infoText.text ?? ""
+       	self.tk.update("\(tkUrl)", value: edit)
+    }
 }
 ```
 
@@ -159,9 +160,9 @@ extension EditInfoVC: EditNameDelegate {
 
 override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
      let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! ProfileHeader
-		 ... 
+	 ... 
      
-		 // 업데이트해서 저장된 "username"의 값을 로드
+     // 업데이트해서 저장된 "username"의 값을 로드
      let userName = tk.load(baseUrl + "/api/login", account: "username")
      header.nameLabel.text = "\(userName ?? "")님"
      return header
@@ -195,23 +196,21 @@ https://user-images.githubusercontent.com/93528918/143837522-a953584f-d604-4771-
 ```swift
 extension ExploreVC: UISearchResultsUpdating {
 	func updateSearchResults(for searchController: UISearchController) {
-			
-			var tmp = [Value]()
+		var tmp = [Value]()
 
-			... POST
+		... POST
 
-			for item in json.arrayValue {
+		for item in json.arrayValue {
 
-			... **Value 값**
+		... **Value 값**
 
 		     let value = Value(id: id, title: title, post: post, view: view, info: info, des: des, rank: rank, list: list)
-                        
 		     if item != [] { tmp.append(value) }
-                        
 		      DispatchQueue.main.async {
 		           self.value = tmp
-		      }
+		     }
 		}
+	}
 }
 ```
 
