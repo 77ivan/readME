@@ -1,14 +1,4 @@
 
-<details>
-<summary>11/16(화) [API 탐색 및 테스트, View, 기능 구상]</summary>
-<div markdown="1">    
-	<details>
-	<summary>API 탐색 및 테스트</summary>
-	<div markdown="1">  
-	API 탐색 및 테스트
-	
-</div>
-</details>
 
 ![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=150&section=header&text=Hosung%20Kang&fontSize=70&animation=twinkling)
 
