@@ -25,19 +25,19 @@
 
 
 * **Section III: iOS Apps with RxCocoa**
-  > | Ch# | Chapter Subject | Note |
-  > |:---:| :--- | :--- |
-  > |1| RxCocoa |  |
+  > | Chapter Subject | Note |
+  > | :--- | :--- |
+  > | RxCocoa |  |
 
 
 * **Section IV: Intermediaate RxSwift/RxCocoa**
-  > | Ch# | Chapter Subject | Note |
-  > |:---:| :--- | :--- |
-  > |1| Error Handling |  |
+  > | Chapter Subject | Note |
+  > | :--- | :--- |
+  > | Error Handling |  |
 
 
 * **Section VI: MVVM with Rxswift**
-  > | Ch# | Chapter Subject | Note |
-  > |:---:| :--- | :--- |
-  > |1| MVVM with RxSwift |  |
+  > | Chapter Subject | Note |
+  > | :--- | :--- |
+  > | MVVM with RxSwift |  |
 
