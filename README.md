@@ -1,5 +1,25 @@
+# RxSwift <img src = "https://github.com/ReactiveX/RxSwift/raw/main/assets/RxSwift_Logo.png" width = 60  align = right> 
 
-<p align="right"><img src="https://img.shields.io/badge/Swift-F29661?style=flat-square&logo=Swift&logoColor=white"/></a>&nbsp<img src="https://img.shields.io/badge/SwiftUI-5CD1E5?style=flat-square&logo=Swift&logoColor=white"/></a>&nbsp</h3><img src="https://img.shields.io/badge/Realm-FFB2D9?style=flat-square&logo=Realm&logoColor=white"/></a>&nbsp</h3><img src="https://img.shields.io/badge/Firebase-FFE400?style=flat-square&logo=Firebase&logoColor=white"/></a>&nbsp<img src="https://img.shields.io/badge/Alamofire-FF007F?style=flat-square&logo=Alamofire&logoColor=white"/></a>&nbsp<img src="https://img.shields.io/badge/Xcode-1575F9?style=flat-square&logo=Xcode&logoColor=white"/>
-</p>
-<img src="https://img.shields.io/badge/SwiftUI-5CD1E5?style=flat-square&logo=Swift&logoColor=white"/>
-<img src="https://img.shields.io/badge/Firebase-FFE400?style=flat-square&logo=Firebase&logoColor=white"/>
+## reference
+- [ReactiveX](http://reactivex.io/documentation/ko/observable.html)
+- [Udemy Mastering Rxswift in iOS](https://www.udemy.com/course/mastering-rxswift-in-ios/)
+
+
+## Curriculum
+
+* **Section I: Getting Started with RxSwift**
+  > | Ch# | Chapter Subject | Note |
+  > |:---:| :--- | :--- |
+  > |1| Observables|  |
+  > |2| Subjects |  |
+  > |3| Implementing Photo Filter App Using RxSwift |  |
+  > |4| Filtering Operators |  |
+  > |5| TODO List App Using Filter Operations |  |
+  > |6| Transforming Operators |  |
+  > |7| Building News App Using Transforming Operators |  |
+  > |8| Combining Operators |  |
+  > |9| RxCocoa |  |
+  > |10| Error Handling |  |
+  > |11| MVVM with RxSwift |  |
+  > |12| Conclusion |  |
+
