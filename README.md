@@ -1,13 +1,12 @@
 # RxSwift <img src = "https://github.com/ReactiveX/RxSwift/raw/main/assets/RxSwift_Logo.png" width = 60  align = right> 
 
 ## reference
-- [ReactiveX](http://reactivex.io/documentation/ko/observable.html)
+- [ReactiveX](http://reactivex.io/)
 - [Udemy Mastering Rxswift in iOS](https://www.udemy.com/course/mastering-rxswift-in-ios/)
 
 
 ## Curriculum
 
-* **Section I: Getting Started with RxSwift**
   > | Ch# | Chapter Subject | Note |
   > |:---:| :--- | :--- |
   > |1| Observables|  |
