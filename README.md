@@ -1,9 +1,10 @@
 # RxSwift <img src = "https://github.com/ReactiveX/RxSwift/raw/main/assets/RxSwift_Logo.png" width = 60  align = right> 
 
-<details>
-<summary></summary>
+
 ## Why use RxSwift?
   
+<details>
+<summary></summary>
 ### Rx
 
 Reactive Extensions을 사용하는 라이브러리이다.
