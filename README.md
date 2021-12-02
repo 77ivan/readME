@@ -1,5 +1,13 @@
 # RxSwift <img src = "https://github.com/ReactiveX/RxSwift/raw/main/assets/RxSwift_Logo.png" width = 60  align = right> 
 
+
+## Why use RxSwift?
+<details>
+<summary>sad</summary>
+asdad
+</div>
+</details>
+
 ## reference
 - [ReactiveX](http://reactivex.io/)
 - [Udemy Mastering Rxswift in iOS](https://www.udemy.com/course/mastering-rxswift-in-ios/)
