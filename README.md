@@ -101,6 +101,6 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
 "><img src="https://www.atrinh.com/list/images/download.svg"></a>
 
 <a href="https://www.notion.so/912caceec73d480982e656c018594c7d" target="_blank">
-    <img src="https://img.shields.io/badge/Blog-000000?style=flat-square&logo=Notion&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/>
   </a>
 
