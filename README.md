@@ -97,7 +97,9 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
 
 
 
-<a href="https://apps.apple.com/us/app/id1528701640"><img src="https://www.atrinh.com/list/images/download.svg"></a>
+<a href="https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397
+"><img src="https://www.atrinh.com/list/images/download.svg"></a>
 
+https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397
 
 
