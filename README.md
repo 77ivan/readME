@@ -1,4 +1,4 @@
-# RxSwift <img src = "https://github.com/ReactiveX/RxSwift/raw/main/assets/RxSwift_Logo.png" width = 60  align = right> 
+# SSAC <img src = "https://user-images.githubusercontent.com/93528918/145744691-32ae73ac-94de-429c-b5d5-5267ddd75bac.jpeg" width = 60  align = right> 
 
 
 ## Why use RxSwift?
