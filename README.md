@@ -13,15 +13,13 @@
 
 2. XIB를 View로 불러오기
 
-<aside>
-👉 `xib`로 구성한 View를 가져오기 위해서 `nib`형태로 불러와서 등록하고,
-Custom View에 `addSubView`를 실행
 
-</aside>
+> 👉 `xib`로 구성한 View를 가져오기 위해서 `nib`형태로 불러와서 등록하고, Custom View에 `addSubView`를 실행
+
 
 > ***.first***
 
-File Owner에는 여러개의 View를 가질 수 있기 때문에, 이 중에서 Interface Builder로 Custom한 Class를 가져와 현재 View에 계층을 한 단계 더 쌓은 구조
+> File Owner에는 여러개의 View를 가질 수 있기 때문에, 이 중에서 Interface Builder로 Custom한 Class를 가져와 현재 View에 계층을 한 단계 더 쌓은 구조
 > 
 
 ```swift
