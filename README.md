@@ -14,12 +14,13 @@
 2. XIB를 View로 불러오기
 
 
-> 👉 `xib`로 구성한 View를 가져오기 위해서 `nib`형태로 불러와서 등록하고, Custom View에 `addSubView`를 실행
+> `xib`로 구성한 View를 가져오기 위해서 `nib`형태로 불러와서 등록하고, Custom View에 `addSubView`를 실행
 
 
-> ***.first***
-> File Owner에는 여러개의 View를 가질 수 있기 때문에, 이 중에서 Interface Builder로 Custom한 Class를 가져와 현재 View에 계층을 한 단계 더 쌓은 구조
-> 
+***.first***
+
+File Owner에는 여러개의 View를 가질 수 있기 때문에, 이 중에서 Interface Builder로 Custom한 Class를 가져와 현재 View에 계층을 한 단계 더 쌓은 구조
+
 
 ```swift
 SquareBoxView
@@ -30,10 +31,10 @@ required init?(coder: NSCoder) {
 }
 
 func loadView() {
-     let view = UINib(nibName: "SquareBoxView", bundle: nil)
+    let view = UINib(nibName: "SquareBoxView", bundle: nil)
 		.instantiate(withOwner: self, options: nil).first as! UIView
-     view.frame = bounds // view의 frame을 SquareBoxView의 bounds로 설정
-     self.addSubview(view)
+    view.frame = bounds // view의 frame을 SquareBoxView의 bounds로 설정
+    self.addSubview(view)
 }
 ```
 
@@ -90,11 +91,11 @@ Interface builder는 코드가 아니기 때문에 앱을 컴파일 하는 시�
 
 Interface builder는 코드가 아니기 때문에 앱을 컴파일 하는 시점에서 컴파일러가 인식할 수 없고, 이를 코드로 변환해주는 unarchiving 과정이 필요하다.
 
-> 👉 **xib:** **XML Interface Builder (태그 형태의 마크업 언어)**
-> XCode가 Interface Builder를 통해 시각적으로 제어 가능하도록 제공
+> **xib: XML Interface Builder (태그 형태의 마크업 언어)**
+> , XCode가 Interface Builder를 통해 시각적으로 제어 가능하도록 제공
 > 
-> ****nib: NeXT Interface Builder**
-> 뷰의 layout, display등의 요소들을 object graph로 만들어서 직렬화한 파일
+> **nib: NeXT Interface Builder**
+> , 뷰의 layout, display등의 요소들을 object graph로 만들어서 직렬화한 파일
 
 
 - UINib
@@ -160,7 +161,7 @@ let view = Bundle.main.loadNibNamed("SquareBoxView", owner: self, options: nil)
 
 - **@IBDesignable**
 
-@IBInspectable만 지정하면 "런타임"에 속성이 적용된 것을 볼 수 있다.
+@IBInspectable만 지정하면 "런타임"에 속성이 적용된 것을 볼 수 있지만,
 
 @IBDesignable는 "**컴파일타임**"으로 실시간으로 보는 것을 가능하게 해준다.
 
