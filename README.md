@@ -30,6 +30,6 @@
 * **Section II**
   > | Project | Topic |
   > | ------ | ------ |
-  > | [Firebase]https://github.com/camosss/SSAC/tree/main/ssacFirebase) | Analytics, Crashlytics, Messaging |
+  > | [Firebase](https://github.com/camosss/SSAC/tree/main/ssacFirebase) | Analytics, Crashlytics, Messaging |
   > | [XIB](https://github.com/camosss/SSAC/tree/main/ssacXib) |  |
 
