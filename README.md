@@ -22,7 +22,16 @@
   > | [메모앱](https://github.com/camosss/SSAC/tree/main/ssacMemo) | 평과 과제 |
 
 * **출시 프로젝트**
+
+  > | Project | Topic |
+  > | ------ | ------ |
   > | [해외뉴우스](https://github.com/camosss/Overseas-News) | [AppStore](https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397) |
+
+* **Section II**
+  > | Ch# | Chapter Subject | Note |
+  > |:---:| :--- | :--- |
+  > |1| Filtering Operators |  |
+  > |2| TODO List App Using Filter Operations |  |
 
 
 
