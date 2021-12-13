@@ -29,7 +29,7 @@
 
 * **Section II**
   > | Project | Topic |
-  > |:---:| :--- | :--- |
-  > |1| [Firebase]https://github.com/camosss/SSAC/tree/main/ssacFirebase) | Analytics, Crashlytics, Messaging |
-  > |2| [XIB](https://github.com/camosss/SSAC/tree/main/ssacXib) |  |
+  > | ------ | ------ |
+  > | [Firebase]https://github.com/camosss/SSAC/tree/main/ssacFirebase) | Analytics, Crashlytics, Messaging |
+  > | [XIB](https://github.com/camosss/SSAC/tree/main/ssacXib) |  |
 
