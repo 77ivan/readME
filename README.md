@@ -23,52 +23,13 @@
 
 * **출시 프로젝트**
 
-  > | Project | Topic |
+  > | Project |  |
   > | ------ | ------ |
   > | [해외뉴우스](https://github.com/camosss/Overseas-News) | [AppStore](https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397) |
 
 * **Section II**
-  > | Ch# | Chapter Subject | Note |
+  > | Project | Topic |
   > |:---:| :--- | :--- |
-  > |1| Filtering Operators |  |
-  > |2| TODO List App Using Filter Operations |  |
-
-
-
-## Curriculum
-
-* **Section I: Getting Started with RxSwift**
-  > | Ch# | Chapter Subject | Note |
-  > |:---:| :--- | :--- |
-  > |1| Observables|  |
-  > |2| Subjects |  |
-  > |3| Implementing Photo Filter App Using RxSwift |  |
-
-* **Section II: Operators**
-  > | Ch# | Chapter Subject | Note |
-  > |:---:| :--- | :--- |
-  > |1| Filtering Operators |  |
-  > |2| TODO List App Using Filter Operations |  |
-  > |3| Transforming Operators |  |
-  > |4| Building News App Using Transforming Operators |  |
-  > |5| Combining Operators |  |
-
-
-* **Section III: iOS Apps with RxCocoa**
-  > | Chapter Subject | Note |
-  > | :--- | :--- |
-  > | RxCocoa |  |
-
-
-* **Section IV: Intermediaate RxSwift/RxCocoa**
-  > | Chapter Subject | Note |
-  > | :--- | :--- |
-  > | Error Handling |  |
-
-
-* **Section VI: MVVM with Rxswift**
-  > | Chapter Subject | Note |
-  > | :--- | :--- |
-  > | MVVM with RxSwift |  |
-
+  > |1| [Firebase]https://github.com/camosss/SSAC/tree/main/ssacFirebase) | Analytics, Crashlytics, Messaging |
+  > |2| [XIB](https://github.com/camosss/SSAC/tree/main/ssacXib) |  |
 
