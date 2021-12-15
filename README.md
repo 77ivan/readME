@@ -260,8 +260,7 @@ func application(_ application: UIApplication, didDiscardSceneSessions sceneSess
 > **앱 클릭**
 > 
 1. **application(_:didFinishLaunchingWithOptions:)**
-
-Delegate에게 실행 프로세스가 거의 끝나고 앱이 실행될 준비가 거의 되었음을 알림
+	Delegate에게 실행 프로세스가 거의 끝나고 앱이 실행될 준비가 거의 되었음을 알림
 
 `화면에는 앱이 뜨지 않은 상태`
 
@@ -279,7 +278,7 @@ scene이 foreground로 진입할 때 호출
 
 app switcher에서 선택되는 등 scene과의 상호작용이 시작될때 호출
 
-`***app switcher.***` 화면을 위로 스와이프했을 때, 현재 실행 중인 앱들이 보이는 화면
+`app switcher` 화면을 위로 스와이프했을 때, 현재 실행 중인 앱들이 보이는 화면
 
 ---
 
