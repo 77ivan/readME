@@ -1,7 +1,7 @@
 
 ## Index
 
-- [XIB를 이용해서 Custom View 제작](#XIB를이용해서CustomView작)
+- [XIB를이용해서CustomView제작](#XIB를이용해서CustomView작)
 - [이니셜라이저](#이니셜라이저)
 - [nib 로드](#nib로드(코드에서.xib파일들을생성하여참조))
 - [@IBInspectable, @IBDesignable](#@IBInspectable,@IBDesignable)
@@ -12,7 +12,7 @@
 **📌   Apple이 지원하는 XIB 연결뿐만 아닌, 이니셜라이저와 nib호출을 통해 UIView를 확장해 XIB 사용이 가능하다.**
 
 
-## XIB를 이용해서 Custom View 제작
+## XIB를이용해서CustomView제작
 
 **File Owner에 Custom Class 적용**
 
