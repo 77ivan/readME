@@ -3,9 +3,9 @@
 
 - [XIB를 이용해서 Custom View 제작](#XIB를이용해서CustomView작)
 - [이니셜라이저](#이니셜라이저)
-- [nib 로드(코드에서 .xib 파일들을 생성하여 참조)](#nib 로드(코드에서 .xib 파일들을 생성하여 참조))
-- [@IBInspectable, @IBDesignable](#@IBInspectable, @IBDesignable)
-- [AppDelegate, SceneDelegate](#AppDelegate, SceneDelegate)
+- [nib 로드](#nib로드(코드에서.xib파일들을생성하여참조))
+- [@IBInspectable, @IBDesignable](#@IBInspectable,@IBDesignable)
+- [AppDelegate, SceneDelegate](#AppDelegate,SceneDelegate)
 
 ---
 
