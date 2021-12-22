@@ -36,6 +36,8 @@
 let params = ["email": email, "password": password, "username": username]
 ```
 
+<br />
+
 - 회원가입 시 아래와 같이 제약을 준다.
 
 ```swift
