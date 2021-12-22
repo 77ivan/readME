@@ -34,7 +34,7 @@ https://user-images.githubusercontent.com/74236080/137635789-57feeb91-b8ac-4813-
 <br />
 
 
-### 프로퍼티에 직접 접근해서 Data 전달
+### - 프로퍼티에 직접 접근해서 Data 전달
 
 1. 2번(DetailVC)에서 데이터를 전달받을 프로퍼티를 생성한다.
 
@@ -84,7 +84,7 @@ https://user-images.githubusercontent.com/74236080/137712785-64ffa589-2b84-4012-
 <br />
 
 
-### 링크 버튼을 클릭하면 WebVC로 화면 전환
+### - 링크 버튼을 클릭하면 WebVC로 화면 전환
 
 화면 전환 시 타이틀 값을 전달하고, 전달한 값을 네비게이션 타이틀 넣기
 
@@ -119,7 +119,7 @@ https://user-images.githubusercontent.com/74236080/137712744-7103028c-b96d-45e9-
 <br />
 
 
-### Kingfisher 라이브러리
+### - Kingfisher 라이브러리
 
 파일을 새로 생성해서, 이미지를 설정할 imageView에 메소드체이닝으로 KingFisher를 호출하여 setImage() 메소드를 이용한다.
 
