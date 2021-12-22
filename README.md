@@ -234,7 +234,7 @@ extension ExploreVC: UISearchResultsUpdating {
 
 		for item in json.arrayValue {
 
-		... **Value 값**
+		... Value
 
 		     let value = Value(id: id, title: title, post: post, view: view, info: info, des: des, rank: rank, list: list)
 		     if item != [] { tmp.append(value) }
