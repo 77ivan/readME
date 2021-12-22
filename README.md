@@ -227,20 +227,22 @@ https://user-images.githubusercontent.com/93528918/143837522-a953584f-d604-4771-
 
 ```swift
 extension ExploreVC: UISearchResultsUpdating {
-	func updateSearchResults(for searchController: UISearchController) {
-		var tmp = [Value]()
+    func updateSearchResults(for searchController: UISearchController) {
+    
+	var tmp = [Value]()
 
-		... POST
+	... POST
 
-		for item in json.arrayValue {
+	for item in json.arrayValue {
 
-		... Value
+	... Value
 
-		     let value = Value(id: id, title: title, post: post, view: view, info: info, des: des, rank: rank, list: list)
+		let value = Value(id: id, title: title, post: post, view: view, info: info, des: des, rank: rank, list: list)
 		     if item != [] { tmp.append(value) }
-		      DispatchQueue.main.async {
+		      	
+			DispatchQueue.main.async {
 		           self.value = tmp
-		     }
+		     	}
 		}
 	}
 }
