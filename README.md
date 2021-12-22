@@ -4,7 +4,7 @@
 ## Index
   - [화면전환](#화면전환)
   - [데이터전달](#데이터전달)
-  - [CollectionView와 Resizing_TableView_Cell](#CollectionView와 Resizing_TableView_Cell)
+  - [CollectionView와Resizing_TableView_Cell](#CollectionView와Resizing_TableView_Cell)
   - [Map](#Map)
   - [영화진흥위원회_API](#영화진흥위원회_API)
   - [TMDB_API](#TMDB_API)
@@ -163,7 +163,7 @@ cell.postImageView.setImage(imageUrl: tvShow.backdropImage)
 <br />
 
 
-## CollectionView와 Resizing_TableView_Cell
+## CollectionView와Resizing_TableView_Cell
 
 ### 도서 화면을 컬렉션뷰로 구현
 
