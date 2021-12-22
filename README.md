@@ -71,6 +71,7 @@ let params = ["email": email, "password": password]
 
 
 // 토큰 정보 추출
+let json = JSON(data)
 let username = json["username"].stringValue
 let accessToken = json["token"].stringValue
 ```
