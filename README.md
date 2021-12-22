@@ -90,7 +90,7 @@ tk.create("\(url)", account: "username", value: username)
 
 <br />
 
-3. 서버에서 결과값에 `"login success"`를 보내면 메인탭으로 전환 전환한다.
+3. 서버에서 결과값에 `"login success"`를 보내면 메인탭으로 전환한다.
 
 ```swift
 if result == "login success" {
