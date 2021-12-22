@@ -4,14 +4,14 @@
 ## Index
   - [화면전환](#화면전환)
   - [데이터전달](#데이터전달)
-  - [CollectionView,Resizing_TableView_Cell](#CollectionView,Resizing_TableView_Cell)
+  - [CollectionView/Resizing_TableView_Cell](#CollectionView/Resizing_TableView_Cell)
   - [Map](#Map)
   - [영화진흥위원회_API](#영화진흥위원회_API)
   - [TMDB_API](#TMDB_API)
   - [Pagenation](#Pagenation)
   - [Cast_Crew_API](#Cast_Crew_API)
   - [WebView](#WebView)
-  - [NWPathMonitor,Toast_Swift](#NWPathMonitor,Toast_Swift)
+  - [NWPathMonitor/Toast_Swift](#NWPathMonitor/Toast_Swift)
   - [장르추가](#장르추가)
 
 
@@ -163,7 +163,7 @@ cell.postImageView.setImage(imageUrl: tvShow.backdropImage)
 <br />
 
 
-## CollectionView,Resizing_TableView_Cell
+## CollectionView/Resizing_TableView_Cell
 
 ### 도서 화면을 컬렉션뷰로 구현
 
@@ -443,7 +443,7 @@ https://user-images.githubusercontent.com/74236080/139521734-624b235a-454f-46e1-
 <br />
  
 
-## NWPathMonitor,Toast_Swift
+## NWPathMonitor/Toast_Swift
 
 
 ### 네트워크 모니터링을 통해 네트워크 연결이 되어 있지 않은 상태라면, 얼럿/토스트 등으로 사용자에게 알려주세요.
