@@ -102,7 +102,7 @@ if result == "login success" {
 
 <br />
 
-✓ 메인탭에서 checkLoginedUser() 메서드를 통해 해당 사용자의 토큰을 불러와서, 해당 토큰 값이 있으면 다시 앱을 실행할 때, 로그인페이지가 아닌 메인페이지를 로드한다.
+✓ 메인탭에서 `checkLoginedUser()` 메서드를 통해 해당 사용자의 토큰을 불러와서, 해당 토큰 값이 있으면 다시 앱을 실행할 때, 로그인페이지가 아닌 메인페이지를 로드한다.
 
 ```swift
 func checkLoginedUser() {
