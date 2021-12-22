@@ -14,13 +14,10 @@
 ✓ 개인 프로젝트
 ✓ iOS
 ✓ 기간: 21.11.16 ~ 21.11.27
-<a href="https://www.notion.so/912caceec73d480982e656c018594c7d" target="_blank">
-    <img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/></a>
 ```
  
-
-
-<a href="https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397
+<a href="https://www.notion.so/912caceec73d480982e656c018594c7d" target="_blank">
+    <img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/></a><a href="https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397
 "><img src="https://www.atrinh.com/list/images/download.svg"></a>
 
 
