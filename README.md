@@ -21,7 +21,8 @@
 
 ## Auth
 
-<img width="730" alt="스크린샷 2021-10-04 오후 4 24 34" src="https://user-images.githubusercontent.com/93528918/143837211-f5e501e8-9eaf-4449-8646-7d108777b27e.png">
+<img src="스크린샷 2021-10-04 오후 4 24 34" src="https://user-images.githubusercontent.com/93528918/143837211-f5e501e8-9eaf-4449-8646-7d108777b27e.png" width = "70%">
+
 
 <br />
 
