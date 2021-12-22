@@ -69,7 +69,6 @@ let params = ["email": email, "password": password]
     username = "사용자 이름";
 }
 
--------
 
 // 토큰 정보 추출
 let username = json["username"].stringValue
