@@ -22,7 +22,7 @@
 ## Auth
 
 
-<img src = "https://user-images.githubusercontent.com/93528918/143837211-f5e501e8-9eaf-4449-8646-7d108777b27e.png" width="30%" height="30%">
+<img src = "https://user-images.githubusercontent.com/93528918/143837211-f5e501e8-9eaf-4449-8646-7d108777b27e.png" width="70%" height="50%">
 
 
 <br />
