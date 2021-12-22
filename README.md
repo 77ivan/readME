@@ -140,7 +140,7 @@ extension UIImageView {
 
 <br />
 
-***url String을 Kingfisher 라이브러리 사용안했을 때 ❌\***
+***url String을 Kingfisher 라이브러리 사용안했을 때 ❌***
 
 ```swift
 let url = URL(string: tvShow.backdropImage)
