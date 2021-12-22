@@ -25,7 +25,7 @@
 
 <br />
 
-## 사용 라이브러리
+## 📌  사용 라이브러리
 
 ```swift
 ⚒ Alamofire
@@ -40,40 +40,9 @@
 ⚒ Snapkit
 ⚒ Toast
 ```
-<br />
-
-### 📌  API
-
-> **Trending**
-> 
-
-**[Web Search](https://rapidapi.com/contextualwebsearch/api/web-search/)**
-
-✓ 하루에 100번 요청가능한데, 그 이후로 추가요금 있음
-
-
-
-> **Search**
-> 
-
-**[Free News](https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/free-news/)**
-
-✓ 콜수 제한 없음 !!
-
-
-
-> **Category**
-> 
-
-**[Bing News Search](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/)**
-
-✓ 콜수 제한 → 한달에 1,000
-
-```swift
-‼️ 콜수 제한으로 뉴스 (비즈니스, 정치) / 연예 (영화 및 티비, 음악) / 스포츠 (축구, 농구, 야구) / 테크놀로지 (테크, 과학)만 제공
-```
 
 <br />
+
 
 
 ## 📌  초기 UI, 정보 구조도 IA
