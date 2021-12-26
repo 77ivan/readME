@@ -1,3 +1,5 @@
+<details>
+<summary></summary>
 ## Codable
 
 JSON 데이터를 간편하고 쉽게 Encoding/Decoding 할 수 있게 해준다.
@@ -178,3 +180,5 @@ if let data = data, let myPerson = try? decoder.decode(Person.self, from: data) 
 
 - [https://zeddios.tistory.com/373](https://zeddios.tistory.com/373)
 - [https://learn-hyeoni.tistory.com/45](https://learn-hyeoni.tistory.com/45)
+</div>
+</details>
