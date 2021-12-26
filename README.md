@@ -17,7 +17,10 @@ public typealias Codable = Decodable & Encodable
 
 아래의 두 코드를 비교해보면 큰 차이는 없어보이지만,
 
-복잡한 JSON구조에서 `JSONSerialization`는 내부 값에 대해 매번 타입을 정의하면서 하나하나 벗겨줘야하는 불편함이 있지만, `Codable`은 이미 타입의 객체에 값을 할당해 놓았기 때문에 추가적으로 작업할 필요가 없다.
+복잡한 JSON구조에서는
+
+- `JSONSerialization`는 내부 값에 대해 매번 타입을 정의하면서 하나하나 벗겨줘야하는 불편함이 있지만,
+- `Codable`은 이미 타입의 객체에 값을 할당해 놓았기 때문에 추가적으로 작업할 필요가 없다.
 
 <br>
 
@@ -26,8 +29,8 @@ JSONSerialization
 ```swift
 // data
 if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] {
-	  if let name = json["name"] as? String {
-		    print(name) // hyeon
+	if let name = json["name"] as? String {
+		print(name) // hyeon
      }
 }
 ```
@@ -174,5 +177,5 @@ if let data = data, let myPerson = try? decoder.decode(Person.self, from: data) 
 > 
 
 [https://zeddios.tistory.com/373](https://zeddios.tistory.com/373)
-
+[https://learn-hyeoni.tistory.com/45](https://learn-hyeoni.tistory.com/45)
 ---
