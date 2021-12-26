@@ -84,6 +84,8 @@ encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
 // }
 ```
 
+<br>
+
 ### Codable을 이용한 Decoding
 
 1. 이전의 Json값을 Decoding
