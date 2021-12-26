@@ -178,4 +178,3 @@ if let data = data, let myPerson = try? decoder.decode(Person.self, from: data) 
 
 [https://zeddios.tistory.com/373](https://zeddios.tistory.com/373)
 [https://learn-hyeoni.tistory.com/45](https://learn-hyeoni.tistory.com/45)
----
