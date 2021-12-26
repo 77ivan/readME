@@ -1,5 +1,5 @@
 <details>
-<summary>## Codable</summary>
+<summary>Codable</summary>
 
 
 JSON 데이터를 간편하고 쉽게 Encoding/Decoding 할 수 있게 해준다.
