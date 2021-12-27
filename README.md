@@ -13,7 +13,7 @@
 ### ✓ Model
 
 
-데이터에 관한 로직 담당 (데이터 값 변경 및 관리)
+**데이터에 관한 로직 담당 (데이터 값 변경 및 관리)**
 
 - 앱이 **무엇**인지에 대해 관심, 앱이 가지는 데이터들을 정의
 - UI와 독립되어있다.
@@ -41,7 +41,7 @@ struct UserClass: Codable {
 ### ✓ View
 
 
-사용자에게 보여지는 화면을 담당 (UI)
+**사용자에게 보여지는 화면을 담당 (UI)**
 
 - UILabel, UIButton, UIViewController와 같은 UI와 관련된 것이고, Controller의 통제를 받게 된다.
 - Controller가 화면에 무엇을 보여주기 위해 사용되는 요소
@@ -107,7 +107,7 @@ class SignInView: UIView, ViewRepresentable {
 ### ✓ Controller
 
 
-Model과 View 연결 (Model 값을 View에 보여준다)
+**Model과 View 연결 (Model 값을 View에 보여준다)**
 
 - **어떻게** 화면에 표시할 것인지에 대해 관심
 - 항상 접근이 가능, Model에 대한 모든 것을 알고있다.
@@ -116,7 +116,7 @@ Model과 View 연결 (Model 값을 View에 보여준다)
 <br>
 
 > - `signInView` 인스턴스를 통해 View에 접근
-- `UIButton`의 Action 처리를 통해 API 호출을 하여 생성한 Model에 데이터를 저장하고, 이를 바탕으로 UI(View)를 그린다.
+> - `UIButton`의 Action 처리를 통해 API 호출을 하여 생성한 Model에 데이터를 저장하고, 이를 바탕으로 UI(View)를 그린다.
 > 
 
 
@@ -208,9 +208,9 @@ class SignInViewController: UIViewController {
 ### ✓ Model
 
 
-데이터 구조를 정의하고 ViewModel에게 결과를 알려준다.
+- 데이터 구조를 정의하고 ViewModel에게 결과를 알려준다.
 
-Model은 View와 이어지지 않는다.
+- Model은 View와 이어지지 않는다.
 
 `MVC 코드와 동일`
 
@@ -219,9 +219,9 @@ Model은 View와 이어지지 않는다.
 ### ✓ View
 
 
-사용자와의 상호작용을 통해 이벤트가 일어나면 ViewModel에게 알려준다.
+- 사용자와의 상호작용을 통해 이벤트가 일어나면 ViewModel에게 알려준다.
 
-ViewModel이 업데이트 요청한 데이터를 보여준다.
+- ViewModel이 업데이트 요청한 데이터를 보여준다.
 
 `MVC 코드와 동일`
 
@@ -231,7 +231,7 @@ ViewModel이 업데이트 요청한 데이터를 보여준다.
 
 
 
-Model 데이터를 View에 맞게 가공 및 처리 (View에 반영될 데이터 비즈니스 로직 담당)
+**Model 데이터를 View에 맞게 가공 및 처리 (View에 반영될 데이터 비즈니스 로직 담당)**
 
 - 사용자의 상호작용을 View가 보내주면 그에 맞는 이벤트를 처리한다.
 - Model의 RUD를 담당한다.
