@@ -24,8 +24,6 @@
 > 로그인에 필요한 `토큰 값`과 `id`, `username`, `email`과 같은 데이터를 모델에서 정의
 > 
 
-<br>
-
 ```swift
 struct User: Codable {
     let jwt: String
@@ -53,7 +51,7 @@ struct UserClass: Codable {
 <br>
 
 > - 이름과 비밀번호를 입력할 `TextField`와 로그인 버튼(`UIButton`)의 UI를 구성하는 코드들이 포함
-- `UIButton`의 **Action**은 **Controller**에서 처리
+> - `UIButton`의 **Action**은 **Controller**에서 처리
 > 
 
 <br>
