@@ -10,9 +10,8 @@
 
 <br>
 
-### Model
+### ✓ Model
 
-<br>
 
 데이터에 관한 로직 담당 (데이터 값 변경 및 관리)
 
@@ -41,7 +40,7 @@ struct UserClass: Codable {
 
 <br>
 
-### View
+### ✓ View
 
 
 사용자에게 보여지는 화면을 담당 (UI)
@@ -109,7 +108,7 @@ class SignInView: UIView, ViewRepresentable {
 
 <br>
 
-### Controller
+### ✓ Controller
 
 
 Model과 View 연결 (Model 값을 View에 보여준다)
@@ -172,7 +171,7 @@ class SignInViewController: UIViewController {
 
 <br>
 
-### 관계
+## 관계
 
 
 **Model & Controller**
@@ -211,7 +210,7 @@ class SignInViewController: UIViewController {
 
 <br>
 
-### Model
+### ✓ Model
 
 
 데이터 구조를 정의하고 ViewModel에게 결과를 알려준다.
@@ -222,7 +221,7 @@ Model은 View와 이어지지 않는다.
 
 <br>
 
-### View
+### ✓ View
 
 
 사용자와의 상호작용을 통해 이벤트가 일어나면 ViewModel에게 알려준다.
@@ -233,7 +232,7 @@ ViewModel이 업데이트 요청한 데이터를 보여준다.
 
 <br>
 
-### ViewModel
+### ✓ ViewModel
 
 
 
@@ -276,7 +275,7 @@ class SignInViewModel {
 
 <br>
 
-### Controller
+### ✓ Controller
 
 
 
