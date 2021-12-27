@@ -1,6 +1,6 @@
 ## Index
-[MVC](#MVC)
-[MVVM](#MVVM)
+- [MVC](#MVC)
+- [MVVM](#MVVM)
 
 <br>
 
