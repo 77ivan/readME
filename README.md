@@ -1,184 +1,361 @@
-<details>
-<summary>Codable</summary>
-
-
-JSON 데이터를 간편하고 쉽게 Encoding/Decoding 할 수 있게 해준다.
-
-- Encodable+Decodable 프로토콜을 준수하는 프로토콜
-- Struct, Class, Enum 모두 Codable을 채택
-
-```swift
-public typealias Codable = Decodable & Encodable
-```
-
-<img src = "https://user-images.githubusercontent.com/93528918/147404626-4aaa9bd7-15ce-4d7a-b9e7-7bdbeb8c32dc.png" width="50%" height="50%">
+## Index
+[MVC](#MVC)
+[MVVM](#MVVM)
 
 <br>
 
-### JSONSerialization vs Codable
+## MVC
 
-아래의 두 코드를 비교해보면 큰 차이는 없어보이지만,
-
-복잡한 JSON구조에서는
-
-- `JSONSerialization`는 내부 값에 대해 매번 타입을 정의하면서 하나하나 벗겨줘야하는 불편함이 있지만,
-- `Codable`은 이미 타입의 객체에 값을 할당해 놓았기 때문에 추가적으로 작업할 필요가 없다.
+로그인 기능 **MVC** 패턴 적용
 
 <br>
 
-JSONSerialization
-
-```swift
-// data
-if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] {
-	if let name = json["name"] as? String {
-		print(name) // hyeon
-     }
-}
-```
+### Model
 
 <br>
 
-Codable
+데이터에 관한 로직 담당 (데이터 값 변경 및 관리)
 
-```swift
-// data
-let decoder = JSONDecoder()
-if let json = try? decoder.decode(SimpleJson.self, from: data) {
-      print(json.name) // hyeon
-}
-```
+- 앱이 **무엇**인지에 대해 관심, 앱이 가지는 데이터들을 정의
+- UI와 독립되어있다.
+- 모든 의사소통은 Controller를 통해 전달
 
 <br>
 
-> 실행 속도
-> 
-
-구조가 간편한 JSON을 다룰 때에는 JSONSerialization `>` Codable
-
-그 외 (중첩된 구조, 반복 데이터) 에는 JSONSerialization `<` Codable
-
-
-<br>
-
-### Codable을 이용한 Encoding
-
-1. Codable 채택 == Decodable & Encodable 채택
-
-```swift
-struct Person: Codable {
-    var name: String
-    var age: Int
-}
-```
-
-<br>
-
-2. Encodable (Data → JSON)
-
-`encode`  Person의 인스턴스를 Data타입으로 변환
-
-encode안에 올 수 있는 값은 Encodable을 준수하고 있는 타입이어야 한다.
-
-→ Codable 채택으로 Person타입의 인스턴스는 모두 Encodable을 준수한다 !
-
-![스크린샷 2021-12-26 오후 6 52 20](https://user-images.githubusercontent.com/93528918/147404694-6319b2f8-78e7-4b73-ba1a-f69ac4529119.png)
-
-
-<br>
-
-> throws ⇒ encoding 중 에러를 발생시킬 수 있기 때문에 try와 함께 써줘야 한다.
-> 
-> 
-> 리턴 타입이 Data ⇒ Person 인스턴스의 데이터를 얻는 것
+> 로그인에 필요한 `토큰 값`과 `id`, `username`, `email`과 같은 데이터를 모델에서 정의
 > 
 
 <br>
 
 ```swift
-let encoder = JSONEncoder()
-
-let A = Person(name: "A", age: 10)
-
-let jsonData = try? encoder.encode(A) // 인스턴스 -> Data타입
-print(jsonData)
-// Optional(32 bytes)
-```
-
-<br>
-
-3. 리턴받은 Data를 json 형식으로 변환
-
-```swift
-// Data타입 -> String타입
-if let prettyJsonData = jsonData,
-	 let jsonString = String(data: prettyJsonData, encoding: .utf8) {
-    print(jsonString)
+struct User: Codable {
+    let jwt: String
+    let user: UserClass
 }
 
-// {"name":"A","age":10}
-```
-
-<br>
-
-- 해당 코드 추가로 우리가 보던 json 형태로
-
-```swift
-encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-
-// {
-//   "age" : 10,
-//   "name" : "A"
-// }
-```
-
-<br>
-
-### Codable을 이용한 Decoding
-
-1. 이전의 Json값을 Decoding
-
-```swift
-let jsonString = """
-{
-  "age" : 10,
-  "name" : "A"
+struct UserClass: Codable {
+    let id: Int
+    let username, email: String
 }
-"""
 ```
 
 <br>
 
-2. Decodable (JSON → Data)
+### View
 
-`decode`  Data를 인스턴스로 변환
 
-→ `Person.self`가 들어간 자리는 `type:` 의 자리 (Decode할 값의 타입)
+사용자에게 보여지는 화면을 담당 (UI)
 
-![스크린샷 2021-12-26 오후 6 53 17](https://user-images.githubusercontent.com/93528918/147404714-f682a507-4e1b-41c8-ad3f-1b3c74521d5a.png)
+- UILabel, UIButton, UIViewController와 같은 UI와 관련된 것이고, Controller의 통제를 받게 된다.
+- Controller가 화면에 무엇을 보여주기 위해 사용되는 요소
+- 사용자에게 입력을 받아 Controller를 통해 Model을 업데이트
+- 어떤 ViewController 클래스에 속해 있는지 모르는 상태
 
 <br>
 
+> - 이름과 비밀번호를 입력할 `TextField`와 로그인 버튼(`UIButton`)의 UI를 구성하는 코드들이 포함
+- `UIButton`의 **Action**은 **Controller**에서 처리
+> 
+
+<br>
 
 ```swift
-let decoder = JSONDecoder()
-
-var data = jsonString.data(using: .utf8)
-print(data)
-// Optional(32 bytes)
-
-if let data = data, let myPerson = try? decoder.decode(Person.self, from: data) {
-    print(myPerson)
+protocol ViewRepresentable {
+    func setupView()
+    func setupConstraints()
 }
-// Person(name: "A", age: 10)
+
+class SignInView: UIView, ViewRepresentable {
+    
+    // MARK: - Properties
+    
+    let usernameTextField = UITextField()
+    let passwordTextField = UITextField()
+    let signInButton = UIButton()
+    
+    // MARK: - Lifecycle
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+        setupConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    // MARK: - Helper
+    
+    func setupView() {
+        addSubview(usernameTextField)
+        addSubview(passwordTextField)
+        addSubview(signInButton)
+    }
+    
+    func setupConstraints() {
+        usernameTextField.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.equalTo(self.snp.width).multipliedBy(0.9)
+            make.height.equalTo(50)
+        }
+        
+        passwordTextField.snp.makeConstraints { make in
+         ...
+    }
+}
 ```
 
+<br>
+
+### Controller
+
+
+Model과 View 연결 (Model 값을 View에 보여준다)
+
+- **어떻게** 화면에 표시할 것인지에 대해 관심
+- 항상 접근이 가능, Model에 대한 모든 것을 알고있다.
+- 아울렛 변수나 인스턴스 변수를 통해 View에 항상 접근
+
+<br>
+
+> - `signInView` 인스턴스를 통해 View에 접근
+- `UIButton`의 Action 처리를 통해 API 호출을 하여 생성한 Model에 데이터를 저장하고, 이를 바탕으로 UI(View)를 그린다.
+> 
+
+<br>
+
+```swift
+class SignInViewController: UIViewController {
+
+    // MARK: - Properties
+    
+    let signInView = SignInView()
+    
+    // MARK: - Lifecycle
+    
+    override func loadView() {
+        self.view = signInView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        signInView.signInButton.addTarget(self, action: #selector(signInButtonClicked), for: .touchUpInside)
+    }
+
+    // MARK: - Action
+    
+    @objc func signInButtonClicked() {
+        guard let username = signInView.usernameTextField.text else { return }
+        guard let password = signInView.passwordTextField.text else { return }
+
+        APIService.login(identifier: username, password: password) { userData, error in
+            guard let userData = userData else { return }
+            print(username, password, userData)
+            
+            UserDefaults.standard.set(userData.jwt, forKey: "token")
+            ...
+
+            DispatchQueue.main.async {
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
+                windowScene.windows.first?.rootViewController = UINavigationController(rootViewController: MainViewController())
+                windowScene.windows.first?.makeKeyAndVisible()
+            }
+            
+        }
+        
+    }
+}
+```
+
+<br>
+
+### 관계
+
+
+**Model & Controller**
+
+- Controller는 모델에 직접적으로 접근할 수 있지만, Model은 Controller에 **Notification** / **KVO** 등을 통해 Controller에게 Model의 변화를 알린다.
+
+<br>
+
+**Model & View**
+
+- Model은 UI에 독립적이며, View와 소통할 수 없으며 View 또한 불가능
+
+<br>
+
+**View & Controller**
+
+- Controller는 View에 대해 outlet을 이용해 View에게 직접적으로 접근 가능
+- View는 Controller에게 구조적으로 미리 정해진 방식으로 Controller에게 행위에 대한 요청(delegate)과 데이터에 대한 요청(data source)을 할 수 있다.
+- action(View) - target(Controller)의 구조로 사용자의 행위에 따라 필요한 함수를 호출할 수 있다.
+
+
+<br>
+
+## MVVM
+
+로그인 기능 **MVVM** 패턴 적용
+
+![다운로드](https://user-images.githubusercontent.com/93528918/147460946-dc4f1c7d-aac5-42a1-bac8-699ecb2c90fc.png)
+
+<br>
+
+- View와 Model을 분리
+- 기존의 View는 단순히 UI를 표시하기 위한 로직만을 담당하고, 그 외에는 메서드 호출 정도만 있는 것이 이상적
+- ViewModel은 기존의 UIKit을 import할 필요 없이 **데이터 update** 및 **View 요소를 업데이트**한다.
+- View - Model - ViewModel 모두 독립적으로 테스트가 가능하다.
+
+<br>
+
+### Model
+
+
+데이터 구조를 정의하고 ViewModel에게 결과를 알려준다.
+
+Model은 View와 이어지지 않는다.
+
+`MVC 코드와 동일`
+
+<br>
+
+### View
+
+
+사용자와의 상호작용을 통해 이벤트가 일어나면 ViewModel에게 알려준다.
+
+ViewModel이 업데이트 요청한 데이터를 보여준다.
+
+`MVC 코드와 동일`
+
+<br>
+
+### ViewModel
+
+
+
+Model 데이터를 View에 맞게 가공 및 처리 (View에 반영될 데이터 비즈니스 로직 담당)
+
+- 사용자의 상호작용을 View가 보내주면 그에 맞는 이벤트를 처리한다.
+- Model의 RUD를 담당한다.
+
+<br>
+
+> `MVC`에서 **Controller**에서 처리하던 API 호출 메서드를 `MVVM`에서는 **ViewModel**을 통**해 Model** 데이터를 처리한다.
+> 
+
+<br>
+
+```swift
+import Foundation
+
+class SignInViewModel {
+    
+    var username: Observable<String> = Observable("유저네임")
+    var password: Observable<String> = Observable("")
+    
+    func postUserLogin(completion: @escaping () -> Void) {
+        
+        APIService.login(identifier: username.value, password: password.value) { userData, error in
+            guard let userData = userData else { return }
+
+            UserDefaults.standard.set(userData.jwt, forKey: "token")
+            UserDefaults.standard.set(userData.user.username, forKey: "username")
+            UserDefaults.standard.set(userData.user.id, forKey: "id")
+            UserDefaults.standard.set(userData.user.email, forKey: "email")
+            
+            completion()
+        }
+        
+    }
+}
+```
+
+<br>
+
+### Controller
+
+
+
+1. `ViewModel`의 인스턴스를 생성
+2. `ViewModel`의 username, password가 `View`의 usernameTextField, passwordTextField와 **Bind**
+
+<br>
+
+> ***Bind.***  옵저버를 사용해서 UI와 옵저버블을 하나로 묶는 행위로, 새로 생성되는 값을 넘겨줄 때 쓰는 용도
+> 
+
+3. TextField의 데이터가 변경되면 (`@objc func ~TextFieldDidChange`) ViewModel에 변경 사항을 알린다.
+4. ViewModel의 데이터가 변경됨에 따라 변경된 데이터가 TextField에 Binding된다.
+
+<br>
+
+```swift
+class SignInViewController: UIViewController {
+
+    // MARK: - Properties
+    
+    let signInView = SignInView()
+    let viewModel = SignInViewModel()
+    
+    // MARK: - Lifecycle
+    
+    override func loadView() {
+        self.view = signInView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setAddTarget()
+        bindingViewModel()
+    }
+    
+    // MARK: - Helper
+    
+    func bindingViewModel() {
+        viewModel.username.bind { text in
+            self.signInView.usernameTextField.text = text
+        }
+        
+        viewModel.password.bind { text in
+            self.signInView.passwordTextField.text = text
+        }
+    }
+    
+    func setAddTarget() {
+        signInView.usernameTextField.addTarget(self, action: #selector(usernameTextFieldDidChange(_:)), for: .editingChanged)
+        signInView.passwordTextField.addTarget(self, action: #selector(passwordTextFieldDidChange(_:)), for: .editingChanged)
+        signInView.signInButton.addTarget(self, action: #selector(signInButtonClicked), for: .touchUpInside)
+    }
+
+    // MARK: - Action
+    
+    @objc func usernameTextFieldDidChange(_ textfield: UITextField) {
+        viewModel.username.value = textfield.text ?? ""
+    }
+    
+    @objc func passwordTextFieldDidChange(_ textfield: UITextField) {
+        viewModel.password.value = textfield.text ?? ""
+    }
+    
+    @objc func signInButtonClicked() {
+        viewModel.postUserLogin {
+            DispatchQueue.main.async {
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
+                windowScene.windows.first?.rootViewController = UINavigationController(rootViewController: MainViewController())
+                windowScene.windows.first?.makeKeyAndVisible()
+            }
+        }
+    }
+}
+```
 <br>
 
 > 참고
-> 
+[https://www.edwith.org/swiftapp/lecture/26620?isDesc=false](https://www.edwith.org/swiftapp/lecture/26620?isDesc=false)
+[https://42kchoi.tistory.com/292](https://42kchoi.tistory.com/292)
 
-- [https://zeddios.tistory.com/373](https://zeddios.tistory.com/373)
-- [https://learn-hyeoni.tistory.com/45](https://learn-hyeoni.tistory.com/45)
-</div>
-</details>
+
