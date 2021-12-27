@@ -52,9 +52,7 @@ struct UserClass: Codable {
 
 > - 이름과 비밀번호를 입력할 `TextField`와 로그인 버튼(`UIButton`)의 UI를 구성하는 코드들이 포함
 > - `UIButton`의 **Action**은 **Controller**에서 처리
-> 
 
-<br>
 
 ```swift
 protocol ViewRepresentable {
@@ -121,7 +119,6 @@ Model과 View 연결 (Model 값을 View에 보여준다)
 - `UIButton`의 Action 처리를 통해 API 호출을 하여 생성한 Model에 데이터를 저장하고, 이를 바탕으로 UI(View)를 그린다.
 > 
 
-<br>
 
 ```swift
 class SignInViewController: UIViewController {
@@ -244,7 +241,6 @@ Model 데이터를 View에 맞게 가공 및 처리 (View에 반영될 데이터
 > `MVC`에서 **Controller**에서 처리하던 API 호출 메서드를 `MVVM`에서는 **ViewModel**을 통**해 Model** 데이터를 처리한다.
 > 
 
-<br>
 
 ```swift
 import Foundation
