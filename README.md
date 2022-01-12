@@ -19,6 +19,7 @@
 ![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
 ![Badge](https://img.shields.io/badge/iOS-13.0-green)
 ![Badge](https://img.shields.io/badge/Swift-5-orange)
+
 ![Badge](https://img.shields.io/badge/Alamofire-5.4.4-red)
 ![Badge](https://img.shields.io/badge/SwiftyJSON-5.0.0-important)
 ![Badge](https://img.shields.io/badge/Kingfisher-7.1.2-yellowgreen)
