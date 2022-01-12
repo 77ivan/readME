@@ -68,6 +68,7 @@
 
 <br />
 <br />
+<br />
 
 ## 🗞 View 구성 및 소개
 
@@ -145,6 +146,211 @@ https://user-images.githubusercontent.com/93528918/149177687-7447a7a6-8bfc-4e18-
 
 <br />
 <br />
+<br />
+
+
+## 🗞 구현 이슈
+
+<details>
+<summary>카테고리 ViewController 재사용</summary>
+
+ 카테고리 View는 `Tabman` 라이브러리를 사용해서 탭페이징 방식으로 구현
+
+라이브러리 사용법을 보면 **페이지별 ViewController**을 배열로 담고, ViewController의 수만큼 탭이 생성
+
+```swift
+private var viewControllers = [UIViewController(), UIViewController() ・・・]
+
+...
+func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
+    return viewControllers.count
+}
+```
+
+> 카테고리별 View 디자인은 같고 데이터만 다르게 들어가기 때문에 하나의 ViewController를 재사용
+**하나의 ViewController에 각각의 메모리에 올라간 다른 ViewController를 사용하는 것!**
+> 
+
+1. **UIViewController 배열을 생성하여 필요한 페이지만큼을 배열에 추가**
+
+```swift
+// UIViewController 배열을 생성
+private var viewControllers: Array<UIViewController> = []
+
+// 필요한 페이지만큼의 Property를 생성하여 배열에 추가
+let newsVC = UIStoryboard.init(name: "Category", bundle: nil)
+								.instantiateViewController(withIdentifier: "CategorySectionViewController") as! CategorySectionViewController
+let entertainmentVC = ...
+
+...
+
+viewControllers.append(newsVC)
+viewControllers.append(entertainmentVC)
+viewControllers.append(sportsVC)
+viewControllers.append(scienceTechnologyVC)
+```
+
+2. **PageView의 해당 ViewController를 index에 접근하는 메서드를 통해 데이터를 넘겨준다.**
+
+- Category를 enum 타입으로 각 페이지의 Section을 담아서 선언
+
+```swift
+enum Category: Int, CaseIterable {
+    case news
+    case entertainment
+    case sports
+    case scienceAndTechnology
+    
+    var description: Array<String> {
+        switch self {
+        case .news: return ["Business", "Politics"]
+        case .entertainment: return ["Entertainment_MovieAndTV", "Entertainment_Music"]
+        case .sports: return ["Sports_Soccer", "Sports_NBA", "Sports_MLB"]
+        case .scienceAndTechnology: return ["Science", "Technology"]
+        }
+    }
+}
+```
+
+- ViewController에 Section배열을 넘겨준다.
+
+```swift
+func viewController(for pageboyViewController: PageboyViewController, at **index**: PageboyViewController.PageIndex) -> UIViewController? {
+    let vc = viewControllers[index] as? CategorySectionViewController
+
+    vc?.sectionURL = Category.allCases[index].description
+
+    return vc
+}
+```
+
+- 전달받은 URL Section 배열을 통해 API 호출
+
+```swift
+func fetchData() {
+
+		for urlString in **sectionURL** {
+				AF.request(URL.categoryURL(urlString: urlString), method: .get)
+				...
+```
+ 
+</div>
+</details>
+
+<details>
+<summary>API 콜수 제한으로 인해 날짜별로 Realm에 List로 저장</summary>
+
+ <aside>
+👉 API에서 제공하는 콜수 제한이 낮다. 그래서 서버와의 통신으로 인한 비용 발생 문제를 해결하기 위해 Realm에 데이터를 저장하고, 한번 불러온 데이터는 API 통신없이 갱신할 수 있도록 !!
+
+</aside>
+
+API 제한
+
+- **Trending Topic: 100/day**
+- **Category: 1,000/month**
+
+---
+
+1. **Trending Topic와 Category 테이블 작성**
+
+[Overseas-News/RealmModel.swift at main · camosss/Overseas-News](https://github.com/camosss/Overseas-News/blob/main/OverseasNews/Model/RealmModel.swift)
+
+- Swift에서의 `Array` 와 Realm에서의 `List` 는 다르다.
+    - List에 바로 배열값을 넣어주면 오류가 발생하기 때문에, 저장할 값들을 타입으로 배열을 생성하고 해당 배열 요소를 모두 append하는 방식으로 구현
+
+```swift
+class TrendingModel: Object {
+    @Persisted var title: String
+    @Persisted var snippet: String
+    ...
+        
+    convenience init(title: String, snippet: String, ...) {
+        self.init()
+        self.title = title
+        self.snippet = snippet
+        ...
+    }
+}
+
+class SaveTrending: Object {
+    @Persisted var saveDate: String
+    @Persisted var trendingModels: List<TrendingModel>
+
+    convenience init(saveDate: String, **trendingModels: [TrendingModel]**) {
+        self.init()
+        self.saveDate = saveDate
+        self.trendingModels.append(objectsIn: trendingModels)
+    }
+}
+```
+
+2. **ViewController에서 하루 기준으로 데이터 저장 및 불러오기**
+
+> Realm에 오늘날짜로 데이터가 저장 ❌    →   **API 콜, Realm에 저장**
+
+Realm에 오늘날짜로 데이터가 저장 ⭕️.   →   **저장된 데이터 불러오기**
+> 
+
+```swift
+if localRealm.objects(SaveTrending.self)
+							.filter("saveDate == '\(todayDateString)'").isEmpty {
+			// API 콜
+			// Realm 저장
+			try! self.localRealm.write {
+         let saveTrending: SaveTrending = .init(saveDate: self.todayDateString, trendingModels: tempTrendingTopic)
+         self.localRealm.add(saveTrending)
+      }
+
+} else {
+	// 불러오기
+	tasks = localRealm.objects(SaveTrending.self)
+										.filter("saveDate == '\(todayDateString)'")
+}
+```
+
+***List 배열에 해당 날짜별로 데이터 저장***
+
+ ![스크린샷 2021-12-23 오후 11 20 41](https://user-images.githubusercontent.com/93528918/149179917-6bb21da5-3dd5-42f4-94f7-38ad475a3f1b.png)
+
+</div>
+</details>
+
+<details>
+<summary>JSON의 Date값을 포맷 (오류 수정으로 1.0.1 업데이트)</summary>
+
+ > 아래와 같이 JSON Date값이 여러개로 받아오는데 제대로된 포맷을 처리하지 않아서 제대로된 날짜를 받아오지 못하고 옵셔널로 처리한 Date()값으로 저장됨
+> 
+
+```swift
+"2021-11-24T07:23:00.0000000Z"
+"2021-11-25T22:06:30.871"
+"2021-11-25T11:19:00"
+```
+
+1. `datePublished`의 값을 문자열로 받는데, `2021-11-25T11:19:00` 로 저장하기 위해 문자열을 자른다.
+
+```swift
+ex) datePublished = "2021-11-24T07:23:00.0000000Z"
+
+let datePublished = "\(json["value"][idx]["datePublished"])"
+
+**let endIndex: String.Index = datePublished.index(datePublished.startIndex, 
+																								 offsetBy: 18)
+let datePublish = String(datePublished[...endIndex])**
+
+// "2021-11-24T07:23:00"
+```
+ 
+ - 결과 화면
+ 
+</div>
+</details>
+
+<br />
+<br />
+<br />
+
 
 ## 🗞 버전
 
