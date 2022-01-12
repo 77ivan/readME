@@ -173,6 +173,8 @@ https://user-images.githubusercontent.com/93528918/149188506-9745fae7-3390-4f93-
 
 - **Endpoint.** 
 
+<br>
+	
 - URL, path, method, parameters 등의 데이터 객체.
 
 <details>
@@ -236,6 +238,8 @@ https://user-images.githubusercontent.com/93528918/149188506-9745fae7-3390-4f93-
     ```
     </div>
 </details>
+
+<br>
 
 - **Provider.** 
 
