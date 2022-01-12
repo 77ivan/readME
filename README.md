@@ -48,9 +48,7 @@
 | 진행사항 | 진행기간 |
 |:---:| :--- | 
 | 회원가입, 로그인 | 비밀번호 변경, 로그아웃 |
-| https://user-images.githubusercontent.com/93528918/149186739-361524ef-8019-489c-b1b1-92105b7e74a8.mov
- | https://user-images.githubusercontent.com/93528918/149186986-5618d555-af95-4d72-8161-f1ebafd12f5f.mov
- |
+| https://user-images.githubusercontent.com/93528918/149186739-361524ef-8019-489c-b1b1-92105b7e74a8.mov | https://userimages.githubusercontent.com/93528918/149186986-5618d555-af95-4d72-8161-f1ebafd12f5f.mov |
 
  
 
