@@ -1,9 +1,6 @@
 
 ## 새싹 커뮤니티
 
-
-<br>
-
 ![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
 ![Badge](https://img.shields.io/badge/iOS-13.0-green)
 ![Badge](https://img.shields.io/badge/Swift-5-orange)
