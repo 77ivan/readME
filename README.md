@@ -129,8 +129,9 @@ https://user-images.githubusercontent.com/93528918/149188506-9745fae7-3390-4f93-
 
 ## 🌱 구현 이슈
 
-<details>
-<summary>ViewModel에서 API 호출 로직 작성</summary>
+<br>
+
+### ViewModel에서 API 호출 로직 작성
 
 <br>
 
@@ -156,9 +157,7 @@ https://user-images.githubusercontent.com/93528918/149188506-9745fae7-3390-4f93-
 프로젝트에서 구성된 모든 패턴이 MVVM이라고 가정한다면, 일관적인 형태로 코드의 Flow가 흘러가는 것이 중요
 
 지금은 비즈니스 로직이 없는 뷰일지라도, 새로운 기능이 생기고, 유지보수를 하고, 여러 화면을 하나의 화면으로 합하게 될 경우 등을 고려해본다면 특정 화면만 API 호출이 뷰컨트롤러에서 이루어진다면 코드의 패턴을 파악하기가 타인이 바라볼 때는 어려울 수도 있음!
-	
-</div>
-</details>
+
 
 <br>
 
