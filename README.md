@@ -45,9 +45,26 @@
 
 ## 📌  출시 프로젝트 기획 항목
 
+
+
+* **Section I: Getting Started with RxSwift**
+  > | Ch# | Chapter Subject | Keyword |
+  > |:---:| :--- | :--- |
+  > |1| [Observables](https://www.notion.so/Observables-0d3b84af6e0540f6ac231aa9e6a28138) | Just, Of, From, Dispose, Create |
+  > |2| [Subjects](https://www.notion.so/Subject-c75ff57eecd549b5b22a1d35455fec56) | Publish Subject, Behavior Subject, Replay Subject, Observable 과 Subject 차이 |
+  > |3| [Implementing Photo Filter App Using RxSwift](https://www.notion.so/Implementing-Photo-Filter-App-Using-RxSwift-c8484db9fda447b1afb239ce4c7a855a) | [CameraFilter 코드](https://github.com/camosss/RxSwift/tree/main/CameraFilter) |
+
+<details>
+<summary>출시 프로젝트 기획 항목</summary>
+
 ![스크린샷 2021-12-04 오후 4 36 46](https://user-images.githubusercontent.com/74236080/144701789-fa1198e4-0373-4c82-8be7-5921f2074c73.png)
 
 ![스크린샷 2021-12-04 오후 4 37 09](https://user-images.githubusercontent.com/74236080/144701790-72d72d18-459f-4568-8603-30263bf6e286.png)
+  
+</div>
+</details>
+
+
 
 
 <br />
