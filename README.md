@@ -169,11 +169,14 @@ https://user-images.githubusercontent.com/93528918/149188506-9745fae7-3390-4f93-
 	
 ### Network의 핵심 모듈
 
-**Endpoint.** 
+<br>
+
+- **Endpoint.** 
 
 - URL, path, method, parameters 등의 데이터 객체.
 
-- **코드**
+<details>
+<summary>Endpoint 코드</summary>
     
     ```swift
     import Foundation
@@ -231,14 +234,18 @@ https://user-images.githubusercontent.com/93528918/149188506-9745fae7-3390-4f93-
         }
     }
     ```
-    
+    </div>
+</details>
 
-**Provider.** 
+- **Provider.** 
+
+<br>
 
 - URLSession, DataTask를 이용하여 Network호출이 이루어 지는 곳.
 - Response의 타입을 알아야 제네릭을 적용할 수 있는데, 여기서 Endpoint 객체 하나만 넘기면 따로 request할 때 Response 타입을 넘기지 않아도 되게끔 설계.
 
-- **코드**
+<details>
+<summary>Provider 코드</summary>
     
     ```swift
     import Foundation
@@ -275,7 +282,8 @@ https://user-images.githubusercontent.com/93528918/149188506-9745fae7-3390-4f93-
         }
     }
     ```
-	
+	    </div>
+</details>
 </div>
 </details>
 
