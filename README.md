@@ -33,6 +33,7 @@
 - 검색을 통해 원하는 주제의 기사를 찾을 수 있어요.
 - 마음에 드는 기사를 공유해보세요 !
 
+<br />
 
 <a href="https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397
 "><img src="https://www.atrinh.com/list/images/download.svg"></a>
