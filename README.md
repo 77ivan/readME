@@ -5,6 +5,14 @@
 
 <br>
 
+**해외 뉴스로 세상을 바라보는 시야를 넓히고, 영어 공부까지 !**
+
+- 현재 해외에서 인기 급상승중인 주제와 카테고리별 기사들의 목록을 볼 수 있어요.
+- 검색을 통해 원하는 주제의 기사를 찾을 수 있어요.
+- 마음에 드는 기사를 공유해보세요 !
+
+<br>
+
 ![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
 ![Badge](https://img.shields.io/badge/iOS-13.0-green)
 ![Badge](https://img.shields.io/badge/Swift-5-orange)
@@ -31,13 +39,7 @@
 
 <br>
 
-**해외 뉴스로 세상을 바라보는 시야를 넓히고, 영어 공부까지 !**
 
-- 현재 해외에서 인기 급상승중인 주제와 카테고리별 기사들의 목록을 볼 수 있어요.
-- 검색을 통해 원하는 주제의 기사를 찾을 수 있어요.
-- 마음에 드는 기사를 공유해보세요 !
-
-<br>
 
 <a href="https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397
 "><img src="https://www.atrinh.com/list/images/download.svg"></a>
