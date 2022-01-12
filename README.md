@@ -71,8 +71,9 @@
 </div>
 </details>
 
+<br />
 
-## 🗞  View 구성 및 소개
+## 🗞 View 구성 및 소개
 
 **Trending Topic.**
 
@@ -80,16 +81,28 @@
 - **WaterfallLayout**을 적용하여 트렌드한 주제의 기사 데이터를 받아와서 Collection View 구성
 - Cell을 선택하면 **SlideView**에 각각의 기사 데이터 구성 및 원본 기사 웹뷰로 이동
 
+<details>
+<summary>시연 영상</summary>
+ 
+</div>
+</details>
+
+<br />
+
 **Search.**
 
 - **SkeletonView** 라이브러리를 통해 검색한 데이터를 받아오는 동안 로딩 View 구현
 - Cell을 선택하면 해당 기사 본문 페이지로 이동
+
+<br />
 
 **Category.**
 
 - **Tabman, Pageboy** 라이브러리를 통해 카테고리 별 탭페이징 구현
 - **하나의 View, Cell, Controller 재사용**
 - Section별 하단에 **전체보기 버튼**을 추가하여, Section별로 받아오는 데이터 전체를 표시하는 View로 이동
+
+<br />
 
 **기사 본문.**
 
@@ -99,7 +112,7 @@
 
 <br />
 
-## 🗞  버전
+## 🗞 버전
 
 > [v1.0.1](https://www.notion.so/v1-0-1-2285257857644e7b8916099eb816309a)
 
