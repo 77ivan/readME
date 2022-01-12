@@ -1,5 +1,5 @@
 
-# 영자 신문을 앱으로 간편하게, 해외뉴우스<img src = "https://user-images.githubusercontent.com/93528918/149170874-1428e755-5919-4f06-a153-631c55d4e09e.png" width = 100  align = right> 
+# 영자 신문을 앱으로 간편하게, 해외뉴우스<img src = "https://user-images.githubusercontent.com/93528918/149170874-1428e755-5919-4f06-a153-631c55d4e09e.png" width = 80  align = right> 
 
 <img width="1534" alt="12" src="https://user-images.githubusercontent.com/74236080/143826875-c12c807d-0b03-4c25-8e97-38b79119164d.png">
 
