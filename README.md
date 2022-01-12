@@ -1,4 +1,37 @@
 
+## 새싹 커뮤니티
+
+
+<br>
+
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
+![Badge](https://img.shields.io/badge/iOS-13.0-green)
+![Badge](https://img.shields.io/badge/Swift-5-orange)
+![Badge](https://img.shields.io/badge/IQKeyboardManager-6.5.9-important)
+![Badge](https://img.shields.io/badge/SnapKit-5.0.1-blue)
+![Badge](https://img.shields.io/badge/Toast-5.0.1-yellow)
+
+<br>
+
+
+- 서버와 iOS 클라이언트 통신 (iOS 클라이언트 개발 담당)
+
+- 회원가입/로그인 후 게시글을 작성/수정/삭제하고, 게시글에 대한 댓글을 작성/수정/삭제할 수 있는 앱
+
+
+<br>
+
+🌱 기간: 21.12.31 - 22.01.06  **(총 5일)**
+
+<br>
+
+🌱 [시연 영상 및 일정별 기록](https://www.notion.so/Community-App-7967d96e14c447109cf853ef3495654f)
+
+
+
+
+
+
 # 영자 신문을 앱으로 간편하게, 해외뉴우스<img src = "https://user-images.githubusercontent.com/93528918/149170874-1428e755-5919-4f06-a153-631c55d4e09e.png" width = 80  align = right> 
 
 <img width="1534" alt="12" src="https://user-images.githubusercontent.com/74236080/143826875-c12c807d-0b03-4c25-8e97-38b79119164d.png">
