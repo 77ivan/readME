@@ -17,6 +17,7 @@
 ![Badge](https://img.shields.io/badge/SkeletonView-1.26.0-ff69b4)
 ![Badge](https://img.shields.io/badge/CHTCollectionViewWaterfallLayout-0.9.19-lightgrey)
 
+<br>
 
 <img width="1534" alt="12" src="https://user-images.githubusercontent.com/74236080/143826875-c12c807d-0b03-4c25-8e97-38b79119164d.png">
 
