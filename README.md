@@ -45,14 +45,14 @@
  
 <br>
 
- 회원가입, 로그인
+ - 회원가입, 로그인
 
 https://user-images.githubusercontent.com/93528918/149186739-361524ef-8019-489c-b1b1-92105b7e74a8.mov
 
 <br>
 
 
-비밀번호 변경, 로그아웃
+- 비밀번호 변경, 로그아웃
 	
 https://user-images.githubusercontent.com/93528918/149187957-8a460709-5f88-4096-b4b5-b83d5f0ce201.mov
 
@@ -63,24 +63,24 @@ https://user-images.githubusercontent.com/93528918/149187957-8a460709-5f88-4096-
 <br>
 
 <details>
-<summary>Auth</summary>
+<summary>Post</summary>
  
 <br>
 
-Post 작성
+- Post 작성
 	
 https://user-images.githubusercontent.com/93528918/149188233-e25d92b6-3922-4557-88dd-2b47ab02c072.mov
 
 
 <br>
 
-Post 수정
+- Post 수정
 
 https://user-images.githubusercontent.com/93528918/149188242-bf08da41-7dc4-435c-a16e-3f0b11e18cf8.mov
 
 <br>
 
-Post 삭제
+- Post 삭제
 
 https://user-images.githubusercontent.com/93528918/149188255-edfcd8f4-e2ef-409e-8583-0791c1463352.mov
 
@@ -91,11 +91,11 @@ https://user-images.githubusercontent.com/93528918/149188255-edfcd8f4-e2ef-409e-
 <br>
 
 <details>
-<summary>Auth</summary>
+<summary>Comment</summary>
  
 <br>
 
-Comment 작성
+- Comment 작성
 	
 https://user-images.githubusercontent.com/93528918/149188487-cac62e0f-c75a-44da-bdfe-9153352dd45d.mov
 
@@ -103,7 +103,7 @@ https://user-images.githubusercontent.com/93528918/149188487-cac62e0f-c75a-44da-
 
 <br>
 
-Comment 수정
+- Comment 수정
 
 
 https://user-images.githubusercontent.com/93528918/149188496-71a26733-ba54-48dc-b5f8-c10df0828fbf.mov
@@ -112,7 +112,7 @@ https://user-images.githubusercontent.com/93528918/149188496-71a26733-ba54-48dc-
 
 <br>
 
-Comment 삭제
+- Comment 삭제
 
 
 https://user-images.githubusercontent.com/93528918/149188506-9745fae7-3390-4f93-a84f-576922f460ae.mov
