@@ -57,14 +57,71 @@ https://user-images.githubusercontent.com/93528918/149186739-361524ef-8019-489c-
 https://user-images.githubusercontent.com/93528918/149187957-8a460709-5f88-4096-b4b5-b83d5f0ce201.mov
 
 
+</div>
+</details>
+
+<br>
+
+<details>
+<summary>Auth</summary>
+ 
+<br>
+
+Post 작성
+	
+https://user-images.githubusercontent.com/93528918/149188233-e25d92b6-3922-4557-88dd-2b47ab02c072.mov
+
+
+<br>
+
+Post 수정
+
+https://user-images.githubusercontent.com/93528918/149188242-bf08da41-7dc4-435c-a16e-3f0b11e18cf8.mov
+
+<br>
+
+Post 삭제
+
+https://user-images.githubusercontent.com/93528918/149188255-edfcd8f4-e2ef-409e-8583-0791c1463352.mov
+
 
 </div>
 </details>
 
 <br>
 
+<details>
+<summary>Auth</summary>
+ 
+<br>
 
-🌱 [시연 영상 및 일정별 기록](https://www.notion.so/Community-App-7967d96e14c447109cf853ef3495654f)
+Comment 작성
+	
+https://user-images.githubusercontent.com/93528918/149188487-cac62e0f-c75a-44da-bdfe-9153352dd45d.mov
+
+
+
+<br>
+
+Comment 수정
+
+
+https://user-images.githubusercontent.com/93528918/149188496-71a26733-ba54-48dc-b5f8-c10df0828fbf.mov
+
+
+
+<br>
+
+Comment 삭제
+
+
+https://user-images.githubusercontent.com/93528918/149188506-9745fae7-3390-4f93-a84f-576922f460ae.mov
+
+
+
+</div>
+</details>
+
 
 
 <br>
