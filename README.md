@@ -77,6 +77,7 @@
 - 검색을 통해 원하는 주제의 기사를 찾을 수 있어요.
 - 마음에 드는 기사를 공유해보세요 !
 
+<br>
 
 <details>
 <summary>Trending Topic</summary>
