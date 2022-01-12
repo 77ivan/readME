@@ -83,7 +83,7 @@
 
 <details>
 <summary>시연 영상</summary>
- 
+ https://user-images.githubusercontent.com/93528918/149177563-49d2cd84-64b0-4c40-9401-3d7f96055d16.mov
 </div>
 </details>
 
@@ -94,6 +94,12 @@
 - **SkeletonView** 라이브러리를 통해 검색한 데이터를 받아오는 동안 로딩 View 구현
 - Cell을 선택하면 해당 기사 본문 페이지로 이동
 
+<details>
+<summary>시연 영상</summary>
+https://user-images.githubusercontent.com/93528918/149177637-8c0916cb-58c4-432a-baa9-0d435888c145.mov
+</div>
+</details>
+
 <br />
 
 **Category.**
@@ -102,12 +108,24 @@
 - **하나의 View, Cell, Controller 재사용**
 - Section별 하단에 **전체보기 버튼**을 추가하여, Section별로 받아오는 데이터 전체를 표시하는 View로 이동
 
+<details>
+<summary>시연 영상</summary>
+https://user-images.githubusercontent.com/93528918/149177675-c867cd6e-98fe-4de1-9d57-4abaad2c3bd3.mov
+</div>
+</details>
+
 <br />
 
 **기사 본문.**
 
 - **ScrollView**를 적용하여 각 기사의 본문 길이만큼 동적인 높이 조정
 
+<details>
+<summary>시연 영상</summary>
+ https://user-images.githubusercontent.com/93528918/149177687-7447a7a6-8bfc-4e18-ac5e-23907748dafd.mov
+
+</div>
+</details>
 
 
 <br />
