@@ -84,9 +84,13 @@
 
 <details>
 <summary>시연 영상</summary>
- https://user-images.githubusercontent.com/93528918/149177563-49d2cd84-64b0-4c40-9401-3d7f96055d16.mov
-</div>
+ 
+https://user-images.githubusercontent.com/93528918/149177563-49d2cd84-64b0-4c40-9401-3d7f96055d16.mov
+
+ </div>
 </details>
+
+ https://user-images.githubusercontent.com/93528918/149177563-49d2cd84-64b0-4c40-9401-3d7f96055d16.mov
 
 <br />
 
