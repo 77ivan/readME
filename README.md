@@ -16,18 +16,24 @@
 ✓ 기간: 21.11.16 ~ 21.11.27
 ``` 
 
-https://img.shields.io/badge/Xcode-13.0-blue
-
-https://img.shields.io/badge/iOS-13.0-green
+https://img.shields.io/badge/Xcode-13.0-blue https://img.shields.io/badge/iOS-13.0-green
 
 https://img.shields.io/badge/Swift-5-orange
+
 https://img.shields.io/badge/Alamofire-5.4.4-red
+
 https://img.shields.io/badge/SwiftyJSON-5.0.0-important
+
 https://img.shields.io/badge/Kingfisher-7.1.2-yellowgreen
+
 https://img.shields.io/badge/Realm-10.19.0-red
+
 https://img.shields.io/badge/SnapKit-5.0.1-blue
+
 https://img.shields.io/badge/Pageboy-3.6.2-success
+
 https://img.shields.io/badge/Tabman-2.11.1-blueviolet
+
 https://img.shields.io/badge/Toast-5.0.1-yellow
  
     
