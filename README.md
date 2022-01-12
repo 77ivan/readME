@@ -16,6 +16,12 @@
 ✓ 기간: 21.11.16 ~ 21.11.27
 ``` 
 
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue)![Badge](https://img.shields.io/badge/iOS-13.0-green)
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
 ![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
 
 https://img.shields.io/badge/Xcode-13.0-blue https://img.shields.io/badge/iOS-13.0-green
