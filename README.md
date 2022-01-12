@@ -339,19 +339,16 @@ Realm에 오늘날짜로 데이터가 저장 ⭕️.   →   **저장된 데이�
 <br />
 	
 ```swift
-if localRealm.objects(SaveTrending.self)
-							.filter("saveDate == '\(todayDateString)'").isEmpty {
-			// API 콜
-			// Realm 저장
-			try! self.localRealm.write {
+if localRealm.objects(SaveTrending.self).filter("saveDate == '\(todayDateString)'").isEmpty {
+	// API 콜
+	// Realm 저장
+     try! self.localRealm.write {
          let saveTrending: SaveTrending = .init(saveDate: self.todayDateString, trendingModels: tempTrendingTopic)
          self.localRealm.add(saveTrending)
-      }
-
+     }
 } else {
 	// 불러오기
-	tasks = localRealm.objects(SaveTrending.self)
-										.filter("saveDate == '\(todayDateString)'")
+	tasks = localRealm.objects(SaveTrending.self).filter("saveDate == '\(todayDateString)'")
 }
 ```
 
@@ -399,6 +396,49 @@ let endIndex: String.Index = datePublished.index(datePublished.startIndex, offse
 let datePublish = String(datePublished[...endIndex])
 
 // "2021-11-24T07:23:00"
+```
+	
+	
+2. `"2021-11-24T07:23:00"` 값을 Date로 포맷해서 Realm에 저장
+
+<br />
+<br />
+
+```swift
+extension String {
+    func toDate(stringValue: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = **"yyyy-MM-dd'T'HH:mm:ss"**
+        return dateFormatter.date(from: stringValue)
+    }
+}
+
+...
+
+TrendingModel(title: title, ...datePublished: **datePublished.toDate(stringValue: datePublish)** ?? Date())
+
+// 2021-11-24 07:23:00 +0000
+```
+
+<br />
+
+	
+3. View에 String으로 포맷해서 띄우기
+
+<br />
+
+```swift
+extension Date {
+    func toString(dateValue: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = **"yyyy-MM-dd HH:mm:ss"**
+        return dateFormatter.string(from: dateValue)
+    }
+}
+
+---
+
+dateLabel.text = row?.**datePublished.toString(dateValue: row?.datePublished** ?? Date())
 ```
 	
 <br />
