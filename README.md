@@ -151,6 +151,8 @@ https://user-images.githubusercontent.com/93528918/149177687-7447a7a6-8bfc-4e18-
 
 ## 🗞 구현 이슈
 
+<br />
+
 <details>
 <summary>카테고리 ViewController 재사용</summary>
 
@@ -159,6 +161,8 @@ https://user-images.githubusercontent.com/93528918/149177687-7447a7a6-8bfc-4e18-
  카테고리 View는 `Tabman` 라이브러리를 사용해서 탭페이징 방식으로 구현
 
 라이브러리 사용법을 보면 **페이지별 ViewController**을 배열로 담고, ViewController의 수만큼 탭이 생성
+
+<br />
 
 ```swift
 private var viewControllers = [UIViewController(), UIViewController() ・・・]
@@ -169,11 +173,18 @@ func numberOfViewControllers(in pageboyViewController: PageboyViewController) ->
 }
 ```
 
+<br />
+
 > 카테고리별 View 디자인은 같고 데이터만 다르게 들어가기 때문에 하나의 ViewController를 재사용
 **하나의 ViewController에 각각의 메모리에 올라간 다른 ViewController를 사용하는 것!**
 > 
 
+	
+<br />
+	
 1. **UIViewController 배열을 생성하여 필요한 페이지만큼을 배열에 추가**
+
+<br />
 
 ```swift
 // UIViewController 배열을 생성
@@ -192,10 +203,16 @@ viewControllers.append(sportsVC)
 viewControllers.append(scienceTechnologyVC)
 ```
 
+<br />
+	
 2. **PageView의 해당 ViewController를 index에 접근하는 메서드를 통해 데이터를 넘겨준다.**
 
+<br />
+	
 - Category를 enum 타입으로 각 페이지의 Section을 담아서 선언
 
+<br />
+	
 ```swift
 enum Category: Int, CaseIterable {
     case news
@@ -214,8 +231,12 @@ enum Category: Int, CaseIterable {
 }
 ```
 
+<br />
+	
 - ViewController에 Section배열을 넘겨준다.
 
+<br />
+	
 ```swift
 func viewController(for pageboyViewController: PageboyViewController, at **index**: PageboyViewController.PageIndex) -> UIViewController? {
     let vc = viewControllers[index] as? CategorySectionViewController
@@ -226,8 +247,12 @@ func viewController(for pageboyViewController: PageboyViewController, at **index
 }
 ```
 
+<br />
+	
 - 전달받은 URL Section 배열을 통해 API 호출
 
+<br />
+	
 ```swift
 func fetchData() {
 
@@ -236,6 +261,8 @@ func fetchData() {
 				...
 ```
  
+<br />
+	
 </div>
 </details>
 
