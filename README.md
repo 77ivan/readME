@@ -1,7 +1,4 @@
 
-<img width="1534" alt="12" src="https://user-images.githubusercontent.com/74236080/143826875-c12c807d-0b03-4c25-8e97-38b79119164d.png">
-
-
 ## 영자 신문을 앱으로 간편하게, 해외뉴우스
 
 해외 뉴스로 세상을 바라보는 시야를 넓히고, 영어 공부까지 !
@@ -10,27 +7,33 @@
 - 검색을 통해 원하는 주제의 기사를 찾을 수 있어요.
 - 마음에 드는 기사를 공유해보세요 !
 
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
+![Badge](https://img.shields.io/badge/iOS-13.0-green)
+![Badge](https://img.shields.io/badge/Swift-5-orange)
+
+![Badge](https://img.shields.io/badge/Realm-10.19.0-red)
+![Badge](https://img.shields.io/badge/Alamofire-5.4.4-red)
+![Badge](https://img.shields.io/badge/SwiftyJSON-5.0.0-important)
+![Badge](https://img.shields.io/badge/Kingfisher-7.1.2-yellowgreen)
+
+![Badge](https://img.shields.io/badge/SnapKit-5.0.1-blue)
+![Badge](https://img.shields.io/badge/Pageboy-3.6.2-success)
+![Badge](https://img.shields.io/badge/Tabman-2.11.1-blueviolet)
+![Badge](https://img.shields.io/badge/Toast-5.0.1-yellow)
+![Badge](https://img.shields.io/badge/SkeletonView-1.26.0-ff69b4)
+![Badge](https://img.shields.io/badge/CHTCollectionViewWaterfallLayout-0.9.19-lightgrey)
+
+
+<img width="1534" alt="12" src="https://user-images.githubusercontent.com/74236080/143826875-c12c807d-0b03-4c25-8e97-38b79119164d.png">
+
 ```swift
 ✓ 개인 프로젝트
 ✓ iOS
 ✓ 기간: 21.11.16 ~ 21.11.27
 ``` 
 
-![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
-![Badge](https://img.shields.io/badge/iOS-13.0-green)
-![Badge](https://img.shields.io/badge/Swift-5-orange)
-
-![Badge](https://img.shields.io/badge/Alamofire-5.4.4-red)
-![Badge](https://img.shields.io/badge/SwiftyJSON-5.0.0-important)
-![Badge](https://img.shields.io/badge/Kingfisher-7.1.2-yellowgreen)
-![Badge](https://img.shields.io/badge/Realm-10.19.0-red)
-![Badge](https://img.shields.io/badge/SnapKit-5.0.1-blue)
-![Badge](https://img.shields.io/badge/Pageboy-3.6.2-success)
-![Badge](https://img.shields.io/badge/Tabman-2.11.1-blueviolet)
-![Badge](https://img.shields.io/badge/Toast-5.0.1-yellow)
 
 
-    
 <a href="https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397
 "><img src="https://www.atrinh.com/list/images/download.svg"></a>
 
