@@ -76,14 +76,13 @@
 
 ## 🗞 View 구성 및 소개
 
-**Trending Topic.**
 
+<details>
+<summary>Trending Topic</summary>
+ 
 - **SkeletonView** 라이브러리를 통해 로딩 View 구현
 - **WaterfallLayout**을 적용하여 트렌드한 주제의 기사 데이터를 받아와서 Collection View 구성
 - Cell을 선택하면 **SlideView**에 각각의 기사 데이터 구성 및 원본 기사 웹뷰로 이동
-
-<details>
-<summary>시연 영상</summary>
  
 https://user-images.githubusercontent.com/93528918/149177563-49d2cd84-64b0-4c40-9401-3d7f96055d16.mov
 
