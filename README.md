@@ -255,10 +255,9 @@ func viewController(for pageboyViewController: PageboyViewController, at **index
 	
 ```swift
 func fetchData() {
-
-		for urlString in **sectionURL** {
-				AF.request(URL.categoryURL(urlString: urlString), method: .get)
-				...
+	for urlString in **sectionURL** {
+		AF.request(URL.categoryURL(urlString: urlString), method: .get)
+		...
 ```
  
 <br />
@@ -266,14 +265,20 @@ func fetchData() {
 </div>
 </details>
 
+<br />
+	
 <details>
 <summary>API 콜수 제한으로 인해 날짜별로 Realm에 List로 저장</summary>
 
+<br />
+	
  <aside>
 👉 API에서 제공하는 콜수 제한이 낮다. 그래서 서버와의 통신으로 인한 비용 발생 문제를 해결하기 위해 Realm에 데이터를 저장하고, 한번 불러온 데이터는 API 통신없이 갱신할 수 있도록 !!
 
 </aside>
 
+<br />
+	
 API 제한
 
 - **Trending Topic: 100/day**
@@ -281,13 +286,19 @@ API 제한
 
 ---
 
+<br />
+	
 1. **Trending Topic와 Category 테이블 작성**
 
 [Overseas-News/RealmModel.swift at main · camosss/Overseas-News](https://github.com/camosss/Overseas-News/blob/main/OverseasNews/Model/RealmModel.swift)
 
+<br />
+	
 - Swift에서의 `Array` 와 Realm에서의 `List` 는 다르다.
     - List에 바로 배열값을 넣어주면 오류가 발생하기 때문에, 저장할 값들을 타입으로 배열을 생성하고 해당 배열 요소를 모두 append하는 방식으로 구현
 
+<br />
+	
 ```swift
 class TrendingModel: Object {
     @Persisted var title: String
@@ -313,14 +324,20 @@ class SaveTrending: Object {
     }
 }
 ```
-
+	
+<br />
+	
 2. **ViewController에서 하루 기준으로 데이터 저장 및 불러오기**
 
+<br />
+	
 > Realm에 오늘날짜로 데이터가 저장 ❌    →   **API 콜, Realm에 저장**
 
 Realm에 오늘날짜로 데이터가 저장 ⭕️.   →   **저장된 데이터 불러오기**
 > 
 
+<br />
+	
 ```swift
 if localRealm.objects(SaveTrending.self)
 							.filter("saveDate == '\(todayDateString)'").isEmpty {
@@ -338,40 +355,54 @@ if localRealm.objects(SaveTrending.self)
 }
 ```
 
+<br />
+	
 ***List 배열에 해당 날짜별로 데이터 저장***
 
  ![스크린샷 2021-12-23 오후 11 20 41](https://user-images.githubusercontent.com/93528918/149179917-6bb21da5-3dd5-42f4-94f7-38ad475a3f1b.png)
 
+<br />
+	
 </div>
 </details>
 
+<br />
+	
 <details>
 <summary>JSON의 Date값을 포맷 (오류 수정으로 1.0.1 업데이트)</summary>
 
+<br />
+	
  > 아래와 같이 JSON Date값이 여러개로 받아오는데 제대로된 포맷을 처리하지 않아서 제대로된 날짜를 받아오지 못하고 옵셔널로 처리한 Date()값으로 저장됨
 > 
 
+<br />
+	
 ```swift
 "2021-11-24T07:23:00.0000000Z"
 "2021-11-25T22:06:30.871"
 "2021-11-25T11:19:00"
 ```
 
+<br />
+	
 1. `datePublished`의 값을 문자열로 받는데, `2021-11-25T11:19:00` 로 저장하기 위해 문자열을 자른다.
 
+<br />
+	
 ```swift
 ex) datePublished = "2021-11-24T07:23:00.0000000Z"
 
 let datePublished = "\(json["value"][idx]["datePublished"])"
 
-**let endIndex: String.Index = datePublished.index(datePublished.startIndex, 
-																								 offsetBy: 18)
-let datePublish = String(datePublished[...endIndex])**
+let endIndex: String.Index = datePublished.index(datePublished.startIndex, offsetBy: 18)
+let datePublish = String(datePublished[...endIndex])
 
 // "2021-11-24T07:23:00"
 ```
+	
+<br />
  
- - 결과 화면
  
 </div>
 </details>
