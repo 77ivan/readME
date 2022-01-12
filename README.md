@@ -57,7 +57,8 @@ https://user-images.githubusercontent.com/93528918/149186739-361524ef-8019-489c-
 https://userimages.githubusercontent.com/93528918/149186986-5618d555-af95-4d72-8161-f1ebafd12f5f.mov
 
 
-
+</div>
+</details>
 
 <br>
 
@@ -65,7 +66,9 @@ https://userimages.githubusercontent.com/93528918/149186986-5618d555-af95-4d72-8
 🌱 [시연 영상 및 일정별 기록](https://www.notion.so/Community-App-7967d96e14c447109cf853ef3495654f)
 
 
-
+<br>
+<br>
+<br>
 
 
 
