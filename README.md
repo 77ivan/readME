@@ -72,6 +72,7 @@
 </details>
 
 <br />
+<br />
 
 ## 🗞 View 구성 및 소개
 
@@ -128,6 +129,7 @@ https://user-images.githubusercontent.com/93528918/149177675-c867cd6e-98fe-4de1-
 </details>
 
 
+<br />
 <br />
 
 ## 🗞 버전
