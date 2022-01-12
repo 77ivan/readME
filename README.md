@@ -7,6 +7,8 @@
 - 검색을 통해 원하는 주제의 기사를 찾을 수 있어요.
 - 마음에 드는 기사를 공유해보세요 !
 
+<br>
+
 ![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
 ![Badge](https://img.shields.io/badge/iOS-13.0-green)
 ![Badge](https://img.shields.io/badge/Swift-5-orange)
