@@ -1,6 +1,10 @@
 
 # 영자 신문을 앱으로 간편하게, 해외뉴우스<img src = "https://user-images.githubusercontent.com/93528918/149170874-1428e755-5919-4f06-a153-631c55d4e09e.png" width = 100  align = right> 
 
+<img width="1534" alt="12" src="https://user-images.githubusercontent.com/74236080/143826875-c12c807d-0b03-4c25-8e97-38b79119164d.png">
+
+<br>
+
 ![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
 ![Badge](https://img.shields.io/badge/iOS-13.0-green)
 ![Badge](https://img.shields.io/badge/Swift-5-orange)
@@ -19,9 +23,6 @@
 
 <br>
 
-<img width="1534" alt="12" src="https://user-images.githubusercontent.com/74236080/143826875-c12c807d-0b03-4c25-8e97-38b79119164d.png">
-
-<br>
 
 ```sh
 구성: iOS 1명
