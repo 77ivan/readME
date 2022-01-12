@@ -16,34 +16,19 @@
 ✓ 기간: 21.11.16 ~ 21.11.27
 ``` 
 
-![Badge](https://img.shields.io/badge/Xcode-13.0-blue) ![Badge](https://img.shields.io/badge/iOS-13.0-green)
-![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
-![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
-![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
-![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
-![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
-![Badge](https://img.shields.io/badge/Xcode-13.0-blue)
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
+![Badge](https://img.shields.io/badge/iOS-13.0-green)
+![Badge](https://img.shields.io/badge/Swift-5-orange)
+![Badge](https://img.shields.io/badge/Alamofire-5.4.4-red)
+![Badge](https://img.shields.io/badge/SwiftyJSON-5.0.0-important)
+![Badge](https://img.shields.io/badge/Kingfisher-7.1.2-yellowgreen)
+![Badge](https://img.shields.io/badge/Realm-10.19.0-red)
+![Badge](https://img.shields.io/badge/SnapKit-5.0.1-blue)
+![Badge](https://img.shields.io/badge/Pageboy-3.6.2-success)
+![Badge](https://img.shields.io/badge/Tabman-2.11.1-blueviolet)
+![Badge](https://img.shields.io/badge/Toast-5.0.1-yellow)
 
-https://img.shields.io/badge/Xcode-13.0-blue https://img.shields.io/badge/iOS-13.0-green
 
-https://img.shields.io/badge/Swift-5-orange
-
-https://img.shields.io/badge/Alamofire-5.4.4-red
-
-https://img.shields.io/badge/SwiftyJSON-5.0.0-important
-
-https://img.shields.io/badge/Kingfisher-7.1.2-yellowgreen
-
-https://img.shields.io/badge/Realm-10.19.0-red
-
-https://img.shields.io/badge/SnapKit-5.0.1-blue
-
-https://img.shields.io/badge/Pageboy-3.6.2-success
-
-https://img.shields.io/badge/Tabman-2.11.1-blueviolet
-
-https://img.shields.io/badge/Toast-5.0.1-yellow
- 
     
 <a href="https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397
 "><img src="https://www.atrinh.com/list/images/download.svg"></a>
