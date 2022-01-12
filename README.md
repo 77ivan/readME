@@ -11,6 +11,13 @@
 - 검색을 통해 원하는 주제의 기사를 찾을 수 있어요.
 - 마음에 드는 기사를 공유해보세요 !
 
+
+```sh
+구성: iOS 1명
+기간: 21.11.16 ~ 21.11.27 (2주)
+```
+
+
 <br>
 
 ![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
@@ -29,13 +36,7 @@
 ![Badge](https://img.shields.io/badge/SkeletonView-1.26.0-ff69b4)
 ![Badge](https://img.shields.io/badge/CHTCollectionViewWaterfallLayout-0.9.19-lightgrey)
 
-<br>
 
-
-```sh
-구성: iOS 1명
-기간: 21.11.16 ~ 21.11.27 (2주)
-```
 
 <br>
 
@@ -84,6 +85,8 @@
 - **WaterfallLayout**을 적용하여 트렌드한 주제의 기사 데이터를 받아와서 Collection View 구성
 - Cell을 선택하면 **SlideView**에 각각의 기사 데이터 구성 및 원본 기사 웹뷰로 이동
  
+ <br>
+
 https://user-images.githubusercontent.com/93528918/149177563-49d2cd84-64b0-4c40-9401-3d7f96055d16.mov
 
  </div>
@@ -99,6 +102,8 @@ https://user-images.githubusercontent.com/93528918/149177563-49d2cd84-64b0-4c40-
 - **SkeletonView** 라이브러리를 통해 검색한 데이터를 받아오는 동안 로딩 View 구현
 - Cell을 선택하면 해당 기사 본문 페이지로 이동
  
+ <br>
+
 https://user-images.githubusercontent.com/93528918/149177637-8c0916cb-58c4-432a-baa9-0d435888c145.mov
 
 </div>
@@ -114,6 +119,8 @@ https://user-images.githubusercontent.com/93528918/149177637-8c0916cb-58c4-432a-
 - **하나의 View, Cell, Controller 재사용**
 - Section별 하단에 **전체보기 버튼**을 추가하여, Section별로 받아오는 데이터 전체를 표시하는 View로 이동
  
+ <br>
+
 https://user-images.githubusercontent.com/93528918/149177675-c867cd6e-98fe-4de1-9d57-4abaad2c3bd3.mov
 
 </div>
@@ -126,6 +133,8 @@ https://user-images.githubusercontent.com/93528918/149177675-c867cd6e-98fe-4de1-
 <summary>기사 본문</summary>
  
  - **ScrollView**를 적용하여 각 기사의 본문 길이만큼 동적인 높이 조정
+
+ <br>
 
 https://user-images.githubusercontent.com/93528918/149177687-7447a7a6-8bfc-4e18-ac5e-23907748dafd.mov
 
