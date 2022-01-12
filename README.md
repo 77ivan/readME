@@ -83,6 +83,8 @@
 <details>
 <summary>Trending Topic</summary>
  
+<br>
+	
 - **SkeletonView** 라이브러리를 통해 로딩 View 구현
 - **WaterfallLayout**을 적용하여 트렌드한 주제의 기사 데이터를 받아와서 Collection View 구성
 - Cell을 선택하면 **SlideView**에 각각의 기사 데이터 구성 및 원본 기사 웹뷰로 이동
@@ -101,6 +103,8 @@ https://user-images.githubusercontent.com/93528918/149177563-49d2cd84-64b0-4c40-
 <details>
 <summary>Search</summary>
  
+<br>
+	
 - **SkeletonView** 라이브러리를 통해 검색한 데이터를 받아오는 동안 로딩 View 구현
 - Cell을 선택하면 해당 기사 본문 페이지로 이동
  
@@ -117,6 +121,8 @@ https://user-images.githubusercontent.com/93528918/149177637-8c0916cb-58c4-432a-
 <details>
 <summary>Category</summary>
 
+<br>
+	
 - **Tabman, Pageboy** 라이브러리를 통해 카테고리 별 탭페이징 구현
 - **하나의 View, Cell, Controller 재사용**
 - Section별 하단에 **전체보기 버튼**을 추가하여, Section별로 받아오는 데이터 전체를 표시하는 View로 이동
@@ -134,6 +140,8 @@ https://user-images.githubusercontent.com/93528918/149177675-c867cd6e-98fe-4de1-
 <details>
 <summary>기사 본문</summary>
  
+<br>
+	
  - **ScrollView**를 적용하여 각 기사의 본문 길이만큼 동적인 높이 조정
 
  <br>
