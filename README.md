@@ -43,19 +43,19 @@
 
 <br />
 
-## 📌  출시 프로젝트 기획 항목
+## 📌  기간별 일정
 
-
-
-* **Section I: Getting Started with RxSwift**
-  > | Ch# | Chapter Subject | Keyword |
+  > | 진행사항 | 진행기간 | 세부사항 |
   > |:---:| :--- | :--- |
-  > |1| [Observables](https://www.notion.so/Observables-0d3b84af6e0540f6ac231aa9e6a28138) | Just, Of, From, Dispose, Create |
-  > |2| [Subjects](https://www.notion.so/Subject-c75ff57eecd549b5b22a1d35455fec56) | Publish Subject, Behavior Subject, Replay Subject, Observable 과 Subject 차이 |
-  > |3| [Implementing Photo Filter App Using RxSwift](https://www.notion.so/Implementing-Photo-Filter-App-Using-RxSwift-c8484db9fda447b1afb239ce4c7a855a) | [CameraFilter 코드](https://github.com/camosss/RxSwift/tree/main/CameraFilter) |
+  > | 아이디어 기획 | 2021.11.16~21.11.17 | 기획서 작성, API 탐색 및 View 구상 |
+  > | UI 개발 | 2021.11.17~21.11.18 | 앱 전체적인 View 개발 |
+  > | 기능 개발 | 2021.11.18~21.11.26 | API 데이터 받아오기 및 전체적인 기능 개발  |
+  > | 앱 심사 제출 및 심사 | 2021.11.26~21.12.03 | 추수감사절 기간이라 지체됨 |
+ 
+
 
 <details>
-<summary>출시 프로젝트 기획 항목</summary>
+<summary>출시 프로젝트 세부 기획 항목</summary>
 
 ![스크린샷 2021-12-04 오후 4 36 46](https://user-images.githubusercontent.com/74236080/144701789-fa1198e4-0373-4c82-8be7-5921f2074c73.png)
 
