@@ -154,6 +154,8 @@ https://user-images.githubusercontent.com/93528918/149177687-7447a7a6-8bfc-4e18-
 <details>
 <summary>카테고리 ViewController 재사용</summary>
 
+	<br />
+
  카테고리 View는 `Tabman` 라이브러리를 사용해서 탭페이징 방식으로 구현
 
 라이브러리 사용법을 보면 **페이지별 ViewController**을 배열로 담고, ViewController의 수만큼 탭이 생성
