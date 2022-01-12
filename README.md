@@ -1,5 +1,5 @@
 
-## 영자 신문을 앱으로 간편하게, 해외뉴우스
+## 영자 신문을 앱으로 간편하게, 해외뉴우스<img src = "https://user-images.githubusercontent.com/93528918/145744691-32ae73ac-94de-429c-b5d5-5267ddd75bac.jpeg" width = 100  align = right> 
 
 해외 뉴스로 세상을 바라보는 시야를 넓히고, 영어 공부까지 !
 
