@@ -1,5 +1,5 @@
 
-## 새싹 커뮤니티
+## 🌱 새싹 커뮤니티
 
 ![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
 ![Badge](https://img.shields.io/badge/iOS-13.0-green)
@@ -49,10 +49,14 @@
 |:---:| :--- | 
 | https://user-images.githubusercontent.com/93528918/149186739-361524ef-8019-489c-b1b1-92105b7e74a8.mov | https://userimages.githubusercontent.com/93528918/149186986-5618d555-af95-4d72-8161-f1ebafd12f5f.mov |
 
- 
+ 회원가입, 로그인
+https://user-images.githubusercontent.com/93528918/149186739-361524ef-8019-489c-b1b1-92105b7e74a8.mov
 
+<br>
 
-
+	
+비밀번호 변경, 로그아웃
+https://userimages.githubusercontent.com/93528918/149186986-5618d555-af95-4d72-8161-f1ebafd12f5f.mov
 
 
 
