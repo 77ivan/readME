@@ -17,7 +17,9 @@
 ``` 
 
 https://img.shields.io/badge/Xcode-13.0-blue
+
 https://img.shields.io/badge/iOS-13.0-green
+
 https://img.shields.io/badge/Swift-5-orange
 https://img.shields.io/badge/Alamofire-5.4.4-red
 https://img.shields.io/badge/SwiftyJSON-5.0.0-important
