@@ -20,11 +20,14 @@
 
 <img width="1534" alt="12" src="https://user-images.githubusercontent.com/74236080/143826875-c12c807d-0b03-4c25-8e97-38b79119164d.png">
 
-```swift
+
+```sh
 ✓ 개인 프로젝트
 ✓ iOS
 ✓ 기간: 21.11.16 ~ 21.11.27
-``` 
+```
+
+
 해외 뉴스로 세상을 바라보는 시야를 넓히고, 영어 공부까지 !
 
 - 현재 해외에서 인기 급상승중인 주제와 카테고리별 기사들의 목록을 볼 수 있어요.
@@ -36,23 +39,6 @@
 "><img src="https://www.atrinh.com/list/images/download.svg"></a>
 
 
-<br />
-
-## 📌  사용 라이브러리
-
-```swift
-⚒ Alamofire
-⚒ Realm
-⚒ SwiftyJSON
-⚒ Kingfisher
-
-⚒ CHTCollectionViewWaterfallLayout
-⚒ Pageboy
-⚒ Tabman
-⚒ SkeletonView
-⚒ Snapkit
-⚒ Toast
-```
 
 <br />
 
