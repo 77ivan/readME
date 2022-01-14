@@ -22,7 +22,7 @@
 // 서버와 메시지를 주고받기 위한 클래스
 var manager: SocketManager!
 
-let url = URL(string: "http://test.monocoding.com:1233")!
+let url = URL(string: "http://~~~.com:1233")!
 // 소켓 통신 준비
 manager = SocketManager(socketURL: url, config: [
      .log(true),
