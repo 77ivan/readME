@@ -220,4 +220,4 @@ func postChat() {
 
 > 임시로 Cell을 2개로 나눠 받아오는 데이터의 이름과 비교하여 내가 보낸 채팅과 상대방이 보낸 채팅을 구분해주었다.
 
-<img src = "https://user-images.githubusercontent.com/93528918/149484324-1894c77e-223e-49ed-8c58-7f01e26e6f0d.png" width="40%" height="50%">
+<img src = "https://user-images.githubusercontent.com/93528918/149484324-1894c77e-223e-49ed-8c58-7f01e26e6f0d.png" width="30%" height="30%">
