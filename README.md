@@ -121,7 +121,7 @@ struct Chat: Codable {
 <br>
 <br>
 
-### 수신
+### 📡  수신
 
 
 - 서버로부터 온 소켓 데이터 수신
@@ -193,7 +193,7 @@ NotificationCenter.default.addObserver(self,
 <br>
 <br>
 
-### 송신
+### 📡  송신
 
 
 - 채팅 송신
