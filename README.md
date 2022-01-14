@@ -65,9 +65,7 @@ socket.on("sesac") { dataArray, ack in
 
     print("check", data, chat, name, createdAt)
 
-    NotificationCenter.default.post(name: NSNotification.Name("getMessage"), 
-																		object: self, 
-																		userInfo: ["chat" : chat, "name" : name, "createdAt" : createdAt])
+    NotificationCenter.default.post(name: NSNotification.Name("getMessage"), object: self, userInfo: ["chat" : chat, "name" : name, "createdAt" : createdAt])
 }
 ```
 
@@ -156,8 +154,7 @@ func requestChats() {
 - 새로운 채팅이 오면 자동으로 밑(.bottom)으로 내려가도록 `scrollToRow`을 이용해서 마지막행으로 스크롤되도록 설정해준다.
 
 ```swift
-self.tableView.scrollToRow(at: IndexPath(row: self.list.count - 1, section: 0), 
-													 at: .bottom, animated: false)
+self.tableView.scrollToRow(at: IndexPath(row: self.list.count - 1, section: 0), at: .bottom, animated: false)
 ```
 
 <br>
