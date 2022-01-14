@@ -1,16 +1,19 @@
 ## 소켓 통신
 
----
 
 - Server와 Client가 특정 포트를 통해 실시간으로 양방향 통신을 하는 방식.
 - Client가 필요한 경우에만 요청을 보낼 수 있는 HTTP 통신과는 달리, Socket 통신은 Server 역시 Client로 요청을 보낼 수 있으며, 계속 연결을 유지하는 연결지향형 방식이기 때문에 실시간 통신이 필요한 경우에 자주 사용된다.
 
+<br>
+
 > Socket.io 설치링크 - [Socket.io-client-swift](https://github.com/socketio/socket.io-client-swift)
 > 
 
+<br>
+
 ## 소켓 클래스
 
----
+<br>
 
 - manager 변수를 생성하는 부분에서 서버의 url주소와 포트를 맞춰줘서 통신 준비.
 
@@ -27,6 +30,8 @@ manager = SocketManager(socketURL: url, config: [
  ])
 ```
 
+<br>
+
 - 소켓을 룸으로 나누어 룸(Namespace)단위로 구분할 수 있는 기능이 있다.
 
 기존 url에 “/” 뒤에 룸(Namespace)명을 붙혀 구분이 가능하다. 
@@ -35,11 +40,15 @@ manager = SocketManager(socketURL: url, config: [
 socket = manager.socket(forNamespace: "/ex")
 ```
 
+<br>
+
 여기서는 .defaultSocket을 사용하여 기본인 “/”의 위치에서 사용한다. 
 
 ```swift
 socket = manager.defaultSocket
 ```
+
+<br>
 
 - 소켓(채팅) 듣는 메서드로 “sesac” 이벤트로 날아온 데이터를 수신한다.
 - `NotificationCenter.default.post` 코드로 새로운 데이터를 수신할 때마다 등록된 observer에게 notification을 전달한다. (새로운 채팅을 바로바로 띄울 수 있게 처리)
@@ -61,8 +70,12 @@ socket.on("sesac") { dataArray, ack in
 }
 ```
 
+<br>
+
 > Socket.IO 주요메서드
 > 
+
+<br>
 
 1. **socket.connet**
     - 설정한 주소와 포트로 소켓 연결 시도
@@ -75,9 +88,12 @@ socket.on("sesac") { dataArray, ack in
     - 예시 ) socket.on("abc")
     - 이름이 "abc"로 emit된 이벤트를 수신
 
+<br>
+<br>
+
 ## Controller
 
----
+<br>
 
 - 서버와의 데이터를 다룰 구조체 생성
 
@@ -100,9 +116,10 @@ struct Chat: Codable {
 }
 ```
 
+<br>
+
 ### 수신
 
----
 
 - 서버로부터 온 소켓 데이터 수신
 
@@ -132,6 +149,8 @@ func requestChats() {
 }
 ```
 
+<br>
+
 - 채팅 기능이기 때문에, 행을 추가할 때 제일 아래에 추가해야해서 구조체배열에 있는 마지막행에 추가를 하면되므로, `self.list.count - 1` 를 해준다.
 - 새로운 채팅이 오면 자동으로 밑(.bottom)으로 내려가도록 `scrollToRow`을 이용해서 마지막행으로 스크롤되도록 설정해준다.
 
@@ -139,6 +158,8 @@ func requestChats() {
 self.tableView.scrollToRow(at: IndexPath(row: self.list.count - 1, section: 0), 
 													 at: .bottom, animated: false)
 ```
+
+<br>
 
 - 또한 소켓 클래스에서 `NotificationCenter` 를 통해 전달받은 observer를 처리 *(addObserver(관찰자를 대기시킴))* 함으로써, 새로운 채팅 데이터를 View에 계속해서 띄운다.
 
@@ -165,9 +186,10 @@ NotificationCenter.default.addObserver(self,
 }
 ```
 
+<br>
+
 ### 송신
 
----
 
 - 채팅 송신
 
@@ -188,8 +210,8 @@ func postChat() {
 }
 ```
 
+<br>
+
 > 임시로 Cell을 2개로 나눠 받아오는 데이터의 이름과 비교하여 내가 보낸 채팅과 상대방이 보낸 채팅을 구분해주었다.
 
-![Simulator Screen Shot - iPhone 13 Pro Max - 2022-01-14 at 17 42 55](https://user-images.githubusercontent.com/93528918/149484324-1894c77e-223e-49ed-8c58-7f01e26e6f0d.png)
-
-
+<img src = "https://user-images.githubusercontent.com/93528918/149484324-1894c77e-223e-49ed-8c58-7f01e26e6f0d.png" width="40%" height="50%">
