@@ -32,6 +32,7 @@ manager = SocketManager(socketURL: url, config: [
 ```
 
 <br>
+<br>
 
 - 소켓을 룸으로 나누어 룸(Namespace)단위로 구분할 수 있는 기능이 있다.
 
@@ -49,6 +50,7 @@ socket = manager.socket(forNamespace: "/ex")
 socket = manager.defaultSocket
 ```
 
+<br>
 <br>
 
 - 소켓(채팅) 듣는 메서드로 “sesac” 이벤트로 날아온 데이터를 수신한다.
@@ -69,6 +71,7 @@ socket.on("sesac") { dataArray, ack in
 }
 ```
 
+<br>
 <br>
 
 > Socket.IO 주요메서드
@@ -116,6 +119,7 @@ struct Chat: Codable {
 ```
 
 <br>
+<br>
 
 ### 수신
 
@@ -149,6 +153,7 @@ func requestChats() {
 ```
 
 <br>
+<br>
 
 - 채팅 기능이기 때문에, 행을 추가할 때 제일 아래에 추가해야해서 구조체배열에 있는 마지막행에 추가를 하면되므로, `self.list.count - 1` 를 해준다.
 - 새로운 채팅이 오면 자동으로 밑(.bottom)으로 내려가도록 `scrollToRow`을 이용해서 마지막행으로 스크롤되도록 설정해준다.
@@ -157,6 +162,7 @@ func requestChats() {
 self.tableView.scrollToRow(at: IndexPath(row: self.list.count - 1, section: 0), at: .bottom, animated: false)
 ```
 
+<br>
 <br>
 
 - 또한 소켓 클래스에서 `NotificationCenter` 를 통해 전달받은 observer를 처리 (addObserver(관찰자를 대기시킴)) 함으로써, 새로운 채팅 데이터를 View에 계속해서 띄운다.
@@ -185,6 +191,7 @@ NotificationCenter.default.addObserver(self,
 ```
 
 <br>
+<br>
 
 ### 송신
 
@@ -208,6 +215,7 @@ func postChat() {
 }
 ```
 
+<br>
 <br>
 
 > 임시로 Cell을 2개로 나눠 받아오는 데이터의 이름과 비교하여 내가 보낸 채팅과 상대방이 보낸 채팅을 구분해주었다.
