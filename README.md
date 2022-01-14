@@ -162,15 +162,15 @@ self.tableView.scrollToRow(at: IndexPath(row: self.list.count - 1, section: 0),
 
 <br>
 
-- 또한 소켓 클래스에서 `NotificationCenter` 를 통해 전달받은 observer를 처리 *(addObserver(관찰자를 대기시킴))* 함으로써, 새로운 채팅 데이터를 View에 계속해서 띄운다.
+- 또한 소켓 클래스에서 `NotificationCenter` 를 통해 전달받은 observer를 처리 (addObserver(관찰자를 대기시킴)) 함으로써, 새로운 채팅 데이터를 View에 계속해서 띄운다.
 
 ```swift
 var list: [Chat] = []
 
 NotificationCenter.default.addObserver(self, 
-																			 selector: #selector(getMessage(notification:)), 
-																			 name: NSNotification.Name("getMessage"),
-																			 object: nil)
+                                       selector: #selector(getMessage(notification:)), 
+                                       name: NSNotification.Name("getMessage"),
+                                       object: nil)
 
 ...
 
