@@ -19,13 +19,24 @@ Please feel free to contribute to this project, open issues, make suggestions an
 
 ## Requirements
 
+- iOS 13.0
+- Swift 5
+
 ## Installation
+
+### CocoaPods
 
 IAMPopup is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'IAMPopup'
+```
+
+### Swift Package Manager
+
+```ruby
+https://github.com/camosss/IAMPopup
 ```
 
 ## Author
