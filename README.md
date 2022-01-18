@@ -1,40 +1,9 @@
+<img src = "https://user-images.githubusercontent.com/93528918/149971523-e6c13f4b-322e-4835-a459-fd855b06188b.gif" width="30%" height="30%">
+<img src = "https://user-images.githubusercontent.com/93528918/149971528-35fd604a-68c0-41d9-ae2c-8385da279827.gif" width="30%" height="30%">
+<img src = "https://user-images.githubusercontent.com/93528918/149971533-0e9f8dde-712f-49b0-962e-a226f48d359a.gif" width="30%" height="30%">
+<img src = "https://user-images.githubusercontent.com/93528918/149971537-27026971-fa90-48e8-99eb-2d8853e17e19.gif" width="30%" height="30%">
 
-<p align='center'>
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=ffffff&height=40&text=iOS%20Developer&fontSize=30&animation=scaleIn&fontColor=auto" />
-  <br>
-  <img src="https://img.shields.io/badge/Swift-F29661?style=flat-square&logo=Swift&logoColor=white"/>
-  </a>
-  <a href="https://www.notion.so/Tech-Blog-237308dc0bf4403c854546d1a20e886d" target="_blank">
-    <img src="https://img.shields.io/badge/Study-000000?style=flat-square&logo=Notion&logoColor=white"/>
-  </a>
-  <a href="mailto:camosss777@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white"/>
-  </a>
-</p>
-<br>
-
-
-<h2>Project</h2>
-
-- [새싹 커뮤니티](https://github.com/camosss/SSAC/tree/main/ssacFarm)
-- [해외 뉴우스](https://github.com/camosss/Overseas-News)
-- [NetflixReview](https://github.com/Netflix-Review/NetflixReview_iOS)
-
-<h2>Library</h2>
-
-- [IAMPopup](https://github.com/camosss/IAMPopup)
-
-<h2>Activities</h2>
-
-- [SeSAC](https://github.com/camosss/SSAC)
-- [42 la piscine](https://github.com/camosss/42)
-
-
-
-<h2>GitHub stats</h2>
-
-[<img src="https://github-readme-streak-stats.herokuapp.com/?user=camosss&theme=default&hide_border=true&fire=e25822&currStreakLabel=e25822&dates=aaa&background=fff">](#bottom)
-
-![1](https://user-images.githubusercontent.com/93528918/149942918-249b3b3e-b011-4688-9413-066a3846530e.gif)
-
-
+![Trending](https://user-images.githubusercontent.com/93528918/149971523-e6c13f4b-322e-4835-a459-fd855b06188b.gif)
+![Search](https://user-images.githubusercontent.com/93528918/149971528-35fd604a-68c0-41d9-ae2c-8385da279827.gif)
+![Category](https://user-images.githubusercontent.com/93528918/149971533-0e9f8dde-712f-49b0-962e-a226f48d359a.gif)
+![Article](https://user-images.githubusercontent.com/93528918/149971537-27026971-fa90-48e8-99eb-2d8853e17e19.gif)
