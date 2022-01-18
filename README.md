@@ -15,6 +15,31 @@ Please feel free to contribute to this project, open issues, make suggestions an
 <img src = "https://user-images.githubusercontent.com/93528918/149862217-62946646-4c47-47d6-a4d9-e4341610957c.gif" width="40%" height="40%">
 
 
+## Basic Examples
+
+```swift
+// Top Popup
+self.view.IAM_top(height: 100) { slideView in
+    slideView.addSubview(self.titleLabel)
+    self.titleLabel.text = "TOP"
+}
+
+ 
+// Center Popup  
+self.view.IAM_center(height: 400) { slideView in
+    slideView.addSubview(self.titleLabel)
+    self.titleLabel.text = "Center"
+}
+
+   
+// Bottom Popup 
+self.view.IAM_bottom(height: 300) { slideView in
+    slideView.addSubview(self.titleLabel)
+    self.titleLabel.text = "Bottom"
+}
+
+```
+
 
 
 ## Requirements
