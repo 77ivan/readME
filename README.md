@@ -18,6 +18,9 @@ Please feel free to contribute to this project, open issues, make suggestions an
 
 ## Basic Examples
 
+
+Specify the height of the popup view and customize the popup view.
+
 ```swift
 // Top Popup
 self.view.IAM_top(height: 100) { popupView in
