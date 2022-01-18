@@ -1,84 +1,39 @@
-# IAMPopup
 
-[![Version](https://img.shields.io/cocoapods/v/IAMPopup.svg?style=flat)](https://cocoapods.org/pods/IAMPopup)
-[![SwiftPM](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
-[![License](https://img.shields.io/cocoapods/l/IAMPopup.svg?style=flat)](https://cocoapods.org/pods/IAMPopup)
-[![Platform](https://img.shields.io/cocoapods/p/IAMPopup.svg?style=flat)](https://cocoapods.org/pods/IAMPopup)
-
-
-## Introduction
-
-`IAMPopup` is a simple class for expressing custom popup in various forms. This includes where to display the popup and space to decorate the View.
-
-Please feel free to contribute to this project, open issues, make suggestions and submit pull-requests. If you use this project in your app, let me know. I'd love to see what you do with it.
-
-
-<img src = "https://user-images.githubusercontent.com/93528918/149862217-62946646-4c47-47d6-a4d9-e4341610957c.gif" width="40%" height="40%">
+<p align='center'>
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=ffffff&height=40&text=iOS%20Developer&fontSize=30&animation=scaleIn&fontColor=auto" />
+  <br>
+    <img src="https://img.shields.io/badge/Swift-F29661?style=flat-square&logo=Swift&logoColor=white"/></a>
+  <a href="https://www.notion.so/Tech-Blog-237308dc0bf4403c854546d1a20e886d" target="_blank">
+    <img src="https://img.shields.io/badge/Study-000000?style=flat-square&logo=Notion&logoColor=white"/>
+  </a>
+  <a href="mailto:camosss777@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white"/>
+  </a>
+</p>
+<br>
 
 
-## Basic Examples
+<h2>Project</h2>
 
+- [새싹 커뮤니티](https://github.com/camosss/SSAC/tree/main/ssacFarm)
+- [해외 뉴우스](https://github.com/camosss/Overseas-News)
+- [NetflixReview](https://github.com/Netflix-Review/NetflixReview_iOS)
 
-Specifies the height of the popup view and customizes the inner view.
+<h2>Library</h2>
 
-```swift
-// Top Popup
-self.view.IAM_top(height: 100) { popupView in
-    popupView.addSubview(self.label)
-    self.label.text = "TOP"
-}
+- [IAMPopup](https://github.com/camosss/IAMPopup)
 
- 
-// Center Popup  
-self.view.IAM_center(height: 400) { popupView in
-    popupView.addSubview(self.label)
-    self.label.text = "Center"
-}
+<h2>Activities</h2>
 
-   
-// Bottom Popup 
-self.view.IAM_bottom(height: 300) { popupView in
-    popupView.addSubview(self.label)
-    self.label.text = "Bottom"
-}
-
-```
+- [SeSAC](https://github.com/camosss/SSAC)
+- [42 la piscine](https://github.com/camosss/42)
 
 
 
-## Requirements
+<h2>GitHub stats</h2>
 
-- iOS 13.0
-- Swift 5
+[<img src="https://github-readme-streak-stats.herokuapp.com/?user=camosss&theme=default&hide_border=true&fire=e25822&currStreakLabel=e25822&dates=aaa&background=fff">](#bottom)
 
+<p align="right"><img src="https://img.shields.io/badge/Swift-F29661?style=flat-square&logo=Swift&logoColor=white"/></a>&nbsp<img src="https://img.shields.io/badge/Realm-FFB2D9?style=flat-square&logo=Realm&logoColor=white"/></a>&nbsp</h3><img src="https://img.shields.io/badge/Firebase-FFE400?style=flat-square&logo=Firebase&logoColor=white"/></a>&nbsp<img src="https://img.shields.io/badge/Alamofire-FF007F?style=flat-square&logo=Alamofire&logoColor=white"/></a>&nbsp<img src="https://img.shields.io/badge/Xcode-1575F9?style=flat-square&logo=Xcode&logoColor=white"/>
+</p>
 
-## Installation
-
-### CocoaPods
-
-IAMPopup is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'IAMPopup'
-```
-
-### Swift Package Manager
-
-To install it, your Project settings > Swift Packages and add the repository by providing the GitHub URL.
-
-Alternatively, File > Swift Packages > Add Package Dependencies.
-
-```ruby
-https://github.com/camosss/IAMPopup
-```
-
-## Author
-
-- Hosung Kang
-- Email: camosss777@gmail.com
-
-
-## License
-
-IAMPopup is available under the MIT license. See the LICENSE file for more info.
