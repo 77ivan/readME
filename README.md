@@ -7,7 +7,7 @@
 <br>
 
 > | Post 작성 | Post 수정 | Post 삭제 |
-  > | ------ | ------ |
+  > | ------ | ------ | ------ |
   > | <img src = "https://user-images.githubusercontent.com/93528918/149973113-4a7e6067-a68e-4391-a24a-71a3980e3138.gif" width="30%" height="30%"> | <img src = "https://user-images.githubusercontent.com/93528918/149973118-b2fa2665-c74b-4592-ab93-16c03cf4a266.gif" width="30%" height="30%"> | <img src = "https://user-images.githubusercontent.com/93528918/149973118-b2fa2665-c74b-4592-ab93-16c03cf4a266.gif" width="30%" height="30%"> |
 
 
@@ -15,6 +15,6 @@
 
 
 > | Comment 작성 | Comment 수정 | Comment 삭제 |
-  > | ------ | ------ |
+  > | ------ | ------ | ------ |
   > | <img src = "https://user-images.githubusercontent.com/93528918/149973133-afd8b284-5d51-4189-a20a-1a7497fc69cf.gif" width="30%" height="30%"> | <img src = "https://user-images.githubusercontent.com/93528918/149973141-1a0fee61-ae80-4aad-872e-0804e0357ea1.gif" width="30%" height="30%"> | <img src = "https://user-images.githubusercontent.com/93528918/149973148-c95b473f-16f7-4988-ae25-ca379d0d24b4.gif" width="30%" height="30%"> |
 
