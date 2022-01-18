@@ -77,9 +77,9 @@ https://github.com/camosss/IAMPopup
 
 ## Author
 
-camosss
+- **Hosung Kang**
 
-Email: camosss777@gmail.com
+- Email: camosss777@gmail.com
 
 <br>
 
