@@ -4,12 +4,14 @@
   > | ------ | ------ |
   > | <img src = "https://user-images.githubusercontent.com/93528918/149973100-ddfa0a96-a185-4f45-adca-099324e02910.gif" width="30%" height="30%"> | <img src = "https://user-images.githubusercontent.com/93528918/149973108-d09de68c-e79c-4b02-b611-9e3067b8f7c2.gif" width="30%" height="30%"> |
 
+<br>
 
 > | Post 작성 | Post 수정 | Post 삭제 |
   > | ------ | ------ |
   > | <img src = "https://user-images.githubusercontent.com/93528918/149973113-4a7e6067-a68e-4391-a24a-71a3980e3138.gif" width="30%" height="30%"> | <img src = "https://user-images.githubusercontent.com/93528918/149973118-b2fa2665-c74b-4592-ab93-16c03cf4a266.gif" width="30%" height="30%"> | <img src = "https://user-images.githubusercontent.com/93528918/149973118-b2fa2665-c74b-4592-ab93-16c03cf4a266.gif" width="30%" height="30%"> |
 
 
+<br>
 
 
 > | Comment 작성 | Comment 수정 | Comment 삭제 |
