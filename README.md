@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/IAMPopup.svg?style=flat)](https://cocoapods.org/pods/IAMPopup)
 [![Platform](https://img.shields.io/cocoapods/p/IAMPopup.svg?style=flat)](https://cocoapods.org/pods/IAMPopup)
 
+<br>
+
 ## Introduction
 
 `IAMPopup` is a simple class for expressing custom popup in various forms. This includes where to display the popup and space to decorate the View.
@@ -14,6 +16,7 @@ Please feel free to contribute to this project, open issues, make suggestions an
 
 <img src = "https://user-images.githubusercontent.com/93528918/149862217-62946646-4c47-47d6-a4d9-e4341610957c.gif" width="40%" height="40%">
 
+<br>
 
 ## Basic Examples
 
@@ -40,12 +43,15 @@ self.view.IAM_bottom(height: 300) { slideView in
 
 ```
 
+<br>
 
 
 ## Requirements
 
 - iOS 13.0
 - Swift 5
+
+<br>
 
 ## Installation
 
@@ -67,12 +73,15 @@ Alternatively, File > Swift Packages > Add Package Dependencies.
 ```ruby
 https://github.com/camosss/IAMPopup
 ```
+<br>
 
 ## Author
 
 camosss
 
 Email: camosss777@gmail.com
+
+<br>
 
 ## License
 
