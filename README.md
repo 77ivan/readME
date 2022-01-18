@@ -35,6 +35,10 @@ pod 'IAMPopup'
 
 ### Swift Package Manager
 
+To install it, 
+your Project settings > Swift Packages and add the repository by providing the GitHub URL.
+Alternatively, File > Swift Packages > Add Package Dependencies.
+
 ```ruby
 https://github.com/camosss/IAMPopup
 ```
