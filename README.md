@@ -21,22 +21,22 @@ Please feel free to contribute to this project, open issues, make suggestions an
 ```swift
 // Top Popup
 self.view.IAM_top(height: 100) { slideView in
-    slideView.addSubview(self.titleLabel)
-    self.titleLabel.text = "TOP"
+    slideView.addSubview(self.label)
+    self.label.text = "TOP"
 }
 
  
 // Center Popup  
 self.view.IAM_center(height: 400) { slideView in
-    slideView.addSubview(self.titleLabel)
-    self.titleLabel.text = "Center"
+    slideView.addSubview(self.label)
+    self.label.text = "Center"
 }
 
    
 // Bottom Popup 
 self.view.IAM_bottom(height: 300) { slideView in
-    slideView.addSubview(self.titleLabel)
-    self.titleLabel.text = "Bottom"
+    slideView.addSubview(self.label)
+    self.label.text = "Bottom"
 }
 
 ```
