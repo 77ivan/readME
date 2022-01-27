@@ -43,6 +43,10 @@
 <br>
 
 
+## 구현 이슈
+
+<br>
+
 <details>
 <summary>버튼 활성화(RxSwift 적용)</summary>
  
@@ -69,6 +73,8 @@ struct Output {
     let sceneTransition: ControlEvent<Void>
 }
 ```
+ 
+<br>
 
 ### 화면 전환, 비즈니스 로직 구현
 
@@ -92,6 +98,8 @@ func certificationTransform(input: Input) -> Output {
     return Output(validStatus: result, validText: validText, sceneTransition: input.tap)
 }
 ```
+
+ <br>
 
 - 유효성 검사가 진행되는 값을 **버튼 배경색, 버튼 활성화 상태**에 바인딩
 
@@ -125,5 +133,7 @@ output.sceneTransition
 
 
 
+<br>
+<br>
 
 
