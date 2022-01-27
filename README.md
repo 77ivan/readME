@@ -144,12 +144,16 @@ output.sceneTransition
 
  - 첫번째 시도.
  
-    1. 회원정보를 앱내 스토리지(저장소)에 저장해두고 필요할때 불러와서 처리하기 위해 토큰 값을 UserDefaults에 저장.
-    2. 로그인과 회원가입 분기처리는 로그인 여부에 달려있기에, 서버로부터 로그인 시 발급받은 토큰을 SceneDelegate에서 앱 실행 시에 토큰 유무에 따라 UI Life Cycle 분기 처리
+ 1. 회원정보를 앱내 스토리지(저장소)에 저장해두고 필요할때 불러와서 처리하기 위해 토큰 값을 UserDefaults에 저장.
+ 2. 로그인과 회원가입 분기처리는 로그인 여부에 달려있기에, 서버로부터 로그인 시 발급받은 토큰을 SceneDelegate에서 앱 실행 시에 토큰 유무에 따라 UI Life Cycle 분기 처리
 
  <br>
  
-  idToken 값으로 분기 처리를 하기 위해, User의 정보를 API에서 호출했는데 API에서 데이터를 받아오는 과정에서 black Screen이 뜬 뒤, View가 로드된다.
+ idToken 값으로 분기 처리를 하기 위해, User의 정보를 API에서 호출했는데 
+ 
+ API에서 데이터를 받아오는 과정에서 black Screen이 뜬 뒤, View가 로드된다.
+ 
+  <br>
  
 <img src = "https://user-images.githubusercontent.com/93528918/151345005-9918e493-9e83-46ec-a4f5-fca9f2953a70.gif" width="30%" height="30%">
 
@@ -203,9 +207,12 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
  2. 회원가입 완료
  3. 회원 탈퇴 완료
 
-  굳이 API 호출을 하지 않고 3가지의 상황에 따라 UserDefaults에 상황별 String값을 저장해주고, SceneDelegate에서 해당 Key값을 통해 UI Life Cycle 분기 처리 진행
+ 굳이 API 호출을 하지 않고 3가지의 상황에 따라 UserDefaults에 상황별 String값을 저장해주고, 
  
+ SceneDelegate에서 해당 Key값을 통해 UI Life Cycle 분기 처리 진행
  
+  <br>
+
  <img src = "https://user-images.githubusercontent.com/93528918/151345253-295ddc6c-9250-43a9-a717-6b29574e8bee.gif" width="30%" height="30%">
 
   <br>
