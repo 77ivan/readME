@@ -1,6 +1,11 @@
 
 # 서비스 레벨 프로젝트
 
+
+`서비스 레벨의 API/기획 명세와 디자인 리소스를 바탕으로 iOS 앱개발`
+
+<br>
+
 ![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
 ![Badge](https://img.shields.io/badge/iOS-13.0-green)
 ![Badge](https://img.shields.io/badge/Swift-5-orange)
@@ -17,7 +22,6 @@
 ![Badge](https://img.shields.io/badge/Toast-5.0.1-ff69b4)
 
 
-`서비스 레벨의 API/기획 명세와 디자인 리소스를 바탕으로 iOS 앱개발`
 
 
 <br>
