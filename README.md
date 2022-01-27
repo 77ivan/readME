@@ -215,7 +215,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 
  > 굳이 API 호출을 하지 않고 3가지의 상황에 따라 UserDefaults에 상황별 String값을 저장해주고, SceneDelegate에서 해당 Key값을 통해 UI Life Cycle 분기 처리 진행
  
-    <br>
+ <br>
 
 
  <details>
