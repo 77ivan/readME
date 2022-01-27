@@ -159,11 +159,11 @@ output.sceneTransition
 
   <br>
 
- <details>
-<summary>코드</summary>
- ```swift
+  <details>
+ <summary>코드</summary>
+ 
+```swift
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
     guard let scene = (scene as? UIWindowScene) else { return }
     window = UIWindow(windowScene: scene)
 
@@ -195,8 +195,8 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
     }
 }
 ```
-  </div>
-</details>
+   </div>
+ </details>
 
  <br>
  <br>
@@ -217,8 +217,9 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 
   <br>
 
-<details>
-<summary>코드</summary>
+ <details>
+ <summary>코드</summary>
+ 
  ```swift
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -239,7 +240,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 }
 ```
   </div>
-</details>
+ </details>
  
  <br>
  
