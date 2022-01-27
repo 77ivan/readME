@@ -42,3 +42,88 @@
 <br>
 <br>
 
+
+<details>
+<summary>버튼 활성화(RxSwift 적용)</summary>
+ 
+<br>
+
+### Input/Output
+
+ViewModel에서 입력(Input)과 출력(Output)을 정의
+
+- View에서 받는 입력은 Input 구조체 안에 정의 (text, 버튼 이벤트)
+- 로직을 통해서 나온 결과 출력은 Output 구조체에 정의 (버튼 활성화 상태, 화면 전환 이벤트)
+
+```swift
+var validText = BehaviorRelay<String>(value: "")
+
+struct Input {
+    let text: ControlProperty<String?>
+    let tap: ControlEvent<Void>
+}
+
+struct Output {
+    let validStatus: Observable<Bool>
+    let validText: BehaviorRelay<String>
+    let sceneTransition: ControlEvent<Void>
+}
+```
+
+### 화면 전환, 비즈니스 로직 구현
+
+- `map` 기능을 통해 정규식 유효성 검사
+- `share()` 연산자를 사용하여 하나의 시퀀스에서 방출되는 아이템을 공유해 사용
+
+```swift
+func phoneNumberTransform(input: Input) -> Output {
+    let result = input.text
+        .orEmpty
+        .map { $0.isValidPhoneNumber() }
+        .share(replay: 1, scope: .whileConnected)
+    return Output(validStatus: result, validText: validText, sceneTransition: input.tap)
+}
+
+func certificationTransform(input: Input) -> Output {
+    let result = input.text
+        .orEmpty
+        .map { $0.isVaildVerificationCode() }
+        .share(replay: 1, scope: .whileConnected)
+    return Output(validStatus: result, validText: validText, sceneTransition: input.tap)
+}
+```
+
+- 유효성 검사가 진행되는 값을 **버튼 배경색, 버튼 활성화 상태**에 바인딩
+
+```swift
+let input = ValidationViewModel.Input(text: authView.inputTextField.rx.text, tap: authView.nextButton.rx.tap)
+let output = viewModel.phoneNumberTransform(input: input)
+
+output.validStatus
+     .map { $0 ? R.color.green() : R.color.gray6() }
+     .bind(to: authView.nextButton.rx.backgroundColor)
+     .disposed(by: disposeBag)
+        
+output.validStatus
+     .bind(to: authView.nextButton.rx.isEnabled)
+     .disposed(by: disposeBag)
+
+output.validText
+      .asDriver()
+      .drive(authView.inputTextField.rx.text)
+      .disposed(by: disposeBag)
+
+output.sceneTransition
+      .subscribe { _ in
+           sceneTransition()
+      }.disposed(by: disposeBag)
+```
+
+</div>
+</details>
+
+
+
+
+
+
