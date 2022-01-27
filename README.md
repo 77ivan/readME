@@ -135,7 +135,109 @@ output.sceneTransition
 </div>
 </details>
 
+<br>
 
+<details>
+<summary>[SceneDelegate] 로그인/회원가입 유무에 따른 UI Life Cycle 분기 처리</summary>
+ 
+<br>
+
+ - **첫번째 시도.**
+    1. 회원정보를 앱내 스토리지(저장소)에 저장해두고 필요할때 불러와서 처리하기 위해 토큰 값을 UserDefaults에 저장.
+    2. 로그인과 회원가입 분기처리는 로그인 여부에 달려있기에, 서버로부터 로그인 시 발급받은 토큰을 SceneDelegate에서 앱 실행 시에 토큰 유무에 따라 UI Life Cycle 분기 처리
+
+ <br>
+ 
+idToken 값으로 분기 처리를 하기 위해, User의 정보를 API에서 호출했는데 API에서 데이터를 받아오는 과정에서 black Screen이 뜬 뒤, View가 로드된다.
+<img src = "https://user-images.githubusercontent.com/93528918/151345005-9918e493-9e83-46ec-a4f5-fca9f2953a70.gif" width="30%" height="30%">
+
+  <br>
+
+ <details>
+<summary>코드</summary>
+ ```swift
+func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+    guard let scene = (scene as? UIWindowScene) else { return }
+    window = UIWindow(windowScene: scene)
+
+    let idToken = UserDefaults.standard.string(forKey: "idToken") ?? ""
+    print("SceneDelegate idToken", idToken)
+
+    if idToken == "" { // 전화번호 인증 X
+        convertNavRootViewController(VerificationViewController())
+    } else { // 전화번호 인증 O
+        APIService.getUserInfo(idToken: idToken) { user, error, statusCode in
+            switch statusCode {
+            case 200:
+                self.convertRootViewController(MainTapController())
+
+            case 401:
+                print("SceneDelegate", statusCode ?? 0)
+                Helper.getIDTokenRefresh {
+                    print("SceneDelegate 토큰 갱신 error"); return
+                } onSuccess: {
+                    print("SceneDelegate 토큰 갱신 성공")
+                    self.convertRootViewController(MainTapController())
+                }
+
+            default:
+                print("SceneDelegate default error", statusCode ?? 0)
+                self.convertNavRootViewController(NickNameViewController())
+            }
+        }
+    }
+}
+```
+  </div>
+</details>
+
+ <br>
+ <br>
+ 
+ - **두번째 시도.**
+
+ 1. 로그인 완료
+ 2. 회원가입 완료
+ 3. 회원 탈퇴 완료
+
+굳이 API 호출을 하지 않고 3가지의 상황에 따라 UserDefaults에 상황별 String값을 저장해주고, SceneDelegate에서 해당 Key값을 통해 UI Life Cycle 분기 처리 진행
+ 
+  <br>
+
+ <img src = "https://user-images.githubusercontent.com/93528918/151345253-295ddc6c-9250-43a9-a717-6b29574e8bee.gif" width="30%" height="30%">
+
+  <br>
+
+<details>
+<summary>코드</summary>
+ ```swift
+func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+    guard let scene = (scene as? UIWindowScene) else { return }
+    window = UIWindow(windowScene: scene)
+
+    let startView = UserDefaults.standard.string(forKey: "startView")
+    print("------> startView = \(startView ?? "전화번호인증 하러가야함")")
+        
+    if startView == "successLogin" { // 로그인 완료
+        convertNavRootViewController(NickNameViewController())
+    } else if startView == "alreadySignUp" { // 회원가입 완료
+        convertRootViewController(MainTapController())
+    } else { // 회원탈퇴 완료 및 앱 첫 실행
+        convertNavRootViewController(VerificationViewController())
+    }
+   
+}
+```
+  </div>
+</details>
+ 
+ <br>
+ 
+</div>
+</details>
+ 
 <br>
 <br>
 
