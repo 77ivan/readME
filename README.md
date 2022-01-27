@@ -13,8 +13,8 @@
 
 
 ![Badge](https://img.shields.io/badge/R.swift-6.0.1-blueviolet)
-![Badge](https://img.shields.io/badge/SnapKit-5.0.0-important)
-![Badge](https://img.shields.io/badge/Toast-5.0.1-9cf)
+![Badge](https://img.shields.io/badge/SnapKit-5.0.0-brightgreen)
+![Badge](https://img.shields.io/badge/Toast-5.0.1-ff69b4)
 
 
 
