@@ -17,9 +17,7 @@
 ![Badge](https://img.shields.io/badge/Toast-5.0.1-ff69b4)
 
 
-
-
-'서비스 레벨의 API/기획 명세와 디자인 리소스를 바탕으로 iOS 앱개발'
+`서비스 레벨의 API/기획 명세와 디자인 리소스를 바탕으로 iOS 앱개발`
 
 
 <br>
