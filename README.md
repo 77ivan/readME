@@ -126,14 +126,14 @@ output.sceneTransition
            sceneTransition()
       }.disposed(by: disposeBag)
 ```
+ 
+<br>
+
+<img src = "https://user-images.githubusercontent.com/93528918/151337727-24b9cc8d-6d4d-4479-af61-1478f22007bd.gif" width="30%" height="30%">
+
 
 </div>
 </details>
-
-<br>
-
- <img src = "https://user-images.githubusercontent.com/93528918/151337727-24b9cc8d-6d4d-4479-af61-1478f22007bd.gif" width="30%" height="30%">
-
 
 
 <br>
