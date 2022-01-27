@@ -4,14 +4,18 @@
 ![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
 ![Badge](https://img.shields.io/badge/iOS-13.0-green)
 ![Badge](https://img.shields.io/badge/Swift-5-orange)
+![Badge](https://img.shields.io/badge/FirebaseAuth-blue)
+![Badge](https://img.shields.io/badge/FirebaseMessaging-yellow)
 
 ![Badge](https://img.shields.io/badge/RxSwift-6.5.0-critical)
 ![Badge](https://img.shields.io/badge/RxCocoa-6.5.0-important)
 ![Badge](https://img.shields.io/badge/Alamofire-5.0.1-red)
 
 
-![Badge](https://img.shields.io/badge/FirebaseAuth-blue)
-![Badge](https://img.shields.io/badge/FirebaseMessaging-yellow)
+![Badge](https://img.shields.io/badge/R.swift-6.0.1-blueviolet)
+![Badge](https://img.shields.io/badge/SnapKit-5.0.0-important)
+![Badge](https://img.shields.io/badge/Toast-5.0.1-9cf)
+
 
 
 - 서버와 iOS 클라이언트 통신 (iOS 클라이언트 개발 담당)
