@@ -149,20 +149,17 @@ output.sceneTransition
 
  <br>
  
- idToken 값으로 분기 처리를 하기 위해, User의 정보를 API에서 호출했는데 
+ > idToken 값으로 분기 처리를 하기 위해, User의 정보를 API에서 호출했는데 
  
- API에서 데이터를 받아오는 과정에서 black Screen이 뜬 뒤, View가 로드된다.
+ > API에서 데이터를 받아오는 과정에서 black Screen이 뜬 뒤, View가 로드된다.
  
-  <br>
  
-<img src = "https://user-images.githubusercontent.com/93528918/151345005-9918e493-9e83-46ec-a4f5-fca9f2953a70.gif" width="30%" height="30%">
+   <br>
 
-  <br>
-
-  <details>
+ <details>
  <summary>코드</summary>
  
-    <br>
+  <br>
 
 ```swift
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -199,6 +196,13 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 ```
    </div>
  </details>
+  <br>
+ 
+<img src = "https://user-images.githubusercontent.com/93528918/151345005-9918e493-9e83-46ec-a4f5-fca9f2953a70.gif" width="30%" height="30%">
+
+  <br>
+
+  
 
  <br>
  <br>
@@ -209,15 +213,11 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
  2. 회원가입 완료
  3. 회원 탈퇴 완료
 
- 굳이 API 호출을 하지 않고 3가지의 상황에 따라 UserDefaults에 상황별 String값을 저장해주고, 
+ > 굳이 API 호출을 하지 않고 3가지의 상황에 따라 UserDefaults에 상황별 String값을 저장해주고, 
  
- SceneDelegate에서 해당 Key값을 통해 UI Life Cycle 분기 처리 진행
+ > SceneDelegate에서 해당 Key값을 통해 UI Life Cycle 분기 처리 진행
  
-  <br>
-
- <img src = "https://user-images.githubusercontent.com/93528918/151345253-295ddc6c-9250-43a9-a717-6b29574e8bee.gif" width="30%" height="30%">
-
-  <br>
+    <br>
 
  <details>
  <summary>코드</summary>
@@ -245,8 +245,13 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 ```
   </div>
  </details>
+  <br>
+
+ <img src = "https://user-images.githubusercontent.com/93528918/151345253-295ddc6c-9250-43a9-a717-6b29574e8bee.gif" width="30%" height="30%">
+
+  <br>
+
  
- <br>
  
 </div>
 </details>
