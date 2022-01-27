@@ -18,7 +18,7 @@
 
 
 ![Badge](https://img.shields.io/badge/R.swift-6.0.1-blueviolet)
-![Badge](https://img.shields.io/badge/SnapKit-5.0.0-brightgreen)
+![Badge](https://img.shields.io/badge/SnapKit-5.0.1-brightgreen)
 ![Badge](https://img.shields.io/badge/Toast-5.0.1-ff69b4)
 
 
@@ -30,15 +30,14 @@
 
 ## 🌱 기간별 일정
 
-2021.12.31 - 22.01.06  **(총 5일)**
+2022.01.19 - 현재  **()**
 
 <br>
 
 | 진행사항 | 진행기간 | 세부사항 |
 |:---:| :--- | :--- |
-| UI | 2021.12.31 | 앱 전체적인 View 개발 |
-| Auth | 2022.01.03 | 회원가입 및 로그인 기능 개발 |
-| Post, Comment | 2022.01.04~22.01.06 | Post, Comment CRUD 개발 |
+| 휴대폰 인증 및 회원가입 | 2022.01.19~22.01.25 | Firebase 전화번호 인증, [SceneDelegate] UI Life Cycle 분기 처리 |
+| 내 정보 | 2022.01.26~현재 | RxSwift로 TableView 구현 |
  
 <br>
 <br>
