@@ -48,7 +48,7 @@
 <br>
 
 <details>
-<summary>버튼 활성화(RxSwift 적용)</summary>
+<summary>버튼 활성화, `RxSwift` 적용</summary>
  
 <br>
 
