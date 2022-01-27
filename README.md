@@ -1,29 +1,41 @@
 
+# 서비스 레벨 프로젝트
 
-> | 회원가입, 로그인 | 비밀번호 변경, 로그아웃 |
-  > | ------ | ------ |
-  > | ![Auth](https://user-images.githubusercontent.com/93528918/149973100-ddfa0a96-a185-4f45-adca-099324e02910.gif) | ![change](https://user-images.githubusercontent.com/93528918/149973108-d09de68c-e79c-4b02-b611-9e3067b8f7c2.gif) |
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
+![Badge](https://img.shields.io/badge/iOS-13.0-green)
+![Badge](https://img.shields.io/badge/Swift-5-orange)
+
+![Badge](https://img.shields.io/badge/RxSwift-6.5.0-critical)
+![Badge](https://img.shields.io/badge/RxCocoa-6.5.0-important)
+![Badge](https://img.shields.io/badge/Alamofire-5.0.1-red)
+
+
+![Badge](https://img.shields.io/badge/FirebaseAuth-blue)
+![Badge](https://img.shields.io/badge/FirebaseMessaging-yellow)
+
+
+- 서버와 iOS 클라이언트 통신 (iOS 클라이언트 개발 담당)
+
+- 회원가입/로그인 후 게시글과 게시글에 대한 댓글을 작성/수정/삭제 기능 구현
+
+
+
+<br>
+<br>
+
+
+## 🌱 기간별 일정
+
+2021.12.31 - 22.01.06  **(총 5일)**
 
 <br>
 
-> | Post 작성 | Post 수정 | Post 삭제 |
-  > | ------ | ------ | ------ |
-  > | ![postw](https://user-images.githubusercontent.com/93528918/149973113-4a7e6067-a68e-4391-a24a-71a3980e3138.gif) | ![poste](https://user-images.githubusercontent.com/93528918/149973118-b2fa2665-c74b-4592-ab93-16c03cf4a266.gif) | ![postd](https://user-images.githubusercontent.com/93528918/149973125-6af466b4-3f57-4a22-b228-22e61e8b72c7.gif) |
-
-
+| 진행사항 | 진행기간 | 세부사항 |
+|:---:| :--- | :--- |
+| UI | 2021.12.31 | 앱 전체적인 View 개발 |
+| Auth | 2022.01.03 | 회원가입 및 로그인 기능 개발 |
+| Post, Comment | 2022.01.04~22.01.06 | Post, Comment CRUD 개발 |
+ 
+<br>
 <br>
 
-
-> | Comment 작성 | Comment 수정 | Comment 삭제 |
-  > | ------ | ------ | ------ |
-  > | ![commentw](https://user-images.githubusercontent.com/93528918/149973133-afd8b284-5d51-4189-a20a-1a7497fc69cf.gif) | ![commente](https://user-images.githubusercontent.com/93528918/149973141-1a0fee61-ae80-4aad-872e-0804e0357ea1.gif) | ![commentd](https://user-images.githubusercontent.com/93528918/149973148-c95b473f-16f7-4988-ae25-ca379d0d24b4.gif) |
-
-
-![Auth](https://user-images.githubusercontent.com/93528918/149973100-ddfa0a96-a185-4f45-adca-099324e02910.gif)
-![change](https://user-images.githubusercontent.com/93528918/149973108-d09de68c-e79c-4b02-b611-9e3067b8f7c2.gif)
-![postw](https://user-images.githubusercontent.com/93528918/149973113-4a7e6067-a68e-4391-a24a-71a3980e3138.gif)
-![poste](https://user-images.githubusercontent.com/93528918/149973118-b2fa2665-c74b-4592-ab93-16c03cf4a266.gif)
-![postd](https://user-images.githubusercontent.com/93528918/149973125-6af466b4-3f57-4a22-b228-22e61e8b72c7.gif)
-![commentw](https://user-images.githubusercontent.com/93528918/149973133-afd8b284-5d51-4189-a20a-1a7497fc69cf.gif)
-![commente](https://user-images.githubusercontent.com/93528918/149973141-1a0fee61-ae80-4aad-872e-0804e0357ea1.gif)
-![commentd](https://user-images.githubusercontent.com/93528918/149973148-c95b473f-16f7-4988-ae25-ca379d0d24b4.gif)
