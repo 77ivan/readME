@@ -149,9 +149,7 @@ output.sceneTransition
 
  <br>
  
- > idToken 값으로 분기 처리를 하기 위해, User의 정보를 API에서 호출했는데 
- 
- > API에서 데이터를 받아오는 과정에서 black Screen이 뜬 뒤, View가 로드된다.
+ > idToken 값으로 분기 처리를 하기 위해, User의 정보를 API에서 호출했는데 API에서 데이터를 받아오는 과정에서 black Screen이 뜬 뒤, View가 로드된다.
  
  
    <br>
@@ -213,9 +211,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
  2. 회원가입 완료
  3. 회원 탈퇴 완료
 
- > 굳이 API 호출을 하지 않고 3가지의 상황에 따라 UserDefaults에 상황별 String값을 저장해주고, 
- 
- > SceneDelegate에서 해당 Key값을 통해 UI Life Cycle 분기 처리 진행
+ > 굳이 API 호출을 하지 않고 3가지의 상황에 따라 UserDefaults에 상황별 String값을 저장해주고, SceneDelegate에서 해당 Key값을 통해 UI Life Cycle 분기 처리 진행
  
     <br>
 
