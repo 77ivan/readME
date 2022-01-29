@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/Study-000000?style=flat-square&logo=Notion&logoColor=white"/>
   </a>
   <a href="https://llan.tistory.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Blog-000000?style=flat-square&logo=Storyblok&logoColor=white/>
+    <img src="https://img.shields.io/badge/Blog-000000?style=flat-square&logo=Storyblok&logoColor=white"/>
   </a>
   <a href="mailto:camosss777@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white"/>
