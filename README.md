@@ -129,36 +129,14 @@ extension URLSession {
 </details>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br>
 
-> ViewModel에서 API 호출 로직 작성
-
-
+<details>
+<summary>ViewModel에서 API 호출 로직 작성</summary>
+ 
 <br>
 
-**ViewModel** → 비즈니스 로직을 처리
+ **ViewModel** → 비즈니스 로직을 처리
 
 **ViewModel**에서 API호출하는 로직을 처리하고, **Controller**에서 알람이나 화면 전환 등 화면 처리를 해주는 걸로 이해.
 
@@ -181,3 +159,12 @@ extension URLSession {
 프로젝트에서 구성된 모든 패턴이 MVVM이라고 가정한다면, 일관적인 형태로 코드의 Flow가 흘러가는 것이 중요
 
 지금은 비즈니스 로직이 없는 뷰일지라도, 새로운 기능이 생기고, 유지보수를 하고, 여러 화면을 하나의 화면으로 합하게 될 경우 등을 고려해본다면 특정 화면만 API 호출이 뷰컨트롤러에서 이루어진다면 코드의 패턴을 파악하기가 타인이 바라볼 때는 어려울 수도 있음!
+
+
+
+<br>
+
+</div>
+</details>
+
+
