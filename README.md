@@ -136,7 +136,8 @@ extension URLSession {
  
 <br>
 
- **ViewModel** → 비즈니스 로직을 처리
+ `ViewModel → 비즈니스 로직을 처리`
+ 
 
 **ViewModel**에서 API호출하는 로직을 처리하고, **Controller**에서 알람이나 화면 전환 등 화면 처리를 해주는 걸로 이해.
 
