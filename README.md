@@ -130,22 +130,25 @@ static func signUpUserInfo(idToken: String, completion: @escaping (Error?, Int?)
 
 Target (baseURL, path, method, task, headers)
 
-[UserTarget](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserTarget.swift)
-[QueueTarget](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/Queue/APIs/QueueTarget.swift)
+- [UserTarget](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserTarget.swift)
+
+- [QueueTarget](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/Queue/APIs/QueueTarget.swift)
 
  <br>
 
 API (request)
 
-[UserAPI](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserAPI.swift)
-[QueueAPI](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/Queue/APIs/QueueAPI.swift)
+- [UserAPI](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserAPI.swift)
+
+- [QueueAPI](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/Queue/APIs/QueueAPI.swift)
 
 <br>
 
 Models (Request body)
 
-[User_Models](https://github.com/camosss/SeSAC_SPL/tree/main/SeSAC_SPL/Network/User/APIs/Models)
-[Queue_Models](https://github.com/camosss/SeSAC_SPL/tree/main/SeSAC_SPL/Network/Queue/APIs/Models)
+- [User_Models](https://github.com/camosss/SeSAC_SPL/tree/main/SeSAC_SPL/Network/User/APIs/Models)
+
+- [Queue_Models](https://github.com/camosss/SeSAC_SPL/tree/main/SeSAC_SPL/Network/Queue/APIs/Models)
 
 
 <br>
