@@ -12,7 +12,7 @@
  <details>
 <summary>Endpoint - URL</summary>
  
-    <br>
+ <br>
 
   ```swift
 enum Endpoint {
@@ -20,6 +20,10 @@ enum Endpoint {
     case user_withdraw
     case user_update_fcm_token
     case user_update_mypage
+  
+    case queue
+    case queue_onqueue
+    ...
 }
 
 extension Endpoint {
@@ -29,6 +33,10 @@ extension Endpoint {
         case .user_withdraw: return .makeEndpoint("user/withdraw")
         case .user_update_fcm_token: return .makeEndpoint("user/update_fcm_token")
         case .user_update_mypage: return .makeEndpoint("user/update/mypage")
+  
+        case .queue: return .makeEndpoint("queue")
+        case .queue_onqueue: return .makeEndpoint("queue/onqueue")
+        ...
         }
     }
 }
@@ -41,10 +49,13 @@ extension URL {
     }
 }
 ```
-  
+<br>
   
  </div>
 </details>
+
+<br>
+
  
  [Moya 도입] 후
  
