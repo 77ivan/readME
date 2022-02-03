@@ -134,14 +134,14 @@ UserTarget (baseURL, path, method, task, headers)
 
  <br>
 
-UserAPI
+UserAPI (request)
 
 [코드 보기](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserAPI.swift)
 
 
 <br>
 
-Models
+Models (Request body)
 
 [코드 보기](https://github.com/camosss/SeSAC_SPL/tree/main/SeSAC_SPL/Network/User/APIs/Models)
 
