@@ -128,23 +128,25 @@ static func signUpUserInfo(idToken: String, completion: @escaping (Error?, Int?)
  <br>
 
 
-UserTarget (baseURL, path, method, task, headers)
+Target (baseURL, path, method, task, headers)
 
-[코드 보기](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserTarget.swift)
-
+[UserTarget](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserTarget.swift)
+[QueueTarget](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/Queue/APIs/QueueTarget.swift)
 
  <br>
 
-UserAPI (request)
+API (request)
 
-[코드 보기](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserAPI.swift)
-
+[UserAPI](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserAPI.swift)
+[QueueAPI](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/Queue/APIs/QueueAPI.swift)
 
 <br>
 
 Models (Request body)
 
-[코드 보기](https://github.com/camosss/SeSAC_SPL/tree/main/SeSAC_SPL/Network/User/APIs/Models)
+[User_Models](https://github.com/camosss/SeSAC_SPL/tree/main/SeSAC_SPL/Network/User/APIs/Models)
+[Queue_Models](https://github.com/camosss/SeSAC_SPL/tree/main/SeSAC_SPL/Network/Queue/APIs/Models)
+
 
 <br>
 
