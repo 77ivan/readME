@@ -89,7 +89,6 @@
 
 > Trending Topic
 
-<br>
 	
 - **SkeletonView** 라이브러리를 통해 로딩 View 구현
 - **WaterfallLayout**을 적용하여 트렌드한 주제의 기사 데이터를 받아와서 Collection View 구성
@@ -107,7 +106,7 @@
 
 > Search
  
-<br>
+
 	
 - **SkeletonView** 라이브러리를 통해 검색한 데이터를 받아오는 동안 로딩 View 구현
 - Cell을 선택하면 해당 기사 본문 페이지로 이동
@@ -123,7 +122,7 @@
 
 > Category
 
-<br>
+
 	
 - **Tabman, Pageboy** 라이브러리를 통해 카테고리 별 탭페이징 구현
 - **하나의 View, Cell, Controller 재사용**
@@ -141,7 +140,7 @@
 
 > 기사 본문
  
-<br>
+
 	
  - **ScrollView**를 적용하여 각 기사의 본문 길이만큼 동적인 높이 조정
 
