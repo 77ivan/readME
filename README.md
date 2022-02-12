@@ -54,9 +54,8 @@
 
  - 회원가입, 로그인
 
-
 | 회원가입, 로그인 | 비밀번호 변경, 로그아웃 |
-|:---:| :--- |
+| ------ | ------ |
 | <img src = "https://user-images.githubusercontent.com/93528918/153704073-694bf0f0-c947-4fc3-b83b-fbe3593cea0a.gif" width="70%" height="70%"> | <img src = "https://user-images.githubusercontent.com/93528918/153704079-b2b97e1c-8af7-40d9-9d16-42bac7c916aa.gif" width="70%" height="70%"> |
 
 
