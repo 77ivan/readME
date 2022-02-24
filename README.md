@@ -57,7 +57,7 @@
         - RxSwift를 사용하여 Callback을 통해 받아오는 Access Token값을 구독하고 이벤트를 감지해서 UI 변경을 구현하는 방식으로 개선해봐야겠다.
     
 - Access Token값 보관 (UserDefaults/Keychain 고민)
-    - 해당 프로젝트에서는 UserDefaults에서 Access Token값을 관리하여 앱이 삭제될 때, 사라질 수 있게 구현
+    - 해당 프로젝트에서는 UserDefaults에서 Access Token값을 관리
     - 하지만 Access Token같은 경우는 민감한 정보이기 때문에 Keychain을 통해 암호화된 데이터로 저장하는 것이 더 적합하다고 판단되어 추후 개선 예정
     
 - Property Wrapper를 사용하여 UserDefaults에 Access Token값 저장
