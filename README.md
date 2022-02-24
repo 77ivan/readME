@@ -52,18 +52,23 @@
 > **ISSUE**
 
 - OAuth Callback 처리
+    
     - Scene Delegate에서 OAuth를 처리하기 위한 Callback이 발생할 때, ViewController에서 로그인 상태가 바로 적용이 되지 않는 이슈
         - Scene Delegate의 window속성을 통해 rootView를 MainTapController로 다시 전환해주면서 해결
-        - RxSwift를 사용하여 Callback을 통해 받아오는 Access Token값을 구독하고 이벤트를 감지해서 UI 변경을 구현하는 방식으로 개선해봐야겠다.
+    
+    - RxSwift를 사용하여 Callback을 통해 받아오는 Access Token값을 구독하고 이벤트를 감지해서 UI 변경을 구현하는 방식으로 개선해봐야겠다.
     
 - Access Token값 보관 (UserDefaults/Keychain 고민)
+    
     - 해당 프로젝트에서는 UserDefaults에서 Access Token값을 관리
+    
     - 하지만 Access Token같은 경우는 민감한 정보이기 때문에 Keychain을 통해 암호화된 데이터로 저장하는 것이 더 적합하다고 판단되어 추후 개선 예정
     
 - Property Wrapper를 사용하여 UserDefaults에 Access Token값 저장
     - 휴먼에러를 방지하면서 UserDefaults에 저장된 Access Token을 관리하기 위한 고민
         - Swift5.1에서 추가된 기능인 Property Wrapper를 적용
         - wrappedValue의 getter는 UserDefaults를 통해 object를 가져와서 반환하고, setter는 UserDefaults를 통해 값을 저장하는 방식으로 구현
+   
     - UserDefaults 같은 경우는 key값만 다르고 같은 코드가 반복되기 때문에, 단순히 property에 값을 대입하는 코드만으로 저장이 가능하고, Enum을 통해 관리하기 수월하다고 느낌
     - UserDefaults뿐만 아니라 반복되는 로직들을 property에 연결하여 사용이 가능해 보여, 추후 다른 로직에도 적용해봐야겠다.
 
