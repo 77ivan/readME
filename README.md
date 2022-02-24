@@ -86,12 +86,11 @@
 > **ISSUE**
 
 - Pagination
-    - 페이지당 검색 결과가 30개씩 반환될 때, 스크롤을 Bottom까지 땡겨 다음 페이지를 호출하는 방식에 대한 고민
     - scrollViewDidScroll 메서드에서 스크롤을 Bottom에 닿을 때의 제약을 줬을 때, 계속된 호출로 무분별하게 데이터가 추가되는 이슈
         
         
-        > 해결 방법
-        > 
+    - 해결한 방법
+        
         - Enum case로 현재 View상태(isNow, isLoading)를 구분
         - 스크롤이 TableView Bottom에 닿을 때, Pagination 함수 호출
             - 검색 결과의 count가 30개가 넘었을 때만 호출
