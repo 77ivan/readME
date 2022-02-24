@@ -19,7 +19,7 @@
 
 ## ****Style Guide****
 
----
+
 
 - [StyleShare Swift Style Guide](https://github.com/StyleShare/swift-style-guide)
 
