@@ -100,7 +100,7 @@
 - Star버튼을 통한 Star/UnStar 기능 구현
     - 검색 결과 Repositories 응답값과 사용자가 Star한 Repositories 응답값 비교를 통한 분기 처리
         - 검색 결과에 로그인한 사용자가 Star했다는 응답값이 없기 때문에 사용자가 Star한 Repositories를 불러와서 두 배열을 비교하는 식으로 접근
-        - 검색 response에 **`var**starred: Bool? =**false**`를 추가하여 두 배열이 일치하는 값에 true 대입
+        - 검색 response에 `var**starred: Bool? = false`를 추가하여 두 배열이 일치하는 값에 true 대입
         - true로 변경한 Repositories를 데이터 소스와 연결하는 과정에서 해결하지 못함
     - 좀 더 다른 방식으로 접근을 해봐야겠다.
 
