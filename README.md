@@ -55,9 +55,9 @@
     
     - Scene Delegate에서 OAuth를 처리하기 위한 Callback이 발생할 때, ViewController에서 로그인 상태가 바로 적용이 되지 않는 이슈
         
-        - Scene Delegate의 window속성을 통해 rootView를 MainTapController로 다시 전환해주면서 해결
+    - Scene Delegate의 window속성을 통해 rootView를 MainTapController로 다시 전환해주면서 해결
     
-    - RxSwift를 사용하여 Callback을 통해 받아오는 Access Token값을 구독하고 이벤트를 감지해서 UI 변경을 구현하는 방식으로 개선해봐야겠다.
+        - RxSwift를 사용하여 Callback을 통해 받아오는 Access Token값을 구독하고 이벤트를 감지해서 UI 변경을 구현하는 방식으로 개선해봐야겠다.
     
 <br>
 
