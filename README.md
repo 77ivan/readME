@@ -143,7 +143,8 @@
     
     - 서로 다른 데이터 타입을 Enum case로 구분하여 SectionModel에서 관리하기 위해 API에서 값을 받아 추가하는 과정에서 실패
     
-    - RxDataSources의 구현 방식에 대한 학습의 
+    - RxDataSources의 구현 방식에 대한 학습의 필요성을 느낌
+    
 
 <br>
 <br>
