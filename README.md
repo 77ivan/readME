@@ -54,16 +54,21 @@
 - OAuth Callback 처리
     
     - Scene Delegate에서 OAuth를 처리하기 위한 Callback이 발생할 때, ViewController에서 로그인 상태가 바로 적용이 되지 않는 이슈
+        
         - Scene Delegate의 window속성을 통해 rootView를 MainTapController로 다시 전환해주면서 해결
     
     - RxSwift를 사용하여 Callback을 통해 받아오는 Access Token값을 구독하고 이벤트를 감지해서 UI 변경을 구현하는 방식으로 개선해봐야겠다.
     
+<br>
+
 - Access Token값 보관 (UserDefaults/Keychain 고민)
     
     - 해당 프로젝트에서는 UserDefaults에서 Access Token값을 관리
     
     - 하지만 Access Token같은 경우는 민감한 정보이기 때문에 Keychain을 통해 암호화된 데이터로 저장하는 것이 더 적합하다고 판단되어 추후 개선 예정
     
+<br>
+
 - Property Wrapper를 사용하여 UserDefaults에 Access Token값 저장
     - 휴먼에러를 방지하면서 UserDefaults에 저장된 Access Token을 관리하기 위한 고민
         - Swift5.1에서 추가된 기능인 Property Wrapper를 적용
@@ -91,6 +96,7 @@
 > **ISSUE**
 
 - Pagination
+    
     - scrollViewDidScroll 메서드에서 스크롤을 Bottom에 닿을 때의 제약을 줬을 때, 계속된 호출로 무분별하게 데이터가 추가되는 이슈
     
     - 해결한 방법
@@ -101,6 +107,8 @@
         - API를 호출하여 Repositories 응답 배열에 append 시켜준 뒤, View 상태값(isNow) 다시 변경
     
     - RxSwift를 사용한 Pagination 구현 방식을 찾아보니, Throttle를 통해 시간 간격을 두고 이벤트를 발생시켜 Pagination 구현이 가능해 보여 해당 방식으로 적용해봐야겠다.
+
+<br>
     
 - Star버튼을 통한 Star/UnStar 기능 구현
     - 검색 결과 Repositories 응답값과 사용자가 Star한 Repositories 응답값 비교를 통한 분기 처리
@@ -129,7 +137,9 @@
 > **ISSUE**
 
 - 2개의 Section(사용자 정보, Starred Repositories)으로 구성된 TableView, RxDataSources 적용 시도
+    
     - 서로 다른 데이터 타입을 Enum case로 구분하여 SectionModel에서 관리하기 위해 API에서 값을 받아 추가하는 과정에서 실패
+    
     - RxDataSources의 구현 방식에 대한 학습이 
 
 <br>
