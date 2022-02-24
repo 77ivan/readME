@@ -6,9 +6,9 @@
 
 <br>
 
-### D**ependence**
+## D**ependence**
 
----
+
 
 - Then, Toast-Swift, SkeletonView, SnapKit
 - Kingfisher
@@ -17,7 +17,7 @@
 <br>
 
 
-### ****Style Guide****
+## ****Style Guide****
 
 ---
 
@@ -28,7 +28,6 @@
 
 ### ****Reference****
 
----
 
 - [GitHub API](https://developer.github.com/v3/)
 
@@ -37,9 +36,9 @@
 <br>
 
 
-### 로그인(OAuth)
+## 로그인(OAuth)
 
----
+
 
 <br>
 
@@ -71,9 +70,9 @@
 <br>
 
 
-### 검색
+## 검색
 
----
+
 
 <br>
 
@@ -110,9 +109,9 @@
 
 <br>
 
-### 프로필
+## 프로필
 
----
+
 
 <br>
 
@@ -133,9 +132,9 @@
 
 <br>
 
-### 프로젝트 회고
+## 프로젝트 회고
 
----
+
 
 - 프로젝트를 시작할 때 API 명세서 작성이 필요함을 느꼈다.
     - 진행 과정에서 중간중간 API 문서를 이해하고 적용하는 데에 꽤 많은 시간이 소요됐다.
