@@ -20,7 +20,7 @@
 
 ---
 
-- [StyleShare Swift Style Guide]([https://github.com/StyleShare/swift-style-guide](https://github.com/StyleShare/swift-style-guide))
+- [StyleShare Swift Style Guide](https://github.com/StyleShare/swift-style-guide](https://github.com/StyleShare/swift-style-guide)
 
 <br>
 
