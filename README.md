@@ -42,14 +42,14 @@
 
 <br>
 
-**TODO**
+> **TODO**
 
 - Github와 App사이의 리디렉션 과정을 통한 Access Token값 받아오기
 - 화면 상단 UIBarButtonItem을 통해 로그인 상태 Toggle
 
 <br>
 
-**ISSUE**
+> **ISSUE**
 
 - OAuth Callback 처리
     - Scene Delegate에서 OAuth를 처리하기 위한 Callback이 발생할 때, ViewController에서 로그인 상태가 바로 적용이 되지 않는 이슈
@@ -76,14 +76,14 @@
 
 <br>
 
-**TODO**
+> **TODO**
 
 - SearchBar를 통해 검색한 단어에 해당하는 Repositories 검색
 - 로그인된 상태일 때, Star버튼을 눌러 자신의 계정 Star List에 연동하여 추가
 
 <br>
 
-**ISSUE**
+> **ISSUE**
 
 - Pagination
     - 페이지당 검색 결과가 30개씩 반환될 때, 스크롤을 Bottom까지 땡겨 다음 페이지를 호출하는 방식에 대한 고민
@@ -115,7 +115,7 @@
 
 <br>
 
-**TODO**
+> **TODO**
 
 - 사용자가 로그인이 되어있지 않은 상태일 때, 로그인 유도
 - 로그인된 상태일 때, 사용자 정보 띄우기
@@ -124,7 +124,7 @@
 
 <br>
 
-**ISSUE**
+> **ISSUE**
 
 - 2개의 Section(사용자 정보, Starred Repositories)으로 구성된 TableView, RxDataSources 적용 시도
     - 서로 다른 데이터 타입과 서로 다른 Cell로 구성되어 있는 TableView
