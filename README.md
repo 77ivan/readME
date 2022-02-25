@@ -49,6 +49,7 @@
 > **TODO**
 
 - Github와 App사이의 리디렉션 과정을 통한 Access Token값 받아오기
+
 - 화면 상단 UIBarButtonItem을 통해 로그인 상태 Toggle
 
 <br>
@@ -99,6 +100,7 @@
 > **TODO**
 
 - SearchBar를 통해 검색한 단어에 해당하는 Repositories 검색
+
 - 로그인된 상태일 때, Star버튼을 눌러 자신의 계정 Star List에 연동하여 추가
 
 <br>
@@ -141,8 +143,11 @@
 > **TODO**
 
 - 사용자가 로그인이 되어있지 않은 상태일 때, 로그인 유도
+
 - 로그인된 상태일 때, 사용자 정보 띄우기
+
 - 로그인된 사용자가 Star한 Repositories 목록 띄우기
+
 - Repositories의 Star버튼을 통해 Star/Unstar 가능
 
 <br>
