@@ -156,7 +156,7 @@
 
 - 2개의 Section(사용자 정보, Starred Repositories)으로 구성된 TableView, RxDataSources 적용 시도
     
-    - 서로 다른 데이터 타입을 Enum case로 구분하여 SectionModel에서 관리하기 위해 API에서 값을 받아 추가하는 과정에서 실패
+    - 서로 다른 데이터 타입(UserResponse, UserStarredRepoResponse)을 Enum case로 구분하여 SectionModel에서 관리하기 위해 API에서 값을 받아 추가하는 과정에서 실패
     
     - RxDataSources의 구현 방식에 대한 학습의 필요성을 느낌
     
