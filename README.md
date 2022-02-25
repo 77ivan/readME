@@ -57,7 +57,7 @@
         
     - Scene Delegate의 window속성을 통해 rootView를 MainTapController로 다시 전환해주면서 해결
     
-        - RxSwift를 사용하여 Callback을 통해 받아오는 Access Token값을 구독하고 이벤트를 감지해서 UI 변경을 구현하는 방식으로 개선해봐야겠다.
+        - RxSwift를 사용하여 Callback을 통해 받아오는 Access Token값을 구독하고 이벤트를 감지해서 UI 변경을 구현하는 방식으로 추후 개선 필요
     
 <br>
 
@@ -69,7 +69,7 @@
         - wrappedValue의 getter는 UserDefaults를 통해 object를 가져와서 반환하고, setter는 UserDefaults를 통해 값을 저장하는 방식으로 구현
    
     - UserDefaults 같은 경우는 key값만 다르고 같은 코드가 반복되기 때문에, 단순히 property에 값을 대입하는 코드만으로 저장이 가능하고, Enum을 통해 관리하기 수월하다고 느낌
-    - UserDefaults뿐만 아니라 반복되는 로직들을 property에 연결하여 사용이 가능해 보여, 추후 다른 로직에도 적용해봐야겠다.
+    - UserDefaults뿐만 아니라 반복되는 로직들을 property에 연결하여 사용이 가능해 보여, 추후 다른 로직에도 추후 적용 필요
 
 <br>
 
@@ -77,7 +77,7 @@
     
     - 해당 프로젝트에서는 UserDefaults에서 Access Token값을 관리
     
-    - 하지만 Access Token같은 경우는 민감한 정보이기 때문에 Keychain을 통해 암호화된 데이터로 저장하는 것이 더 적합하다고 판단되어 추후 개선 예정
+    - 하지만 Access Token같은 경우는 민감한 정보이기 때문에 Keychain을 통해 암호화된 데이터로 저장하는 것이 더 적합하다고 판단되어 추후 개선 필요
     
 
 <br>
@@ -109,7 +109,7 @@
         - Pagination 함수 내에서 page값 변수를 생성하여 +1을 해준 뒤 View상태 값(isLoading)을 변경
         - API를 호출하여 Repositories 응답 배열에 append 시켜준 뒤, View 상태값(isNow) 다시 변경
     
-    - RxSwift를 사용한 Pagination 구현 방식을 찾아보니, Throttle를 통해 시간 간격을 두고 이벤트를 발생시켜 Pagination 구현이 가능해 보여 해당 방식으로 적용해봐야겠다.
+    - RxSwift를 사용한 Pagination 구현 방식을 찾아보니, Throttle를 통해 시간 간격을 두고 이벤트를 발생시켜 Pagination 구현이 가능해 보여 해당 방식으로 추후 개선 필요
 
 <br>
     
@@ -121,8 +121,7 @@
         - 검색 response에 `var starred: Bool? = false`를 추가하여 두 배열이 일치하는 값에 true 대입
         - true로 변경한 Repositories를 데이터 소스와 연결하는 과정에서 해결하지 못함
    
-   - 좀 더 다른 방식으로 접근을 해봐야겠다.
-
+   - 좀 더 다른 방식으로 접근 필요
 <br>
 
 ## 프로필
@@ -153,7 +152,6 @@
 <br>
 
 ## 프로젝트 회고
-
 
 
 - 프로젝트를 시작할 때 API 명세서 작성이 필요함을 느꼈다.
