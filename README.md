@@ -1,12 +1,12 @@
+
+
+
+# Github Repository 검색 클라이언트 애플리케이션
+
+
 <br>
 
-
-> Github Repository 검색 클라이언트 애플리케이션
-> 
-
-<br>
-
-- ClientInfo.plist파일은 .gitignore로 관리했으나 원활한 평가를 위해 올려두었습니다.
+> ClientInfo.plist파일은 .gitignore로 관리했으나 원활한 평가를 위해 올려두었습니다.
 
 <br>
 
