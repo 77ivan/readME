@@ -69,11 +69,14 @@
 
 - Property Wrapper를 사용하여 UserDefaults에 Access Token값 저장
     - 휴먼에러를 방지하면서 UserDefaults에 저장된 Access Token을 관리하기 위한 고민
+    
         - Swift5.1에서 추가된 기능인 Property Wrapper를 적용
+
         - wrappedValue의 getter는 UserDefaults를 통해 object를 가져와서 반환하고, setter는 UserDefaults를 통해 값을 저장하는 방식으로 구현
    
     - UserDefaults 같은 경우는 key값만 다르고 같은 코드가 반복되기 때문에, 단순히 property에 값을 대입하는 코드만으로 저장이 가능하고, Enum을 통해 관리하기 수월하다고 느낌
-    - UserDefaults뿐만 아니라 반복되는 로직들을 property에 연결하여 사용이 가능해 보여, 추후 다른 로직에도 추후 적용 필요
+        
+        - UserDefaults뿐만 아니라 반복되는 로직들을 property에 연결하여 사용이 가능해 보여, 추후 다른 로직에도 추후 적용 필요
 
 <br>
 
