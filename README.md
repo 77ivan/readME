@@ -140,10 +140,10 @@ DispatchQueue.global().async {
 <br>
 
 
-<img src = "https://user-images.githubusercontent.com/93528918/157194520-37d7bb1d-ff8c-4663-b367-20c555fcfe96.png" width="100%" height="100%">
+<img src = "https://user-images.githubusercontent.com/93528918/157194520-37d7bb1d-ff8c-4663-b367-20c555fcfe96.png" width="70%" height="70%">
 
 
-<img src = "https://user-images.githubusercontent.com/93528918/157194525-ca87339d-74f6-48d8-bee9-7262aa5d8292.gif" width="100%" height="100%">
+<img src = "https://user-images.githubusercontent.com/93528918/157194525-ca87339d-74f6-48d8-bee9-7262aa5d8292.gif" width="70%" height="70%">
 
 
 
