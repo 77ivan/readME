@@ -9,8 +9,14 @@
 
 - Endpoint
     - URL, path, method, parameters 등의 데이터 객체
+
+<br>
+
 - Provider
     - URLSession, DataTask를 이용하여 Network호출이 이루어 지는 곳
+
+<br>
+
 - APIService
     - URLSession을 사용하여 도메인에 종속된 Endpoint를 통해 서버에 요청
 
