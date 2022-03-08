@@ -78,10 +78,13 @@ DispatchQueue.global().async {
 <br>
 
 1. 서버에 이벤트 요청 시, `enter()` 함수 호출 → 서버에 전달할 이벤트 수만큼 (for문이 순회하는만큼) 실행 알림
+
 2. dataTask 메서드에서 response 에러가 없을 경우 디코딩 후 `leave()` 함수 호출
+
 3. response 에러발생 시 NetworkError(.invaildResponse)를 Callback.
 
-global Queue에서 track 메서드 재실행 → 재실행 후 데이터를 성공적으로 보낸 뒤,`leave()` 함수 호출
+    global Queue에서 track 메서드 재실행 → 재실행 후 데이터를 성공적으로 보낸 뒤,`leave()` 함수 호출
+
 4. ContentView에서 `notify(queue:)` 함수 호출 →  후행 실행 시작을 알림, **exit() 실행**
 
 
