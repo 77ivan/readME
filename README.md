@@ -1,210 +1,126 @@
-
-
-
-## Github Repository Search Client Application
-
+# airbridge-ios-sdk-assignment
 
 <br>
 
-> ClientInfo.plist파일은 .gitignore로 관리했으나 원활한 평가를 위해 올려두었습니다.
-
-<br>
-
-## D**ependence**
-
-
-
-- Then, Toast-Swift, SkeletonView, SnapKit
-- Kingfisher
-- Moya, RxSwift
+## Network 레이어 설계
 
 <br>
 
 
-## ****Style Guide****
+- Endpoint
+    - URL, path, method, parameters 등의 데이터 객체
+- Provider
+    - URLSession, DataTask를 이용하여 Network호출이 이루어 지는 곳
+- APIService
+    - URLSession을 사용하여 도메인에 종속된 Endpoint를 통해 서버에 요청
 
+<br>
 
+## 유실되는 이벤트 없이 서버에 전달하기
 
-- [StyleShare/Swift Style Guide](https://github.com/StyleShare/swift-style-guide)
+<br>
+
+> HTTPURLResponse의 StatusCode 200을 제외한 나머지 경우
+> 
+
+<br>
+
+- 유실된 이벤트를 담은 배열 생성
+
+```swift
+var lostEvent = [Event]()
+```
+
+<br>
+
+- lostEvent 배열에 유실된 이벤트 append
+- global Queue에서 유실된 이벤트 재요청
+    - concurrent 특성을 가지기 때문에 여러 스레드로 분산되어 동시 처리
+
+```swift
+lostEvent.append(event)
+                    
+DispatchQueue.global().async {
+    for event in lostEvent {
+        track(event: event)
+    }
+}
+```
 
 <br>
 
 
-## ****Reference****
-
-
-- [GitHub API](https://developer.github.com/v3/)
-
-
-<br>
-<br>
-
-
-## 로그인(OAuth)
-
-
-
-<br>
-
-> **TODO**
-
-- Github와 App사이의 리디렉션 과정을 통한 Access Token값 받아오기
-
-- 화면 상단 UIBarButtonItem을 통해 로그인 상태 Toggle
-
-<br>
-
-> **ISSUE**
-
-- OAuth Callback 처리
-    
-    - Scene Delegate에서 OAuth를 처리하기 위한 Callback이 발생할 때, ViewController에서 로그인 상태가 바로 적용이 되지 않는 이슈
-        
-    - Scene Delegate의 window속성을 통해 rootView를 MainTapController로 다시 전환해주면서 해결
-    
-        - RxSwift를 사용하여 Callback을 통해 받아오는 Access Token값을 구독하고 이벤트를 감지해서 UI 변경을 구현하는 방식으로 추후 개선 필요
-    
-<br>
-
-
-
-- Property Wrapper를 사용하여 UserDefaults에 Access Token값 저장
-    - 휴먼에러를 방지하면서 UserDefaults에 저장된 Access Token을 관리하기 위한 고민
-    
-        - Swift5.1에서 추가된 기능인 Property Wrapper를 적용
-
-        - wrappedValue의 getter는 UserDefaults를 통해 object를 가져와서 반환하고, setter는 UserDefaults를 통해 값을 저장하는 방식으로 구현
-   
-    - UserDefaults 같은 경우는 key값만 다르고 같은 코드가 반복되기 때문에, 단순히 property에 값을 대입하는 코드만으로 저장이 가능하고, Enum을 통해 관리하기 수월하다고 느낌
-        
-        - UserDefaults뿐만 아니라 반복되는 로직들을 property에 연결하여 사용이 가능해 보여, 추후 다른 로직에도 추후 적용 필요
-
-<br>
-
-- Access Token값 보관 (UserDefaults/Keychain 고민)
-    
-    - 해당 프로젝트에서는 UserDefaults에서 Access Token값을 관리
-    
-    - 하지만 Access Token같은 경우는 민감한 정보이기 때문에 Keychain을 통해 암호화된 데이터로 저장하는 것이 더 적합하다고 판단되어 추후 개선 필요
-    
+## `exit(0)`을 고려한 멀티스레드 처리
 
 <br>
 
 
-## 검색
+**DispatchGroup으로 DispatchQueue들을 그룹으로 묶어서, 모든 작업이 끝난 다음 앱 종료(exit(0))**
 
+<br>
+
+- enter()
+    - Dispatch Group에 들어가며, task를 +1
+    - 선행 실행을 알림
+- leave()
+    - Dispatch Group에서 나오며, task를 -1
+    - 실행이 끝났다는 것을 알림
+- notify()
+    - task가 0이 되었을 때 실행
+    - 후행 실행 시작을 알림
+
+<br>
+
+1. 서버에 이벤트 요청 시, `enter()` 함수 호출 → 서버에 전달할 이벤트 수만큼 (for문이 순회하는만큼) 실행 알림
+2. dataTask 메서드에서 response 에러가 없을 경우 디코딩 후 `leave()` 함수 호출
+3. response 에러발생 시 **NetworkError(.invaildResponse)**를 Callback.
+global Queue에서 track 메서드 재실행 → 재실행 후 데이터를 성공적으로 보낸 뒤,`leave()` 함수 호출
+4. ContentView에서 `notify(queue:)` 함수 호출 →  후행 실행 시작을 알림, **exit() 실행**
 
 
 <br>
 
-> **TODO**
-
-- SearchBar를 통해 검색한 단어에 해당하는 Repositories 검색
-
-- 로그인된 상태일 때, Star버튼을 눌러 자신의 계정 Star List에 연동하여 추가
+## 이벤트 전송 중 네트워크가 끊어지는 케이스
 
 <br>
 
-> **ISSUE**
 
-- Pagination
-    
-    - scrollViewDidScroll 메서드에서 스크롤을 Bottom에 닿을 때의 제약을 줬을 때, 계속된 호출로 무분별하게 데이터가 추가되는 이슈
-    
-    - 해결한 방법
-        - Enum case로 현재 View상태(isNow, isLoading)를 구분
-        - 스크롤이 TableView Bottom에 닿을 때, Pagination 함수 호출
-            - 검색 결과의 count가 30개가 넘었을 때만 호출
-        - Pagination 함수 내에서 page값 변수를 생성하여 +1을 해준 뒤 View상태 값(isLoading)을 변경
-        - API를 호출하여 Repositories 응답 배열에 append 시켜준 뒤, View 상태값(isNow) 다시 변경
-    
-    - RxSwift를 사용한 Pagination 구현 방식을 찾아보니, Throttle를 통해 시간 간격을 두고 이벤트를 발생시켜 Pagination 구현이 가능해 보여 해당 방식으로 추후 개선 필요
+> iOS12부터는 `NWNetworkMonitor` 내부 라이브러리를 통해서 현재 인터넷 상태 변경에 대한 감지를 할 수 있도록 제공
+> 
 
 <br>
-    
-- Star버튼을 통한 Star/UnStar 기능 구현
-    
-    - 검색 결과 Repositories 응답값과 사용자가 Star한 Repositories 응답값 비교를 통한 분기 처리
-        
-        - 검색 결과에 로그인한 사용자가 Star했다는 응답값이 없기 때문에 사용자가 Star한 Repositories를 불러와서 두 배열을 비교하는 식으로 접근
-        - 검색 response에 `var starred: Bool? = false`를 추가하여 두 배열이 일치하는 값에 true 대입
-        - true로 변경한 Repositories를 데이터 소스와 연결하는 과정에서 해결하지 못함
-   
-   - 좀 더 다른 방식으로 접근 필요
-   
+
+**Target OS Version 9.0**을 대응하기 위해서는 `Reachability` 라이브러리 사용
+
+1. 네트워크 상태 모니터링을 위한 Reachability 인스턴스 생성
+2. NotificationCenter에 네트워크 상태 변화를 감지하기 위한 observer 등록
+3. 네트워크 상태가 변경될때마다 reachabilityChanged 메서드에서 Callback
+
 <br>
 
-## 프로필
+## 이벤트 전송 중 앱이 꺼지는 케이스
 
+<br>
+
+- 이벤트 전송 중 background로 전환 시에는 background모드에서도 이벤트 전송 가능
+- Swipe로 앱을 종료 시에는 작업 중단
+
+<br>
+
+## 네트워크가 불안정한 환경에서 이벤트를 전송하는 케이스
 
 
 <br>
 
-> **TODO**
-
-- 사용자가 로그인이 되어있지 않은 상태일 때, 로그인 유도
-
-- 로그인된 상태일 때, 사용자 정보 띄우기
-
-- 로그인된 사용자가 Star한 Repositories 목록 띄우기
-
-- Repositories의 Star버튼을 통해 Star/Unstar 가능
+- Network Link Conditioner → **Very Bad Network** 설정 후 테스트
 
 <br>
 
-> **ISSUE**
 
-- 2개의 Section(사용자 정보, Starred Repositories)으로 구성된 TableView, RxDataSources 적용 시도
-    
-    - 서로 다른 데이터 타입(UserResponse, UserStarredRepoResponse)을 Enum case로 구분
-    
-    - SectionModel에서 관리하기 위해 API에서 값을 응답 받아서 추가하는 과정에서 어떤식으로 값을 넣어주는지에 대한 고민
-    
-    - RxDataSources의 구현 방식에 대한 학습의 필요성을 느낌
-    
-
-<br>
-<br>
-
-## 프로젝트 회고
+<img src = "https://user-images.githubusercontent.com/93528918/157194520-37d7bb1d-ff8c-4663-b367-20c555fcfe96.png" width="50%" height="50%">
 
 
-- 프로젝트 시작 전, 좀 더 시스템적으로 기획/분석/설계 후 효율적으로 공수 산정 필요
-   
-    - 진행 과정에서 중간중간 API 문서를 이해하고 적용하는 데에 꽤 많은 시간이 소요됐다.
-    
-    - 개발 과정을 그림으로 도식화하는 과정을 통해 공수 산정을 좀 더 효율적으로 산정하여 기한 내에 프로젝트를 마무리할 수 있도록 노력해야겠다.
-
-<br>
-
-- 개인화 모바일 서비스에 대한 다양한 use case에 대한 충분한 고민이 필요
-
-    - 이번 과제를 진행하면서 사용자 use case에 대한 다양한 시각에 대해 고민한 경험을 했던 것 같다.
-
-    - 기능적으로만 잘 동작하는 기능을 개발하는 개발자보다, 유저의 다양한 use case도 고민하고 대응할 수 있는 개발자로 성장하는 것이 중요한 것 같다.
-
-
-<br>
-
-- 반응형 프로그래밍과 아키텍쳐 패턴을 이론이 아닌 미니 프로젝트를 통한 학습의 필요성을 느꼈다.
-    
-    - 이론으로만 공부한 상태에서 막상 프로젝트에 적용을 하려니 혼란스럽게만 느껴졌다.
-    
-    - 적재적소에 잘 사용할 수 있도록 여러 코드를 읽고 구성해보는 학습을 해야겠다.
-
-<br>
-
-- 추후 개선이나 적용이 필요한 부분들은 과제를 진행하면서 스스로 부족하거나 아쉬운 부분이 있었다.
-   
-   - Star 버튼 로직 기능 구현을 마무리 못했지만, 이 부분은 다른 접근 방법을 찾아봐야겠다.
-   
-   - RxSwift를 거의 적용하지 못했는데, 이번을 계기로 반응형 프로그래밍에 대해 어느정도 이해하고 넘어갈 수 있게 리펙토링을 진행해야겠다.
-
-
-<br>
-<br>
-
-
+<img src = "https://user-images.githubusercontent.com/93528918/157194525-ca87339d-74f6-48d8-bee9-7262aa5d8292.gif" width="50%" height="50%">
 
 
 
