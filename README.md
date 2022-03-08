@@ -40,6 +40,7 @@ var lostEvent = [Event]()
 <br>
 
 - lostEvent 배열에 유실된 이벤트 append
+
 - global Queue에서 유실된 이벤트 재요청
     - concurrent 특성을 가지기 때문에 여러 스레드로 분산되어 동시 처리
 
@@ -66,13 +67,21 @@ DispatchQueue.global().async {
 <br>
 
 - enter()
+    
     - Dispatch Group에 들어가며, task를 +1
+    
     - 선행 실행을 알림
+
 - leave()
+    
     - Dispatch Group에서 나오며, task를 -1
+    
     - 실행이 끝났다는 것을 알림
+
 - notify()
+    
     - task가 0이 되었을 때 실행
+    
     - 후행 실행 시작을 알림
 
 <br>
@@ -103,7 +112,9 @@ DispatchQueue.global().async {
 **Target OS Version 9.0**을 대응하기 위해서는 `Reachability` 라이브러리 사용
 
 1. 네트워크 상태 모니터링을 위한 Reachability 인스턴스 생성
+
 2. NotificationCenter에 네트워크 상태 변화를 감지하기 위한 observer 등록
+
 3. 네트워크 상태가 변경될때마다 reachabilityChanged 메서드에서 Callback
 
 <br>
@@ -113,6 +124,7 @@ DispatchQueue.global().async {
 <br>
 
 - 이벤트 전송 중 background로 전환 시에는 background모드에서도 이벤트 전송 가능
+
 - Swipe로 앱을 종료 시에는 작업 중단
 
 <br>
