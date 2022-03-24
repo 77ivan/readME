@@ -226,6 +226,7 @@ private func handleRemainEvent(
 <br>
 <br>
 
+---
 
 *2차 시도*
 
