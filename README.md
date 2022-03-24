@@ -344,21 +344,6 @@ private func handleRemainEvent(
 
 <br>
 
-**성공 case**
-
-https://user-images.githubusercontent.com/93528918/159855014-4f2870e8-def4-4345-9f7d-1047e75fa8e7.mov
-
-
-
-**실패 case**
-
-https://user-images.githubusercontent.com/93528918/159855125-e67262bf-45d2-42fd-b6d3-8c6cb4b3dd2b.mov
-
-
-
-<br>
-
-
 <details>
 <summary> 디버깅 구간 </summary>
 <div markdown="1">
@@ -388,6 +373,27 @@ print("스토리지에 저장", PersistenceManager.populateEvent())
     
 </div>
 </details>
+
+<br>
+
+**성공 case**
+
+https://user-images.githubusercontent.com/93528918/159855014-4f2870e8-def4-4345-9f7d-1047e75fa8e7.mov
+
+
+<br>
+
+
+**실패 case**
+
+https://user-images.githubusercontent.com/93528918/159855125-e67262bf-45d2-42fd-b6d3-8c6cb4b3dd2b.mov
+
+
+
+<br>
+
+
+
 
 
 
