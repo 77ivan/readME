@@ -153,7 +153,7 @@ API 호출 구문 코드 (Provider)
 > Solution
 
 
-- UserDefaults를 활용하여 앱 종료로 유실된 object(event) 배열을 스토리지에 저장
+- UserDefaults를 활용하여 앱 종료로 유실된 object(event) 배열을 **스토리지에 저장**
 
 <br>
 
