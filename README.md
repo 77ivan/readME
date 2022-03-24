@@ -99,6 +99,7 @@ API 호출 구문 코드 (Provider)
 
 ## struct → class (AssignmentSDK)
 
+<br>
 
 > ISSUE
 
@@ -114,7 +115,7 @@ API 호출 구문 코드 (Provider)
 
 - 저장해야하는 배열이 메서드 블록이 아닌 프로퍼티로 빠져야한다.
 
-    - **구조체(struct)**가 멤버 프로퍼티를 업데이트하려면 mutating 속성을 붙여야 한다.
+    - 구조체(struct)가 멤버 프로퍼티를 업데이트하려면 mutating 속성을 붙여야 한다.
     
     - 하지만 클로저가 캡쳐하는 시기가 클로저가 생성될 때인데, APIService에서 completion으로 `@escaping closure`를 사용하고 있고, 거기에서 self를 캡처한다.
     
@@ -122,7 +123,7 @@ API 호출 구문 코드 (Provider)
         
         - Error: Escaping closure captures mutating 'self' parameter
         
-    - 클로저가 **클래스(class)**를 캡처할 때는 실행 시 캡처가 이루어지고, 참조타입이기 때문에 class의 속성이 변경이 되어도 `@escaping closure`는 자신이 의도한 인스턴스가 참조가 된다.
+    - 클로저가 클래스(class)를 캡처할 때는 실행 시 캡처가 이루어지고, 참조타입이기 때문에 class의 속성이 변경이 되어도 `@escaping closure`는 자신이 의도한 인스턴스가 참조가 된다.
 
 <br>
 <br>
