@@ -157,6 +157,8 @@ API 호출 구문 코드 (Provider)
 
 <br>
 
+---
+
 **1차 시도**
 
 - view에 sdk를 인스턴스로 할당할 때, **sdk 내부 초기화 구문**을 통해 앱 종료로 유실된 이벤트 불러와서 유실된 이벤트가 있는지 Bool(isLost)로 구분
@@ -267,12 +269,15 @@ private func handleRemainEvent(
 </div>
 </details>
 
+---
 
+<br>
 <br>
 
 
 ## 유효하지않은 응답값의 이벤트 처리
 
+<br>
 
 > ISSUE
 
