@@ -170,12 +170,60 @@ API 호출 구문 코드 (Provider)
 
 <br>
 
+<details>
+<summary> 1차 시도 코드 </summary>
+<div markdown="1">
+<br>
+
+
+    
+```swift
+public init() {
+    /// sdk를 할당할 때, 앱 종료로 유실된 이벤트 불러와서 Bool(flag)로 구분
+    let remainEvent = PersistenceManager.populateEvent()
+    isLost = remainEvent.isEmpty ? false : true
+}
+
+public func track(
+    event: Event,
+    onCompletion: @escaping (NetworkError?) -> Void
+) {
+    if isLost { /// 앱 종료로 유실된 이벤트 처리
+        handleRemainEvent(onCompletion: onCompletion)
+        isLost = false
+    }
+
+		/// 새로 들어온 이벤트 처리
+	  ....
+}
+
+private func handleRemainEvent(
+    onCompletion: @escaping (NetworkError?) -> Void
+) {
+    let remainEvent = PersistenceManager.populateEvent()
+
+    remainEvent.forEach { event in
+        handlePostEvent(event: event, onCompletion: onCompletion)
+    }
+}
+```
+    
+    
+</div>
+</details>
+
+<br>
+
 *문제점*
 
 - sdk 내부 초기화 구문에서 유실 여부 체크후 track 메서드 실행할 때, 유실된 이벤트를 비동기로 처리하는데, 새로운 이벤트에서 또 유실이 발생한다면 앱을 재실행할 때마다 **새로운 allEvent 배열이 생성**되서 유실된 이벤트들이 쌓이지 않는다.
 
 - 데이터를 수집하는 목적으로 봤을 때, 앱을 재실행 후 유실된 데이터들이 track 메서드를 호출해야 처리되는 로직이라면 **유실된 데이터가 있는 상태에서 track 메서드를 호출하지 않는다는 가정**에서는 끝까지 유실된 채로 유지되기 때문에 좋지 못한 방법이라고 생각
 
+
+
+
+<br>
 <br>
 
 
@@ -184,7 +232,37 @@ API 호출 구문 코드 (Provider)
 - **sdk 내부 초기화 구문에서 유실된 이벤트 처리하는 로직을 넣음**으로써, 앱을 재실행했을 때 유실된 이벤트가 남아있다면 자동으로 처리되도록 구현
 - 유실 여부 체크하는 코드를 제거하고, 앱을 재실행할 때 유실된 이벤트 처리하기 때문에 새로운 **allEvent 배열**이 누적되지 못하는 문제를 고려할 필요가 없어진다.
 
+<br>
 
+
+<details>
+<summary> 2차 시도 코드 </summary>
+<div markdown="1">
+<br>
+
+
+    
+```swift
+public init() {
+    /// sdk를 할당할 때, 앱 종료로 유실된 이벤트 처리
+    let remainEvent = PersistenceManager.populateEvent()
+    handleRemainEvent(remainEvent: remainEvent, onCompletion: nil)
+}
+
+private func handleRemainEvent(
+    remainEvent: [Event],
+    onCompletion: ((NetworkError?) -> Void)?
+) {
+    remainEvent.forEach { event in
+        handlePostEvent(event: event, onCompletion: onCompletion)
+    }
+}
+```
+
+    
+    
+</div>
+</details>
 
 
 
