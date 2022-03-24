@@ -17,6 +17,8 @@
 
 ## 네트워크 변경 감지
 
+<br>
+
 > ISSUE
 
 - NotificationCenter에 네트워크 상태 변화를 감지하기 위한 observer 등록하여 네트워크 상태가 변경될때마다 `reachabilityChanged` 메서드에서 Callback
@@ -79,11 +81,44 @@ func startMonitoring() {
 </div>
 </details>
 
+<br>
+
+NetworkMoniter 코드
+
+<br>
+
+API 호출 구문 코드 (Provider)
 
 
 
+<br>
+
+## struct → class (AssignmentSDK)
 
 
+> ISSUE
+
+
+- Event를 담은 배열을 메서드안에 생성하여 **하나의 Event**를 담은 배열이 반복적으로 메모리에 올라간다.
+
+    - 하나의 **event 배열**에 저장하지 못한다.
+
+<br>
+
+> Solution
+
+
+- 저장해야하는 배열이 메서드 블록이 아닌 프로퍼티로 빠져야한다.
+
+    - **구조체(struct)**가 멤버 프로퍼티를 업데이트하려면 mutating 속성을 붙여야 한다.
+    
+    - 하지만 클로저가 캡쳐하는 시기가 클로저가 생성될 때인데, APIService에서 completion으로 `@escaping closure`를 사용하고 있고, 거기에서 self를 캡처한다.
+    
+        - 그 시기는 `@escaping closure`가 생성될 때라고 할 수 있는데, 만약 self가 mutating된다면 `@escaping closure` 입장에서는 잘못된 self를 캡처하게 될 수 있어서 mutating self를 캡처하고 있다고 오류가 난다.
+        
+        - Error: Escaping closure captures mutating 'self' parameter
+        
+    - 클로저가 **클래스(class)**를 캡처할 때는 실행 시 캡처가 이루어지고, 참조타입이기 때문에 class의 속성이 변경이 되어도 `@escaping closure`는 자신이 의도한 인스턴스가 참조가 된다.
 
 <br>
 <br>
