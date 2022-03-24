@@ -324,6 +324,7 @@ private func handleRemainEvent(
 
 
 <br>
+<br>
 
 > 앱 종료로 스토리지에서 유실된 이벤트를 불러올 때, 빈 배열이 들어오는 케이스
 
