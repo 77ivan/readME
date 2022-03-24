@@ -1,7 +1,5 @@
 # airbridge-ios-sdk-assignment
 
-<br>
-
 ## Index
 
 - [1차제출](#1차제출)
@@ -9,7 +7,7 @@
 - [2차제출](#2차제출)
 
 <br>
-
+<br>
 
 # 1차제출
 
