@@ -227,7 +227,6 @@ private func handleRemainEvent(
 
 
 <br>
-<br>
 
 ---
 
@@ -269,6 +268,8 @@ private func handleRemainEvent(
 </div>
 </details>
 
+<br>
+
 ---
 
 <br>
@@ -305,6 +306,8 @@ private func handleRemainEvent(
 
 ## 의문점
 
+<br>
+
 
 > API 호출 로직에서 콜백으로 에러 전달
 
@@ -339,25 +342,65 @@ private func handleRemainEvent(
     - 앱 종료 전에 스토리지에 저장된 시점까지 확인이 가능한데, 재실행했을 때 빈 배열이 들어오는 case에 대한 의문
 
 
-
-
-
-
-
-
-<br>
-<br>
 <br>
 
-
-
+**성공 case**
 
 https://user-images.githubusercontent.com/93528918/159855014-4f2870e8-def4-4345-9f7d-1047e75fa8e7.mov
 
 
 
+**실패 case**
 
 https://user-images.githubusercontent.com/93528918/159855125-e67262bf-45d2-42fd-b6d3-8c6cb4b3dd2b.mov
+
+
+
+<br>
+
+
+<details>
+<summary> 디버깅 구간 </summary>
+<div markdown="1">
+<br>
+
+```swift
+public init() {
+    let remainEvent = PersistenceManager.populateEvent()
+		print("스토리지에 저장된 유실이벤트", remainEvent)
+    handleRemainEvent(remainEvent: remainEvent, onCompletion: nil)
+}
+
+public func track(
+    event: Event,
+    onCompletion: ((NetworkError?) -> Void)?
+) {
+    allEvent.append(event)
+    PersistenceManager.saveEvent(events: allEvent) /// 호출 이벤트 스토리지에 저장
+    
+print("스토리지에 저장", PersistenceManager.populateEvent())
+
+    handlePostEvent(event: event, onCompletion: onCompletion)
+}
+```
+
+    
+    
+</div>
+</details>
+
+
+
+<br>
+<br>
+
+
+
+
+
+
+
+
 
 
 
