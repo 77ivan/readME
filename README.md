@@ -172,7 +172,7 @@ DispatchQueue.global().async {
 
 ## TODO
 
-<br>
+
 
 - 네트워크 상태 변화, 콜백으로 에러 전달
 
