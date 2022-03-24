@@ -24,6 +24,8 @@
     - `reachabilityChanged`(**#selector**)는 매개변수를 2개를 사용할 수 없기 때문에, 네트워크 에러를 completion 구문으로 넘겨주지 못한다.
 
 
+<br>
+
 > Solution
 
 - **클로저 구문**으로 네트워크가 연결되지 않았을 때, completion 구문으로 에러 전달
@@ -82,7 +84,9 @@ func startMonitoring() {
 
 
 
-
+<br>
+<br>
+<br>
 
 
 
