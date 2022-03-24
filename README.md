@@ -341,11 +341,37 @@ private func handleRemainEvent(
 앱을 재실행하고 초기화 구문에서 스토리지에 저장된 이벤트 배열을 불러올 때, 저장된 배열을 불러오지 못하는 case가 발생
 
 
+- 앱 종료 전에 스토리지에 저장된 시점까지 확인이 가능한데, 재실행했을 때 빈 배열이 들어오는 case에 대한 의문
+
 - 빈 배열이 들어온다는 건 스토리지에 저장된 배열을 불러오는 과정에서 빈 배열이 return이 되는 것
 
-    - **PersistenceManager.populateEven**t로직에서 event 키값에 저장된 배열이 없다.
+    - **PersistenceManager.populateEvent**로직에서 event 키값에 저장된 배열이 없다.
     
-    - 앱 종료 전에 스토리지에 저장된 시점까지 확인이 가능한데, 재실행했을 때 빈 배열이 들어오는 case에 대한 의문
+    
+    <details>
+<summary> PersistenceManager.populateEvent </summary>
+<div markdown="1">
+<br>
+
+```swift
+static func populateEvent() -> [Event] {
+    guard let events = defaults.object(forKey: Token.event) as? Data
+    else { return [] }
+
+    do {
+        let decoder = JSONDecoder()
+        let domainsSchema = try decoder.decode([Event].self, from: events)
+        return domainsSchema
+    } catch {
+        return([])
+    }
+}
+```
+
+    
+</div>
+</details>
+
 
 
 <br>
