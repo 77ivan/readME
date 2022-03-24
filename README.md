@@ -260,11 +260,9 @@ func startMonitoring() {
 
 <br>
 
-[(후) NetworkMoniter 코드](https://github.com/AB180-HR/220303-KangHosung/blob/master/assignment-sdk/source/network/service/NetworkMoniter.swift)
+- [(후) NetworkMoniter 코드](https://github.com/AB180-HR/220303-KangHosung/blob/master/assignment-sdk/source/network/service/NetworkMoniter.swift)
 
-<br>
-
-[API 호출 구문 코드 (Provider)](https://github.com/AB180-HR/220303-KangHosung/blob/master/assignment-sdk/source/network/layer/Provider.swift)
+- [API 호출 구문 코드 (Provider)](https://github.com/AB180-HR/220303-KangHosung/blob/master/assignment-sdk/source/network/layer/Provider.swift)
 
 
 
