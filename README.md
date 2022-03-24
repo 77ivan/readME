@@ -347,6 +347,7 @@ private func handleRemainEvent(
 
     - **PersistenceManager.populateEvent**로직에서 event 키값에 저장된 배열이 없다.
     
+    <br>
     
     <details>
 	<summary> PersistenceManager.populateEvent </summary>
@@ -371,6 +372,13 @@ private func handleRemainEvent(
    	 
 	</div>
 	</details>
+
+	<br>
+	
+	
+
+
+	https://user-images.githubusercontent.com/93528918/159867208-15310a0d-e9d5-4ad7-918c-670d50167c45.mov
 
 
 
