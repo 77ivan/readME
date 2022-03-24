@@ -575,7 +575,7 @@ https://user-images.githubusercontent.com/93528918/159855125-e67262bf-45d2-42fd-
 ```swift
 public init() {
     let remainEvent = PersistenceManager.populateEvent()
-		print("스토리지에 저장된 유실이벤트", remainEvent)
+    print("스토리지에 저장된 유실이벤트", remainEvent)
     handleRemainEvent(remainEvent: remainEvent, onCompletion: nil)
 }
 
@@ -586,7 +586,7 @@ public func track(
     allEvent.append(event)
     PersistenceManager.saveEvent(events: allEvent) /// 호출 이벤트 스토리지에 저장
     
-print("스토리지에 저장", PersistenceManager.populateEvent())
+    print("스토리지에 저장", PersistenceManager.populateEvent())
 
     handlePostEvent(event: event, onCompletion: onCompletion)
 }
