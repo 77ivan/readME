@@ -369,16 +369,15 @@ private func handleRemainEvent(
 	}
 	```
 	
+	<br>
+
+	https://user-images.githubusercontent.com/93528918/159867208-15310a0d-e9d5-4ad7-918c-670d50167c45.mov
+
+	<br>
+
    	 
 	</div>
 	</details>
-
-	<br>
-	
-	
-
-
-	https://user-images.githubusercontent.com/93528918/159867208-15310a0d-e9d5-4ad7-918c-670d50167c45.mov
 
 
 
