@@ -148,6 +148,49 @@ DispatchQueue.global().async {
 
 
 
+<br>
+<br>
+<br>
+
+
+## 2차 제출
+
+<br>
+
+### TODO
+
+- 네트워크 상태 변화, 콜백으로 에러 전달
+- **앱을 재실행했을 때** 앱이 종료되기전에 보낸 데이터를 제외한 **나머지 유실된 데이터들을 처리**할 수 있도록 구현
+- 유효하지 않은 응답을 받은 이벤트를 다시 처리할 경우, 고객사 앱에 부담을 주지않는 방향과 재호출 시간 간격을 제어하여 또 다시 유실될 확률 줄이기
+
+<br>
+
+### 네트워크 변경 감지
+
+> ISSUE
+
+- NotificationCenter에 네트워크 상태 변화를 감지하기 위한 observer 등록하여 네트워크 상태가 변경될때마다 `reachabilityChanged` 메서드에서 Callback
+    - `reachabilityChanged`(**#selector**)는 매개변수를 2개를 사용할 수 없기 때문에, 네트워크 에러를 completion 구문으로 넘겨주지 못한다.
+
+
+> Solution
+
+- **클로저 구문**으로 네트워크가 연결되지 않았을 때, completion 구문으로 에러 전달
+    - API 호출 코드 블록(Provider)에 NetworkMoniter를 연결해줌으로써, API를 호출할 때마다 네트워크 연결 상태 체크
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 https://user-images.githubusercontent.com/93528918/159855014-4f2870e8-def4-4345-9f7d-1047e75fa8e7.mov
