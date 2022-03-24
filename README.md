@@ -349,32 +349,32 @@ private func handleRemainEvent(
     
     
     <details>
-<summary> PersistenceManager.populateEvent </summary>
-<div markdown="1">
-<br>
+	<summary> PersistenceManager.populateEvent </summary>
+	<div markdown="1">
+	<br>
 
-```swift
-static func populateEvent() -> [Event] {
-    guard let events = defaults.object(forKey: Token.event) as? Data
-    else { return [] }
+	```swift
+	static func populateEvent() -> [Event] {
+   	 guard let events = defaults.object(forKey: Token.event) as? Data
+   	 else { return [] }
+	
+   	 do {
+    	    let decoder = JSONDecoder()
+      	  let domainsSchema = try decoder.decode([Event].self, from: events)
+      	  return domainsSchema
+    	} catch {
+    	    return([])
+   	 }
+	}
+	```
+	
+   	 
+	</div>
+	</details>
 
-    do {
-        let decoder = JSONDecoder()
-        let domainsSchema = try decoder.decode([Event].self, from: events)
-        return domainsSchema
-    } catch {
-        return([])
-    }
-}
-```
-
-    
-</div>
-</details>
 
 
-
-<br>
+	<br>
 
 <details>
 <summary> 디버깅 구간 </summary>
