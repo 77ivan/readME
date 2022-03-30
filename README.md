@@ -23,8 +23,11 @@
 ## 기술 스택
 
 - Swift, MVVM, Rest API
+
 - AutoLayout, Codebase UI
+
 - URLSession, Codable, Keychain, UIRefreshControl, CustomView
+
 - SnapKit, Toast, IQKeyboardManagerSwift
 
 
