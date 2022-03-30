@@ -27,7 +27,6 @@
 - [RxSwift, RxCocoa](https://github.com/ReactiveX/RxSwift)
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [Moya](https://github.com/Moya/Moya)
-
 - [R.swift](https://github.com/mac-cain13/R.swift)
 - [SnapKit](https://github.com/SnapKit/SnapKit)
 - [Toast](https://github.com/scalessec/Toast-Swift)
