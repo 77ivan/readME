@@ -20,7 +20,7 @@
 
 <br>
 
-## 기술 
+## 기술 스택
 
 - Swift, MVVM, Rest API
 - AutoLayout, Codebase UI
