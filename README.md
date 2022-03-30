@@ -4,7 +4,7 @@
 
 # 영자 신문을 앱으로 간편하게, 해외뉴우스<img src = "https://user-images.githubusercontent.com/93528918/149170874-1428e755-5919-4f06-a153-631c55d4e09e.png" width = 80  align = right> 
 
-[프로젝트 세부 내용 보러가기](https://www.notion.so/912caceec73d480982e656c018594c7d)
+- [프로젝트 세부 내용 보러가기](https://www.notion.so/912caceec73d480982e656c018594c7d)
 
 <a href="https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397
 "><img src="https://www.atrinh.com/list/images/download.svg"></a>
@@ -24,16 +24,16 @@
 
 ## Library
 
-- [Realm]()
-- [Alamofire]()
-- [SwiftyJSON]()
-- [Kingfisher]()
-- [SnapKit]()
-- [Tabman]()
-- [Toast]()
-- [SkeletonView]()
-- [CHTCollectionViewWaterfallLayout]()
-- [IAMPopup]()
+- [Realm](https://cocoapods.org/pods/Realm)
+- [Alamofire](https://github.com/Alamofire/Alamofire)
+- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
+- [Kingfisher](https://github.com/onevcat/Kingfisher)
+- [SnapKit](https://github.com/SnapKit/SnapKit)
+- [Tabman](https://github.com/uias/Tabman)
+- [Toast](https://github.com/scalessec/Toast-Swift)
+- [SkeletonView](https://github.com/Juanpe/SkeletonView)
+- [CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout)
+- [IAMPopup](https://github.com/camosss/IAMPopup)
 
 
 
