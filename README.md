@@ -83,7 +83,7 @@
 - 우측 하단의 **플로팅 버튼**을 통해 취미를 찾거나, 매칭된 사람과 채팅을 하거나, 매칭 되기를 기다릴 수 있음
 - 위치 거부 상태일 경우, 지정해둔 위치로 이동
 
-<img src = "https://user-images.githubusercontent.com/93528918/160844489-57b5d366-8897-4f15-9215-dc6477369e4f.gif" width="40%" height="40%">
+<img src = "https://user-images.githubusercontent.com/93528918/160844489-57b5d366-8897-4f15-9215-dc6477369e4f.gif" width="30%" height="30%">
 
 <br>
 
@@ -98,7 +98,7 @@
 - “내가 하고싶은” 취미를 통해 주변 사용자들에게 **매칭을 기다릴 수 있는 상태**로 변경됨 (플로팅 이미지 변경)
 - “찾기 중단” 버튼을 누르면 **일반 상태**로 변경됨 (플로팅 이미지 변경)
 
-<img src = "https://user-images.githubusercontent.com/93528918/160844729-a27da727-6076-4ec3-838c-37d0ba365a8d.gif" width="40%" height="40%">
+<img src = "https://user-images.githubusercontent.com/93528918/160844729-a27da727-6076-4ec3-838c-37d0ba365a8d.gif" width="30%" height="30%">
 
 
 <br>
