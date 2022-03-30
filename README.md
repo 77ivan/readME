@@ -72,10 +72,15 @@
 > Post
 
 - Post 작성 화면과 수정 화면은 재사용.
+
 - Post 수정/삭제는 우측 상단 BarButtonItem을 통해 기능 구현.
+
     - 사용자가 아니라면 BarButtonItem에 Hidden 적용.
+    
     - 삭제 전 alert을 통해 사용자에게 삭제 재확인.
+    
     - 수정/삭제가 완료되면 Post 조회 화면으로 전환.
+    
 
 	
 | Post 작성 | Post 수정 | Post 삭제 |
@@ -89,8 +94,11 @@
 > Comment
 
 - Comment 작성은 메인 View 하단에 CustomView를 생성하여 UITextView에 작성.
+
 - Comment 수정/삭제는 댓글 우측 상단 UIButton을 통해 기능 구현.
+
     - 사용자가 아니라면 UIButton에 Hidden 적용.
+    
     - 삭제 전 alert을 통해 사용자에게 삭제 재확인.
  
 | Comment 작성 | Comment 수정 | Comment 삭제 |
