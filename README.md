@@ -98,7 +98,7 @@
 - “내가 하고싶은” 취미를 통해 주변 사용자들에게 **매칭을 기다릴 수 있는 상태**로 변경됨 (플로팅 이미지 변경)
 - “찾기 중단” 버튼을 누르면 **일반 상태**로 변경됨 (플로팅 이미지 변경)
 
-<img src = "https://user-images.githubusercontent.com/93528918/160844729-a27da727-6076-4ec3-838c-37d0ba365a8d.gif" width="30%" height="30%">
+<img src = "https://user-images.githubusercontent.com/93528918/160844729-a27da727-6076-4ec3-838c-37d0ba365a8d.gif" width="10%" height="30%">
 
 
 <br>
