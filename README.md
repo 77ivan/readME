@@ -10,7 +10,7 @@
 
 <br>
 
-## Tech
+## Tech & Tool
 
 - Swift
 - MVVM
@@ -18,6 +18,10 @@
 - Mapkit
 - AutoLayout, StoryBoard, Code Base UI
 
+- Xcode
+- Figma
+- SwaggerUI
+- Confluence
 
 <br>
 
@@ -33,15 +37,6 @@
 - [Tabman](https://github.com/uias/Tabman)
 - [RangeSeekSlider](https://github.com/WorldDownTown/RangeSeekSlider)
 
-
-<br>
-
-## Tool
-
-- Xcode
-- Figma
-- SwaggerUI
-- Confluence
 
 <br>
 
