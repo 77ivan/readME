@@ -12,16 +12,9 @@
 
 ## Tech & Tool
 
-- Swift
-- MVVM
-- Rest API
-- Mapkit
+- Swift, MVVM, Rest API, Mapkit
 - AutoLayout, StoryBoard, Code Base UI
-
-- Xcode
-- Figma
-- SwaggerUI
-- Confluence
+- Xcode, Figma, SwaggerUI, Confluence
 
 <br>
 
