@@ -1,503 +1,327 @@
 
-# 서비스 레벨 프로젝트
+![스크린샷 2022-02-01 오전 1 15 32](https://user-images.githubusercontent.com/93528918/151830849-c3d53fbe-6024-489b-8aa0-f74730dba198.png)
 
-- 서비스 레벨의 API/기획 명세와 디자인 리소스를 바탕으로 iOS 앱개발
+<br>
 
-- 휴대폰 인증 및 회원가입을 통해 앱에 로그인을 진행.
+# 🌱 새싹 커뮤니티
 
-- Map에서 사용자의 위치를 확인하고, 다른 사용자들과 취미를 공유할 수 있도록 매칭이 가능한 앱
+![Badge](https://img.shields.io/badge/Xcode-13.0-blue) 
+![Badge](https://img.shields.io/badge/iOS-13.0-green)
+![Badge](https://img.shields.io/badge/Swift-5-orange)
+![Badge](https://img.shields.io/badge/SnapKit-5.0.1-blue)
+![Badge](https://img.shields.io/badge/Toast-5.0.1-yellow)
+![Badge](https://img.shields.io/badge/IQKeyboardManager-6.5.9-important)
+
+
+- 서버와 iOS 클라이언트 통신 (iOS 클라이언트 개발 담당)
+
+- 회원가입/로그인 후 게시글과 게시글에 대한 댓글을 작성/수정/삭제 기능 구현
 
 
 <br>
 
-## Tech & Tool
+## Tech
 
-- Swift, MVVM, Rest API, Mapkit
-- AutoLayout, StoryBoard, Code Base UI
-- Xcode, Figma, SwaggerUI, Confluence
-
-<br>
-
-## Library
-
-- [FirebaseAuth, FirebaseMessaging](https://firebase.google.com/docs/ios/setup?hl=ko)
-- [RxSwift, RxCocoa](https://github.com/ReactiveX/RxSwift)
-- [Alamofire](https://github.com/Alamofire/Alamofire)
-- [Moya](https://github.com/Moya/Moya)
-- [R.swift](https://github.com/mac-cain13/R.swift)
-- [SnapKit](https://github.com/SnapKit/SnapKit)
-- [Toast](https://github.com/scalessec/Toast-Swift)
-- [Tabman](https://github.com/uias/Tabman)
-- [RangeSeekSlider](https://github.com/WorldDownTown/RangeSeekSlider)
-
-
-<br>
-
-## View
-
-### 로그인
-
-- **Page Control**를 사용한 온보딩 페이지
-- 전화번호 입력, 인증번호 입력 TextField에 **[.phonePad] 키보드 타입 적용**
-- **Firebase**를 활용한 전화번호 인증 프로세스 개발
-- NSPredicate(정규식)을 통해 전화번호, 인증번호의 유효성을 검사한 뒤, **버튼 활성화**
-- 인증 번호 확인 절차에서 **타이머 기능과 재전송 기능** 구현
-
-![스크린샷 2022-03-30 오후 10 18 31](https://user-images.githubusercontent.com/93528918/160843798-2c1bc17e-ad5a-4e07-9fd9-30af575fae1d.png)
-
-
-<br>
-
-### 회원가입
-
-- 전화번호 인증 후, 닉네임 / 이메일 / 생년월일 / 성별을 기입하여 회원가입
-- NSPredicate(정규식)을 통해 닉네임 / 이메일의 유효성을 검사한 뒤, **버튼 활성화**
-- 생년월일은 현재 날짜 기준 **만 17세 이상 여부 판단**하여 버튼 활성화
-- **성별은 선택하지않아도** 회원가입 가능하도록 구현 (애플 심사규정 고려)
-
-
-![스크린샷 2022-03-30 오후 10 21 09](https://user-images.githubusercontent.com/93528918/160844289-9e61c2ea-9b44-47e3-8b10-8da57f0be6bf.png)
-
-
-
-<br>
-
-### 마이 페이지
-
-- 정보 관리 페이지는 여러가지 Cell Type으로 하나의 TableView 구성
-- 사용자의 이름이 입력된 Cell은 **확장 View**로 구성
-- 각 Cell의 데이터 편집 후, 저장버튼을 통해 수정 가능
-
-
-![스크린샷 2022-03-30 오후 10 21 38](https://user-images.githubusercontent.com/93528918/160844393-f3e35e30-5d6e-4d34-8e41-571b2fd6401e.png)
+- Swift, MVVM, Rest API
+- AutoLayout, Codebase UI
+- URLSession, Codable, Keychain, UIRefreshControl, CustomView
+- SnapKit, Toast, IQKeyboardManagerSwift
 
 
 <br>
 
 
-### 홈
+## 🌱 기간별 일정
 
-- **MapKit**을 통해 다른 사용자의 정보와 위치를 확인
-- **성별 필터 버튼**을 통해 사용자들 필터링 기능
-- **GPS 버튼**을 통해 자신의 현재 위치로 이동
-- 우측 하단의 **플로팅 버튼**을 통해 취미를 찾거나, 매칭된 사람과 채팅을 하거나, 매칭 되기를 기다릴 수 있음
-- 위치 거부 상태일 경우, 지정해둔 위치로 이동
-
-<img src = "https://user-images.githubusercontent.com/93528918/160844489-57b5d366-8897-4f15-9215-dc6477369e4f.gif" width="30%" height="30%">
+2021.12.31 - 22.01.06  **(총 5일)**
 
 <br>
 
-### 취미 입력 화면
+| 진행사항 | 진행기간 | 세부사항 |
+|:---:| :--- | :--- |
+| UI | 2021.12.31 | 앱 전체적인 View 개발 |
+| Auth | 2022.01.03 | 회원가입 및 로그인 기능 개발 |
+| Post, Comment | 2022.01.04~22.01.06 | Post, Comment CRUD 개발 |
+ 
+<br>
+<br>
 
-- 서버에서 추천하는 취미(빨간색 버튼)과 현재 위치 기준으로 주변의 사용자들이 서버로 보낸 취미(회색 버튼)은 첫번째 Section에 배치
-- 내가 하고 싶은 취미(초록색 버튼)은 두번째 Section에 배치
-- Search Bar를 통해 취미를 추가할 수 있고, 띄어쓰기를 통해 복수 입력이 가능
-- 첫번째 Section의 Cell을 선택하면 두번째 Section으로 이동
-- 두번째 Section을 선택하면 “내가 하고싶은” 취미 목록에서 삭제
-- “내가 하고싶은” 취미 목록은 **최대 8개로 제한**하고, **동일한 취미가 들어가지 못하도록 제한**
-- “내가 하고싶은” 취미를 통해 주변 사용자들에게 **매칭을 기다릴 수 있는 상태**로 변경됨 (플로팅 이미지 변경)
-- “찾기 중단” 버튼을 누르면 **일반 상태**로 변경됨 (플로팅 이미지 변경)
+## 🌱 View
 
-<img src = "https://user-images.githubusercontent.com/93528918/160844729-a27da727-6076-4ec3-838c-37d0ba365a8d.gif" width="30%" height="30%">
+<br>
+
+> Auth
+
+- 회원가입, 로그인, 비밀번호 변경 View는 CustomView를 생성하여 재사용.
+- 회원가입, 로그인, 비밀번호 변경 버튼은 각 UITextField에 입력 유무에 따라 활성화.
+    - 로그인 또는 비밀번호 변경이 완료되면 피드 화면으로 전환.
+    - 로그아웃을 선택하면 alert으로 재확인 후, 시작 페이지로 전환.
 
 
+| 회원가입, 로그인 | 비밀번호 변경, 로그아웃 |
+| ------ | ------ |
+| <img src = "https://user-images.githubusercontent.com/93528918/153704073-694bf0f0-c947-4fc3-b83b-fbe3593cea0a.gif" width="60%" height="60%"> | <img src = "https://user-images.githubusercontent.com/93528918/153704079-b2b97e1c-8af7-40d9-9d16-42bac7c916aa.gif" width="60%" height="60%"> |
+
+
+<br>
+<br>
+
+> Post
+
+- Post 작성 화면과 수정 화면은 재사용.
+- Post 수정/삭제는 우측 상단 BarButtonItem을 통해 기능 구현.
+    - 사용자가 아니라면 BarButtonItem에 Hidden 적용.
+    - 삭제 전 alert을 통해 사용자에게 삭제 재확인.
+    - 수정/삭제가 완료되면 Post 조회 화면으로 전환.
+
+	
+| Post 작성 | Post 수정 | Post 삭제 |
+| ------ | ------ | ------ |
+| <img src = "https://user-images.githubusercontent.com/93528918/153704227-6b25609e-af4a-48e5-8378-3d2e2b7f3861.gif" width="70%" height="70%"> | <img src = "https://user-images.githubusercontent.com/93528918/153704228-981b7788-d207-480d-9954-10d4f73a75dd.gif" width="70%" height="70%"> | <img src = "https://user-images.githubusercontent.com/93528918/153704229-f8df7e8a-88f0-46ce-86d0-c96aaaee470d.gif" width="70%" height="70%"> |
+
+
+<br>
+<br>
+
+> Comment
+
+- Comment 작성은 메인 View 하단에 CustomView를 생성하여 UITextView에 작성.
+- Comment 수정/삭제는 댓글 우측 상단 UIButton을 통해 기능 구현.
+    - 사용자가 아니라면 UIButton에 Hidden 적용.
+    - 삭제 전 alert을 통해 사용자에게 삭제 재확인.
+ 
+| Comment 작성 | Comment 수정 | Comment 삭제 |
+| ------ | ------ | ------ |
+| <img src = "https://user-images.githubusercontent.com/93528918/153704250-7e552dac-9002-4e31-ab58-fb72c2644b32.gif" width="70%" height="70%"> | <img src = "https://user-images.githubusercontent.com/93528918/153704254-935cad72-1aee-4a91-b814-38ba31590a51.gif" width="70%" height="70%"> | <img src = "https://user-images.githubusercontent.com/93528918/153704256-40be7628-9f9e-470e-9e81-56fe09443c53.gif" width="70%" height="70%"> |
+
+
+<br>
 <br>
 
 
 
-
-
-## 구현 이슈
+## 🌱 구현 이슈
 
 <br>
 
 <details>
-<summary>Moya 도입, 네트워크 구조 개선</summary>
+<summary>Network 레이어 설계</summary>
  
- <br>
- 
-### [Moya 도입] 전
- 
- > Endpoint, APIService에 모든 네트워크 통신에 대한 메서드를 다 구현
- 
-  <br>
- 
- <details>
-<summary>Endpoint - URL</summary>
- 
- <br>
+<br>
 
-  ```swift
+### Network의 핵심 모듈
+
+<br>
+ 
+`Endpoint.`
+ 
+- URL, path, method, parameters 등의 데이터 객체.
+
+<br>
+
+```swift
+import Foundation
+
+// MARK: - Method
+
+enum Method: String {
+    case GET
+    case POST
+    case PUT
+    case DELETE
+}
+
+// MARK: - URL
+
 enum Endpoint {
-    case user
-    case user_withdraw
-    case user_update_fcm_token
-    case user_update_mypage
-  
-    case queue
-    case queue_onqueue
-    ...
+    case auth_register
+    case auth_login
+    case auth_password
+    case post_detail_inquire(id: Int)
+    case post_inquire
+    case post_write
+    case post_edit(id: Int)
+    case post_delete(id: Int)
+    case comment_inquire(postId: Int)
+    case comment_write
+    case comment_edit(id: Int)
+    case comment_delete(id: Int)
 }
 
 extension Endpoint {
     var url: URL {
         switch self {
-        case .user: return .makeEndpoint("user")
-        case .user_withdraw: return .makeEndpoint("user/withdraw")
-        case .user_update_fcm_token: return .makeEndpoint("user/update_fcm_token")
-        case .user_update_mypage: return .makeEndpoint("user/update/mypage")
-  
-        case .queue: return .makeEndpoint("queue")
-        case .queue_onqueue: return .makeEndpoint("queue/onqueue")
-        ...
+        case .auth_register: return .makeEndpoint("auth/local/register")
+        case .auth_login: return .makeEndpoint("auth/local")
+        case .auth_password: return .makeEndpoint("custom/change-password")
+        case .post_detail_inquire(id: let id): return .makeEndpoint("posts/\(id)")
+        case .post_inquire: return .makeEndpoint("posts?_start=0&_limit=100&_sort=created_at:desc")
+        case .post_write: return .makeEndpoint("posts")
+        case .post_edit(id: let id): return .makeEndpoint("posts/\(id)")
+        case .post_delete(id: let id): return .makeEndpoint("posts/\(id)")
+        case .comment_inquire(postId: let postId): return .makeEndpoint("comments?post=\(postId)")
+        case .comment_write: return .makeEndpoint("comments")
+        case .comment_edit(id: let id): return .makeEndpoint("comments/\(id)")
+        case .comment_delete(id: let id): return .makeEndpoint("comments/\(id)")
         }
     }
 }
 
 extension URL {
-    static let baseURL = "http://test.monocoding.com:35484/"
-
+    static let baseURL = "http://test.monocoding.com:1231/"
+    
     static func makeEndpoint(_ endpoint: String) -> URL {
         URL(string: baseURL + endpoint)!
     }
 }
 ```
+ 
+<br>
+
+`Provider.`
+
+- URLSession, DataTask를 이용하여 Network호출이 이루어 지는 곳.
+- response 타입은 Decodable로 제네릭을 적용
+	
 <br>
   
- </div>
-</details>
+```swift
+import Foundation
 
-<br>
-
-
- <details>
-<summary>APIService - HTTPHeaders, Parameters, Request</summary>
-
-<br>
-
- ```swift
-import Alamofire
-
-...
-
-static func signUpUserInfo(idToken: String, completion: @escaping (Error?, Int?) -> Void) {
-        
-    let headers: HTTPHeaders = [
-        "idtoken": idToken,
-        "Content-Type": "application/x-www-form-urlencoded"
-    ]
-        
-    let FCMtoken = UserDefaults.standard.string(forKey: "FCMToken") ?? ""
-    let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber") ?? ""
-    let nick = UserDefaults.standard.string(forKey: "nickName") ?? ""
-    let birth = UserDefaults.standard.string(forKey: "birth") ?? ""
-    let email = UserDefaults.standard.string(forKey: "email") ?? ""
-    let gender = UserDefaults.standard.integer(forKey: "gender")
-        
-    let parameters : Parameters = [
-        "phoneNumber": phoneNumber,
-        "FCMtoken": FCMtoken,
-        "nick": nick,
-        "birth": birth,
-        "email": email,
-        "gender": gender
-    ]
-        
-    AF.request(Endpoint.user.url.absoluteString, method: .post, parameters: parameters, headers: headers).responseString { response in
-            
-        let statusCode = response.response?.statusCode
-            
-        switch response.result {
-        case .success(let value):
-            print("[signUpUserInfo] response success", value)
-            completion(nil, statusCode)
-                
-        case .failure(let error):
-            print("[signUpUserInfo] response error", error)
-            completion(error, statusCode)
-        }
+extension URLSession {
+    
+    typealias Handler = (Data?, URLResponse?, Error?) -> Void
+    
+    @discardableResult
+    func dataTask(_ endpoint: URLRequest, handler: @escaping Handler) -> URLSessionDataTask {
+        let task = dataTask(with: endpoint, completionHandler: handler)
+        task.resume()
+        return task
     }
-}
- 
-...
- 
-```
- 
-<br>
-  
- </div>
-</details>
- 
-<br>
-<br>
-
- 
-### [Moya 도입] 후
- 
- > API에도 목적이 존재하는 만큼 자체적인 기준을 세워서 역할/책임을 조금 더 분리 필요.
- > 
- > 이후에 서버와 커뮤니케이션을 할 때, 용이하거나 변경 지점이 생기시더라도 금방 유지보수가 가능
- 
- <br>
-
-
-Target (baseURL, path, method, task, headers)
-
-- [UserTarget](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserTarget.swift)
-
-- [QueueTarget](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/Queue/APIs/QueueTarget.swift)
-
- <br>
-
-API (request)
-
-- [UserAPI](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/User/APIs/UserAPI.swift)
-
-- [QueueAPI](https://github.com/camosss/SeSAC_SPL/blob/main/SeSAC_SPL/Network/Queue/APIs/QueueAPI.swift)
-
-<br>
-
-Models (Request body)
-
-- [User_Models](https://github.com/camosss/SeSAC_SPL/tree/main/SeSAC_SPL/Network/User/APIs/Models)
-
-- [Queue_Models](https://github.com/camosss/SeSAC_SPL/tree/main/SeSAC_SPL/Network/Queue/APIs/Models)
-
-
-<br>
-
-
-
- </div>
-</details>
-
-
-<br>
-
-<details>
-<summary>[MVVM 패턴] 여러가지 Cell Type으로 하나의 TableView 구성하기</summary>
- 
- <br>
- 
-[블로그 포스팅으로 이동하기](https://llan.tistory.com/3)
-
- </div>
-</details>
-
-
-<br>
-
-<details>
-<summary>버튼 활성화, `RxSwift` 적용</summary>
- 
-<br>
-
-### Input/Output
-
-ViewModel에서 입력(Input)과 출력(Output)을 정의
-
-- View에서 받는 입력은 Input 구조체 안에 정의 (text, 버튼 이벤트)
-- 로직을 통해서 나온 결과 출력은 Output 구조체에 정의 (버튼 활성화 상태, 화면 전환 이벤트)
-
-```swift
-var validText = BehaviorRelay<String>(value: "")
-
-struct Input {
-    let text: ControlProperty<String?>
-    let tap: ControlEvent<Void>
-}
-
-struct Output {
-    let validStatus: Observable<Bool>
-    let validText: BehaviorRelay<String>
-    let sceneTransition: ControlEvent<Void>
-}
-```
- 
-<br>
-
-### 화면 전환, 비즈니스 로직 구현
-
-- `map` 기능을 통해 정규식 유효성 검사
-- `share()` 연산자를 사용하여 하나의 시퀀스에서 방출되는 아이템을 공유해 사용
-
-```swift
-func phoneNumberTransform(input: Input) -> Output {
-    let result = input.text
-        .orEmpty
-        .map { $0.isValidPhoneNumber() }
-        .share(replay: 1, scope: .whileConnected)
-    return Output(validStatus: result, validText: validText, sceneTransition: input.tap)
-}
-
-func certificationTransform(input: Input) -> Output {
-    let result = input.text
-        .orEmpty
-        .map { $0.isVaildVerificationCode() }
-        .share(replay: 1, scope: .whileConnected)
-    return Output(validStatus: result, validText: validText, sceneTransition: input.tap)
-}
-```
-
- <br>
-
-- 유효성 검사가 진행되는 값을 **버튼 배경색, 버튼 활성화 상태**에 바인딩
-
-```swift
-let input = ValidationViewModel.Input(text: authView.inputTextField.rx.text, tap: authView.nextButton.rx.tap)
-let output = viewModel.phoneNumberTransform(input: input)
-
-output.validStatus
-     .map { $0 ? R.color.green() : R.color.gray6() }
-     .bind(to: authView.nextButton.rx.backgroundColor)
-     .disposed(by: disposeBag)
+    
+    static func request<T: Decodable>(_ session: URLSession = .shared, endpoint: URLRequest, completion: @escaping (T?, APIError?) -> Void) {
         
-output.validStatus
-     .bind(to: authView.nextButton.rx.isEnabled)
-     .disposed(by: disposeBag)
-
-output.validText
-      .asDriver()
-      .drive(authView.inputTextField.rx.text)
-      .disposed(by: disposeBag)
-
-output.sceneTransition
-      .subscribe { _ in
-           sceneTransition()
-      }.disposed(by: disposeBag)
-```
- 
-<br>
-
-<img src = "https://user-images.githubusercontent.com/93528918/151337727-24b9cc8d-6d4d-4479-af61-1478f22007bd.gif" width="30%" height="30%">
-
-<br>
-<br>
-
-</div>
-</details>
-
-<br>
-
-<details>
-<summary>[SceneDelegate] 로그인/회원가입 유무에 따른 UI Life Cycle 분기 처리</summary>
- 
-<br>
-
- ### 첫번째 시도.
- 
- 1. 회원정보를 앱내 스토리지(저장소)에 저장해두고 필요할때 불러와서 처리하기 위해 토큰 값을 UserDefaults에 저장.
- 2. 로그인과 회원가입 분기처리는 로그인 여부에 달려있기에, 서버로부터 로그인 시 발급받은 토큰을 SceneDelegate에서 앱 실행 시에 토큰 유무에 따라 UI Life Cycle 분기 처리
-
- <br>
- 
- > idToken 값으로 분기 처리를 하기 위해, User의 정보를 API에서 호출했는데 API에서 데이터를 받아오는 과정에서 black Screen이 뜬 뒤, View가 로드된다.
- 
- 
-   <br>
-
- <details>
- <summary>코드</summary>
- 
-  <br>
-
-```swift
-func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-    guard let scene = (scene as? UIWindowScene) else { return }
-    window = UIWindow(windowScene: scene)
-
-    let idToken = UserDefaults.standard.string(forKey: "idToken") ?? ""
-    print("SceneDelegate idToken", idToken)
-
-    if idToken == "" { // 전화번호 인증 X
-        convertNavRootViewController(VerificationViewController())
-    } else { // 전화번호 인증 O
-        APIService.getUserInfo(idToken: idToken) { user, error, statusCode in
-            switch statusCode {
-            case 200:
-                self.convertRootViewController(MainTapController())
-
-            case 401:
-                print("SceneDelegate", statusCode ?? 0)
-                Helper.getIDTokenRefresh {
-                    print("SceneDelegate 토큰 갱신 error"); return
-                } onSuccess: {
-                    print("SceneDelegate 토큰 갱신 성공")
-                    self.convertRootViewController(MainTapController())
+        session.dataTask(endpoint) { data, response, error in
+            DispatchQueue.main.async {
+                guard error == nil else { completion(nil, .failed); return }
+                guard let data = data else { completion(nil, .noData); return }
+                guard let response = response as? HTTPURLResponse else { completion(nil, .invaildResponse); return }
+                guard response.statusCode == 200 else { completion(nil, .invaildToken); return }
+                
+                do {
+                    let decoder = JSONDecoder()
+                    let modelData = try decoder.decode(T.self, from: data)
+                    completion(modelData, nil)
+                } catch {
+                    completion(nil, .invaildData)
                 }
-
-            default:
-                print("SceneDelegate default error", statusCode ?? 0)
-                self.convertNavRootViewController(NickNameViewController())
             }
         }
     }
 }
 ```
-   </div>
- </details>
-  <br>
- 
-<img src = "https://user-images.githubusercontent.com/93528918/151345005-9918e493-9e83-46ec-a4f5-fca9f2953a70.gif" width="30%" height="30%">
-
-  <br>
-
-  
 
  <br>
+
+`APIService.`
+
+- Response가 Generic하여 하드코딩되지 않은 형태
+- URLSession의 dataTask메소드를 함수로 선언하여 response를 testable하도록 구현
+- 공통 Error 타입 정의
+
  <br>
- 
-### 두번째 시도.
-
- 1. 로그인 완료
- 2. 회원가입 완료
- 3. 회원 탈퇴 완료
-
-    <br>
-
- > 굳이 API 호출을 하지 않고 3가지의 상황에 따라 UserDefaults에 상황별 String값을 저장해주고, SceneDelegate에서 해당 Key값을 통해 UI Life Cycle 분기 처리 진행
- 
- <br>
-
-
- <details>
- <summary>코드</summary>
- 
-   <br>
-
- ```swift
-func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-    guard let scene = (scene as? UIWindowScene) else { return }
-    window = UIWindow(windowScene: scene)
-
-    let startView = UserDefaults.standard.string(forKey: "startView")
-    print("------> startView = \(startView ?? "전화번호인증 하러가야함")")
-        
-    if startView == "successLogin" { // 로그인 완료
-        convertNavRootViewController(NickNameViewController())
-    } else if startView == "alreadySignUp" { // 회원가입 완료
-        convertRootViewController(MainTapController())
-    } else { // 회원탈퇴 완료 및 앱 첫 실행
-        convertNavRootViewController(VerificationViewController())
-    }
-   
+	
+```swift
+enum APIError: Error {
+    case invaildResponse
+    case invaildData
+    case invaildToken
+    case noData
+    case failed
 }
 ```
-  </div>
- </details>
-  <br>
 
- <img src = "https://user-images.githubusercontent.com/93528918/151345253-295ddc6c-9250-43a9-a717-6b29574e8bee.gif" width="30%" height="30%">
+<br>
 
-  <br>
+	
+```swift
+/// 회원가입
+static func register(username: String, email: String, password: String, completion: @escaping (User?, APIError?) -> Void) {
+    var request = URLRequest(url: Endpoint.auth_register.url)
+    request.httpMethod = Method.POST.rawValue
+    request.httpBody = "username=\(username)&email=\(email)&password=\(password)".data(using: .utf8, allowLossyConversion: false)
+    
+    URLSession.request(endpoint: request, completion: completion)
+}
+```
+	
+ <br>
 
- 
- 
 </div>
 </details>
+
+
+<br>
+
+<details>
+<summary>ViewModel에서 API 호출 로직 작성</summary>
  
 <br>
+
+ `ViewModel → 비즈니스 로직을 처리`
+ 
+
+**ViewModel**에서 API호출하는 로직을 처리하고, **Controller**에서 알람이나 화면 전환 등 화면 처리를 해주는 걸로 이해.
+
+❓ 그런데 아래 코드처럼 처리할 비즈니스 로직이 없는 경우, **ViewModel에서 API호출하는 코드를 작성하면 괜히 코드만 많아지는 거같아서 그냥 Controller에서 API호출을 하는 게 좋겠다는 생각**과 그래도 **MVVM을 적용한거라면 ViewModel에서 호출하는게 맞는가** 라는 생각이 듬.
+
 <br>
+
+![3C78364E-07BB-4C25-A823-B4188DD8A253_4_5005_c](https://user-images.githubusercontent.com/93528918/149189072-ee9a7923-11b2-4c06-aad5-171f04c2796a.jpeg)
+
+![98287277-E478-4E1F-8FD9-7B1B0105EADD_4_5005_c](https://user-images.githubusercontent.com/93528918/149189078-a25e3cdc-97d2-4168-b398-56164ec9eb7c.jpeg)
+
+<br>
+
+> 멘토님 답변
+
+결국 아키텍쳐 설계 역시 사용법, 방법론적인 것이고, 본인만의 기준을 세워 조금 변경된 패턴이나 새로운 패턴을 적용해보는 것도 아키텍처 설계에 해당.
+
+질문의 목적을 전환해본다면 **"MVVM으로 적용하는 것이 적합할까?"**
+
+프로젝트에서 구성된 모든 패턴이 MVVM이라고 가정한다면, 일관적인 형태로 코드의 Flow가 흘러가는 것이 중요
+
+지금은 비즈니스 로직이 없는 뷰일지라도, 새로운 기능이 생기고, 유지보수를 하고, 여러 화면을 하나의 화면으로 합하게 될 경우 등을 고려해본다면 특정 화면만 API 호출이 뷰컨트롤러에서 이루어진다면 코드의 패턴을 파악하기가 타인이 바라볼 때는 어려울 수도 있음!
+
+
+
+<br>
+
+</div>
+</details>
+
+ <br>
+ <br>
+
+
+## 🌱 프로젝트 회고
+
+
+> MVVM 패턴에 대한 이해
+> 
+
+MVVM 패턴으로 프로젝트를 진행했지만, 해당 아키텍처 패턴에 대한 미숙한 이해로 역할 분리를 제대로 하지 못했다. 아키텍처 패턴에 대한 학습과 리펙토링을 통해 더 깊은 이해가 필요함을 느꼈다.
+
+<br>
+
+> Network 레이어 설계
+> 
+
+이전 프로젝트들에서는 서버와 통신을 하는 코드를 작성할 때, URL, path, method, parameters 등의 데이터 객체를 작성하는 코드나 네트워크를 호출하는 코드를 한 메서드 내에서 처리를 해줬는데,
+
+이번 프로젝트를 계기로 Network 레이어를 설계해 봄으로써, 각각의 역할에 맞게 분리된 개선된 코드를 볼 수 있었으며, 더 세세한 분리의 필요성을 느꼈다.
+
+
+
 
 
