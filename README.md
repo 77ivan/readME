@@ -20,7 +20,7 @@
 
 <br>
 
-## Skill
+## 기술 
 
 - Swift, MVVM, Rest API
 - AutoLayout, Codebase UI
