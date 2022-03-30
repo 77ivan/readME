@@ -20,7 +20,7 @@
 
 <br>
 
-## Tech
+## Skill
 
 - Swift, MVVM, Rest API
 - AutoLayout, Codebase UI
@@ -31,7 +31,7 @@
 <br>
 
 
-## 🌱 기간별 일정
+## 기간별 일정
 
 2021.12.31 - 22.01.06  **(총 5일)**
 
@@ -46,7 +46,7 @@
 <br>
 <br>
 
-## 🌱 View
+## View
 
 <br>
 
@@ -100,7 +100,7 @@
 
 
 
-## 🌱 구현 이슈
+## 구현 이슈
 
 <br>
 
@@ -304,7 +304,7 @@ static func register(username: String, email: String, password: String, completi
  <br>
 
 
-## 🌱 프로젝트 회고
+## 프로젝트 회고
 
 
 > MVVM 패턴에 대한 이해
