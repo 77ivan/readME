@@ -143,7 +143,7 @@ private func handleShoppingProducts(products: Products) {
         shoppingList.accept(products.products)
     } else {
         let oldDatas = shoppingList.value
-				/// 기존 값을 유지하면서 새로운 값을 accept
+	/// 기존 값을 유지하면서 새로운 값을 accept
         shoppingList.accept(oldDatas + products.products)
     }
     pageCounter += 1 /// 요청 페이지 +1
@@ -159,7 +159,7 @@ private func handleShoppingProducts(products: Products) {
 	
 	- 현재 스크롤된 위치 > (전체 content 높이 - collectioinview frame 높이)
 	
-- PublishSubjects(fetchMoreDatas)에 이벤트 전달(onNext)
+- PublishSubjects(**fetchMoreDatas**)에 이벤트 전달(onNext)
 
 ```swift
 collectionView.rx.didScroll
