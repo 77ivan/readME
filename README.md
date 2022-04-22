@@ -5,9 +5,10 @@
 - [TODO](#TODO)
 - [Library](#Library)
 - [Rest API 핸들링](#Rest-API-핸들링)
-- [Reference](#Reference)
-- [Design](#Design)
-- [License](#License)
+- [페이지네이션](#페이지네이션)
+- [footerView indicator](#footerView-indicator)
+- [Pull Refresh(새로고침)](#Pull-Refresh(새로고침))
+- [이미지 캐싱](#이미지 캐싱)
 
 
 
@@ -309,7 +310,7 @@ private func binding() {
 
 <br>
 	
-## Pull Refresh()
+## Pull Refresh(새로고침)
 
 
 [ShopingMallViewModel]
