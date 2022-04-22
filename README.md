@@ -4,7 +4,7 @@
 
 - [TODO](#TODO)
 - [Library](#Library)
-- [Rest API 핸들링](#Rest_API_핸들링)
+- [Rest API 핸들링](#Rest-API-핸들링)
 - [Reference](#Reference)
 - [Design](#Design)
 - [License](#License)
