@@ -58,6 +58,7 @@ API를 통해 제공할 기능들을 열거형으로 정의한 후, extension으
     - Network Result 자체를 success 이벤트로 발행하여 에러 핸들링과 동시에 구독 관리를 원활하게 할 수 있도록 할 수 있다.
 
 <br>
+<br>
 
 [ShopingMallViewModel]
 
@@ -95,12 +96,12 @@ private var isPaginationRequestStillResume = false /// 페이지네이션 시작
 
 ...
 private func bind() {
-		fetchMoreDatas
-		    .subscribe { [weak self] _ in
-		        guard let self = self else { return }
-		        self.populateShoppingProducts(offset: self.pageCounter)
-		    }
-		    .disposed(by: disposeBag)
+    fetchMoreDatas
+	.subscribe { [weak self] _ in
+	    guard let self = self else { return }
+	    self.populateShoppingProducts(offset: self.pageCounter)
+        }
+	.disposed(by: disposeBag)
 }
 ```
 	
@@ -108,9 +109,9 @@ private func bind() {
 
 ```swift
 private func populateShoppingProducts(offset: Int) {
-		isPaginationRequestStillResume = true /// 페이지네이션 시작 flag
+    isPaginationRequestStillResume = true /// 페이지네이션 시작 flag
 
-		shoppingAPI.populateShoppingProducts(offset: offset)
+    shoppingAPI.populateShoppingProducts(offset: offset)
         .subscribe { [weak self] products in
             guard let self = self else { return }
 
@@ -124,6 +125,7 @@ private func populateShoppingProducts(offset: Int) {
             }
         }
         .disposed(by: disposeBag)
+}
 ```
 
 <br>
@@ -149,10 +151,14 @@ private func handleShoppingProducts(products: Products) {
 ```
 
 <br>
+<br>
 
 [ShoppingMallViewController]
 
-- **스크롤이 최하단에 도달** → 현재 스크롤된 위치 > (전체 content 높이 - collectioinview frame 높이)
+- **스크롤이 최하단에 도달**
+	
+	- 현재 스크롤된 위치 > (전체 content 높이 - collectioinview frame 높이)
+	
 - PublishSubjects(fetchMoreDatas)에 이벤트 전달(onNext)
 
 ```swift
@@ -183,8 +189,8 @@ collectionView.rx.didScroll
 <summary> dataSource (configureCell, configureSupplementaryView) 코드</summary>
 <br>
 
-    ```swift
-    private lazy var dataSource = RxCollectionViewSectionedReloadDataSource<ShoppingMallSection.ShoppingMallSectionModel>(
+```swift
+private lazy var dataSource = RxCollectionViewSectionedReloadDataSource<ShoppingMallSection.ShoppingMallSectionModel>(
         configureCell: { dataSource, collectionView, indexPath, item in
             switch item {
             case .firstItem(let product):
@@ -212,10 +218,12 @@ collectionView.rx.didScroll
         }
     )
     ```
+
 <br>
 </div>
 </details>
 
+<br>
 <br>
 
 [ShopingMallViewModel]
@@ -247,6 +255,7 @@ private func populateShoppingProducts(offset: Int, isRefreshControl: Bool) {
 ```
 
 <br>
+<br>
 
 [ShoppingMallViewController]
 
@@ -271,7 +280,7 @@ private func setFooterView(footer: UICollectionReusableView) {
 
 ```swift
 private func binding() {
-		viewModel.isLoadingSpinnerAvaliable
+    viewModel.isLoadingSpinnerAvaliable
         .subscribe { [weak self] isAvailable in
             guard let isAvailable = isAvailable.element,
                   let self = self else { return }
@@ -285,8 +294,7 @@ private func binding() {
 
 <br>
 	
-### Pull Refresh
-
+## Pull Refresh
 
 
 [ShopingMallViewModel]
@@ -323,13 +331,11 @@ private func bind() {
         .disposed(by: disposeBag)
 }
 
-<br>
-
 private func populateShoppingProducts(offset: Int, isRefreshControl: Bool) {
     if isPaginationRequestStillResume || isRefreshRequstStillResume { return }
     self.isRefreshRequstStillResume = isRefreshControl
 
-		...
+    ...
     shoppingAPI.populateShoppingProducts(offset: offset)
         .subscribe(onNext: { [weak self] products in
             guard let self = self else { return }
@@ -337,7 +343,7 @@ private func populateShoppingProducts(offset: Int, isRefreshControl: Bool) {
             self.handleShoppingProducts(products: products)
             self.isRefreshRequstStillResume = false /// 새로고침 끝 flag
             self.refreshControlCompelted.onNext(()) /// "완료" 이벤트 전달
-						...
+	    ...
         })
         .disposed(by: disposeBag)
 }
@@ -358,6 +364,7 @@ private func refreshControlTriggered() {
 ```
 
 <br>
+<br>
 
 [ShoppingMallViewController]
 
@@ -369,7 +376,7 @@ private let refreshControl = UIRefreshControl()
 
 ...
 private func binding() {
-		refreshControl.rx
+    refreshControl.rx
         .controlEvent(.valueChanged)
         .bind { [weak self] _ in
             guard let self = self else { return }
@@ -390,14 +397,18 @@ private func binding() {
 
 <br>
 
-### 이미지 캐싱
+## 이미지 캐싱
 
 
 - UIImageView를 확장하여 **setImage(with:)** 메서드 생성
+
 - ImageCache의 **retrieveImage(forKey:, options:)** 메서드를 호출
+	
     - default로 저장된 키에 캐시가 존재하는 경우, 그 이미지 그대로 사용
+	
     - 캐시가 존재하지 않는 경우, 이미지를 다운하고 해당 키에 저장
 
+	
 ```swift
 import Kingfisher
 
