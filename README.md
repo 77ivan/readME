@@ -231,6 +231,7 @@ private lazy var dataSource = RxCollectionViewSectionedReloadDataSource<Shopping
 [ShopingMallViewModel]
 
 - 즉각적인 트리거를 수신하기 위한 PublishSubjects(**isLoadingSpinnerAvaliable**)
+	
 - CollectionView의 Footer Section 띄울지 여부 판단하기 위함
 
 ```swift
@@ -278,6 +279,7 @@ private func setFooterView(footer: UICollectionReusableView) {
 <br>
 
 - isLoadingSpinnerAvaliable을 구독
+	
 - isLoadingSpinnerAvaliable의 Bool값에 따라 Footer Section Size 조절
 
 ```swift
