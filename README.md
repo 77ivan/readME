@@ -51,7 +51,7 @@ RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애�
 
 [ShoppingTarget]
 
-Moya
+**Moya**
 
 - API를 통해 제공할 기능들을 열거형으로 정의한 후, extension으로 확장해서 TargetType 프로토콜을 채택하여 Moya에서 제공하는 기본적인 네트워킹 레이어를 구축 
 
@@ -59,19 +59,19 @@ Moya
 
 [ShoppingAPI]
 
-프로토콜 (ShoppingAPIProtocol)
+**프로토콜 (ShoppingAPIProtocol)**
 
 - 추후에 아키텍처를 **재사용성, 확장성**이 좋게 만들기 위해서 프로토콜 생성
 
 <br>
 
-Generic 타입을 사용하여 **request 코드** 재사용
+**Generic 타입을 사용하여 request 코드 재사용**
 
 - 에러 핸들링을 위해 request를 **Single**로 wrapping해서 사용, 응답값 또는 에러를 발행 (구독 시, success와 error 두 가지 이벤트 처리)
 
 <br>
 
-Observable<T> → Single<T> 리펙토링
+**Observable<T> → Single<T> 리펙토링**
 	
 - Network Result 에러의 경우, 계속해서 요청을 하는 것이 아닌 error 이벤트를 발행하여 dispose 처리가 되어야한다.
 	
