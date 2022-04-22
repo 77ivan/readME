@@ -186,7 +186,7 @@ collectionView.rx.didScroll
 - **configureSupplementaryView**를 사용하기 위해 **RxDataSources** 임포트하여 dataSource 구성
 
 <details>
-<summary> dataSource (configureCell, configureSupplementaryView) 코드</summary>
+<summary> dataSource (configureCell, configureSupplementaryView) 코드 </summary>
 <br>
 
 ```swift
@@ -219,7 +219,7 @@ private lazy var dataSource = RxCollectionViewSectionedReloadDataSource<Shopping
     )
     ```
 
-<br>
+
 
 </div>
 </details>
