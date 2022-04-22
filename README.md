@@ -2,10 +2,7 @@
 
 RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애플리케이션
 
-
-<p align="center">
-  <img alt="" src="https://user-images.githubusercontent.com/93528918/164646568-beafde78-2e6b-4823-95eb-f4095758341c.gif">
-</p>
+![화면 기록 2022-04-22 오후 2 52 37](https://user-images.githubusercontent.com/93528918/164646856-7611a0b7-6424-4153-8a2a-e4e3f60f637b.gif)
 
 
 ## Content
