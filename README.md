@@ -8,7 +8,7 @@
 - [페이지네이션](#페이지네이션)
 - [footerView indicator](#footerView-indicator)
 - [Pull Refresh(새로고침)](#Pull-Refresh(새로고침))
-- [이미지 캐싱](#이미지 캐싱)
+- [이미지 캐싱](#이미지-캐싱)
 
 
 
