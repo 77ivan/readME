@@ -187,6 +187,7 @@ collectionView.rx.didScroll
 
 <details>
 <summary> dataSource (configureCell, configureSupplementaryView) 코드 </summary>
+
 <br>
 
 ```swift
@@ -217,7 +218,7 @@ private lazy var dataSource = RxCollectionViewSectionedReloadDataSource<Shopping
             }
         }
     )
-    ```
+```
 
 
 
