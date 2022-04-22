@@ -1,178 +1,420 @@
-<img width="1534" alt="12" src="https://user-images.githubusercontent.com/74236080/143826875-c12c807d-0b03-4c25-8e97-38b79119164d.png">
-
-<br>
-
-# 영자 신문을 앱으로 간편하게, 해외뉴우스<img src = "https://user-images.githubusercontent.com/93528918/149170874-1428e755-5919-4f06-a153-631c55d4e09e.png" width = 80  align = right> 
-
-- [프로젝트 세부 내용 보러가기](https://www.notion.so/912caceec73d480982e656c018594c7d)
-
-<a href="https://apps.apple.com/kr/app/%ED%95%B4%EC%99%B8%EB%89%B4%EC%9A%B0%EC%8A%A4/id1596846397
-"><img src="https://www.atrinh.com/list/images/download.svg"></a>
 
 
-<br>
+## TODO
 
-## Skill
-
-- Swift
-- MVVM
-- Firebase
-- Localization
-- AutoLayout, StoryBoard, Code Base UI
+- Rest API 핸들링
+- 네비게이션 설계
+- 이미지 캐싱
+- Pull Refresh
+- 로딩 indicator
+- 페이지네이션 (footerView indicator)
+- 최상단 이동 버튼
 
 <br>
 
 ## Library
 
-- [Realm](https://cocoapods.org/pods/Realm)
-- [Alamofire](https://github.com/Alamofire/Alamofire)
-- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
-- [Kingfisher](https://github.com/onevcat/Kingfisher)
+- [RxSwift, RxCocoa](https://github.com/ReactiveX/RxSwift)
+- [RxDataSources](https://github.com/RxSwiftCommunity/RxDataSources)
 - [SnapKit](https://github.com/SnapKit/SnapKit)
-- [Tabman](https://github.com/uias/Tabman)
+- [Kingfisher](https://github.com/onevcat/Kingfisher)
+- [Moya](https://github.com/Moya/Moya)
+- [Then](https://github.com/devxoul/Then)
 - [Toast](https://github.com/scalessec/Toast-Swift)
-- [SkeletonView](https://github.com/Juanpe/SkeletonView)
-- [CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout)
-- [IAMPopup](https://github.com/camosss/IAMPopup)
+- [AlignedCollectionViewFlowLayout](https://github.com/mischa-hildebrand/AlignedCollectionViewFlowLayout)
 
 
+<br>
 
-<br />
+## Rest API 핸들링
 
-## 기간별 일정
-2021.11.16 ~ 21.11.27 (2주)
 
-<br />
+[ShoppingTarget]
 
-| 진행사항 | 진행기간 | 세부사항 |
-|:---:| :--- | :--- |
-| 아이디어 기획 | 2021.11.16~21.11.17 | 기획서 작성, API 탐색 및 View 구상 |
-| UI 개발 | 2021.11.17~21.11.18 | 앱 전체적인 View 개발 |
-| 기능 개발 | 2021.11.18~21.11.26 | API 데이터 받아오기 및 전체적인 기능 개발  |
-| 앱 심사 제출 및 심사 | 2021.11.26~21.12.03 | 추수감사절 기간이라 지체됨 |
- 
+- Moya
 
-<br />
+API를 통해 제공할 기능들을 열거형으로 정의한 후, extension으로 확장해서 TargetType 프로토콜을 채택하여 Moya에서 제공하는 기본적인 네트워킹 레이어를 구축 
 
+<br>
+
+[ShoppingAPI]
+
+- 프로토콜 (ShoppingAPIProtocol)
+
+추후에 아키텍처를 **재사용성, 확장성**이 좋게 만들기 위해서 프로토콜 생성
+
+- Generic 타입을 사용하여 **request 코드** 재사용
+
+에러 핸들링을 위해 request를 **Single**로 wrapping해서 사용, 응답값 또는 에러를 발행 (구독 시, success와 error 두 가지 이벤트 처리)
+
+- Observable<T> → Single<T> 리펙토링
+    - Network Result 에러의 경우, 계속해서 요청을 하는 것이 아닌 error 이벤트를 발행하여 dispose 처리가 되어야한다.
+    - Network Result 자체를 success 이벤트로 발행하여 에러 핸들링과 동시에 구독 관리를 원활하게 할 수 있도록 할 수 있다.
+
+<br>
+
+[ShopingMallViewModel]
+
+- 상품 목록
+
+**Relay** : completed, error를 발생하지 않고 Dispose되기 전까지 계속 작동하기 때문에 UI Event에서 사용
+
+**BehaviorRelay**: 기존 값을 유지하면서 새로운 값을 accept
+
+```swift
+var shoppingList = BehaviorRelay<[Product]>(value: [])
+
+...
+func populateShoppingProducts(offset: Int) {
+    shoppingAPI.populateShoppingProducts(offset: offset)
+        .subscribe(onNext: { products in
+            self.shoppingList.accept(products.products) /// 새로운 값을 accept
+        })
+        .disposed(by: disposeBag)
+}
+```
+
+<br>
+
+## 페이지네이션
+
+
+- 즉각적인 트리거를 수신하기 위한 PublishSubjects(**fetchMoreDatas**) 구독
+
+```swift
+let fetchMoreDatas = PublishSubject<Void>()
+
+private var pageCounter = 0 /// offset(페이지)
+private var isPaginationRequestStillResume = false /// 페이지네이션 시작 여부
+
+...
+private func bind() {
+		fetchMoreDatas
+		    .subscribe { [weak self] _ in
+		        guard let self = self else { return }
+		        self.populateShoppingProducts(offset: self.pageCounter)
+		    }
+		    .disposed(by: disposeBag)
+}
+```
+	
+<br>
+
+```swift
+private func populateShoppingProducts(offset: Int) {
+		isPaginationRequestStillResume = true /// 페이지네이션 시작 flag
+
+		shoppingAPI.populateShoppingProducts(offset: offset)
+        .subscribe { [weak self] products in
+            guard let self = self else { return }
+
+            switch products {
+            case .success(let products):
+		self.handleShoppingProducts(products: products)
+                self.isPaginationRequestStillResume = false /// 페이지네이션 끝 flag
+
+            case .failure(let error):
+                self.errorMessage.onNext(error)
+            }
+        }
+        .disposed(by: disposeBag)
+```
+
+<br>
+	
+- 데이터를 컬렉션뷰에 추가하고 다음 요청에 대한 페이지 정렬
+
+    - 현재 페이지가 0일 때, 새로운 값을 accept
+	
+    - 페이지네이션을 진행하여 새로운 페이지를 요청할 때, 기존 값에 새로운 값을 accept
+
+	
+```swift
+private func handleShoppingProducts(products: Products) {
+    if pageCounter == 0 {
+        shoppingList.accept(products.products)
+    } else {
+        let oldDatas = shoppingList.value
+				/// 기존 값을 유지하면서 새로운 값을 accept
+        shoppingList.accept(oldDatas + products.products)
+    }
+    pageCounter += 1 /// 요청 페이지 +1
+}
+```
+
+<br>
+
+[ShoppingMallViewController]
+
+- **스크롤이 최하단에 도달** → 현재 스크롤된 위치 > (전체 content 높이 - collectioinview frame 높이)
+- PublishSubjects(fetchMoreDatas)에 이벤트 전달(onNext)
+
+```swift
+collectionView.rx.didScroll
+    .throttle(.milliseconds(200), scheduler: MainScheduler.instance)
+    .subscribe { [weak self] _ in
+        guard let self = self else { return }
+        let offSetY = self.collectionView.contentOffset.y /// 현재 스크롤된 위치
+        let contentHeight = self.collectionView.contentSize.height /// 전체 content 높이
+
+        if offSetY > (contentHeight - self.collectionView.frame.size.height) {
+            self.viewModel.fetchMoreDatas.onNext(())
+        }
+    }
+    .disposed(by: disposeBag)
+```
+
+<br>
+
+## footerView indicator
+
+
+페이지네이션을 진행하는 동안 CollectionView Footer Section에 indicator 추가
+
+- **configureSupplementaryView**를 사용하기 위해 **RxDataSources** 임포트하여 dataSource 구성
 
 <details>
-<summary>출시 프로젝트 세부 기획 항목</summary>
+<summary> dataSource (configureCell, configureSupplementaryView) 코드</summary>
+<br>
 
-<br />
- 
-![스크린샷 2021-12-04 오후 4 36 46](https://user-images.githubusercontent.com/74236080/144701789-fa1198e4-0373-4c82-8be7-5921f2074c73.png)
-
-![스크린샷 2021-12-04 오후 4 37 09](https://user-images.githubusercontent.com/74236080/144701790-72d72d18-459f-4568-8603-30263bf6e286.png)
-  
+    ```swift
+    private lazy var dataSource = RxCollectionViewSectionedReloadDataSource<ShoppingMallSection.ShoppingMallSectionModel>(
+        configureCell: { dataSource, collectionView, indexPath, item in
+            switch item {
+            case .firstItem(let product):
+                let cell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: ShoppingMallCell.reuseIdentifier,
+                    for: indexPath
+                ) as! ShoppingMallCell
+                cell.configure(product: product)
+                return cell
+            }
+        }, configureSupplementaryView: { [weak self] _, collectionView, kind, indexPath in
+            guard let self = self else { return UICollectionReusableView() }
+            switch kind {
+            case UICollectionView.elementKindSectionFooter:
+                let footer = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: kind,
+                    withReuseIdentifier: ShoppingMallFooterView.reuseIdentifier,
+                    for: indexPath
+                ) as! ShoppingMallFooterView
+                self.setFooterView(footer: footer)
+                return footer
+            default:
+                assert(false, "Unexpected element kind")
+            }
+        }
+    )
+    ```
+<br>
 </div>
 </details>
 
-<br />
-<br />
-<br />
-
-## View 구성 및 소개
-
-### 해외 뉴스로 세상을 바라보는 시야를 넓히고, 영어 공부까지 !
-
-- 현재 해외에서 인기 급상승중인 주제와 카테고리별 기사들의 목록을 볼 수 있어요.
-- 검색을 통해 원하는 주제의 기사를 찾을 수 있어요.
-- 마음에 드는 기사를 공유해보세요 !
-
-<br>
 <br>
 
-> Trending Topic
+[ShopingMallViewModel]
 
+- 즉각적인 트리거를 수신하기 위한 PublishSubjects(**isLoadingSpinnerAvaliable**)
+- CollectionView의 Footer Section 띄울지 여부 판단하기 위함
+
+```swift
+let isLoadingSpinnerAvaliable = PublishSubject<Bool>()
+
+private func populateShoppingProducts(offset: Int, isRefreshControl: Bool) {
+	...
+
+        isPaginationRequestStillResume = true
+        isLoadingSpinnerAvaliable.onNext(true) /// FooterView -> O
+
+        if pageCounter == 0 {
+            isLoadingSpinnerAvaliable.onNext(false)
+        }
+
+        shoppingAPI.populateShoppingProducts(offset: offset)
+            .subscribe(onNext: { [weak self] products in
+                guard let self = self else { return }
+		...
+		self.isLoadingSpinnerAvaliable.onNext(false) /// FooterView -> X         
+	})
+        .disposed(by: disposeBag)
+}
+```
+
+<br>
+
+[ShoppingMallViewController]
+
+- Footer Section에 띄울 Indicator 생성
+
+```swift
+private let footerView = UIActivityIndicatorView()
+...
+private func setFooterView(footer: UICollectionReusableView) {
+    footer.addSubview(self.footerView)
+    self.footerView.frame = CGRect(x: 0, y: 16,
+                                   width: collectionView.contentSize.width,
+                                   height: 50)
+    self.footerView.startAnimating()
+}
+```
+
+<br>
+
+- isLoadingSpinnerAvaliable을 구독
+- isLoadingSpinnerAvaliable의 Bool값에 따라 Footer Section Size 조절
+
+```swift
+private func binding() {
+		viewModel.isLoadingSpinnerAvaliable
+        .subscribe { [weak self] isAvailable in
+            guard let isAvailable = isAvailable.element,
+                  let self = self else { return }
+            self.layout.footerReferenceSize = isAvailable || self.viewModel.pageCounter == 0 ?
+            CGSize.zero :
+            CGSize(width: self.collectionView.bounds.width, height: 100)
+        }
+        .disposed(by: disposeBag)
+}
+```
+
+<br>
 	
-- **SkeletonView** 라이브러리를 통해 로딩 View 구현
-- **WaterfallLayout**을 적용하여 트렌드한 주제의 기사 데이터를 받아와서 Collection View 구성
-- Cell을 선택하면 **SlideView**에 각각의 기사 데이터 구성 및 원본 기사 웹뷰로 이동
- 
- <br>
+### Pull Refresh
+
+
+
+[ShopingMallViewModel]
+
+- 새로고침 **실행 여부**를 수신하기 위한 PublishSubjects(**refreshControlAction**)
+- 새로고침 **완료 여부**를 수신하기 위한 PublishSubjects(**refreshControlCompelted**)
+
+```swift
+let refreshControlAction = PublishSubject<Void>()
+let refreshControlCompelted = PublishSubject<Void>()
+
+...
+private var isRefreshRequstStillResume = false /// 새고고침 flag
+```
+
+<br>
+
+```swift
+private func bind() {
+    fetchMoreDatas
+        .subscribe { [weak self] _ in
+            guard let self = self else { return }
+            self.populateShoppingProducts(offset: self.pageCounter,
+                                          isRefreshControl: false)
+        }
+        .disposed(by: disposeBag)
+
+    /// 새로고침 제어
+    refreshControlAction
+        .subscribe { [weak self] _ in
+            guard let self = self else { return }
+            self.refreshControlTriggered()
+        }
+        .disposed(by: disposeBag)
+}
+
+<br>
+
+private func populateShoppingProducts(offset: Int, isRefreshControl: Bool) {
+    if isPaginationRequestStillResume || isRefreshRequstStillResume { return }
+    self.isRefreshRequstStillResume = isRefreshControl
+
+		...
+    shoppingAPI.populateShoppingProducts(offset: offset)
+        .subscribe(onNext: { [weak self] products in
+            guard let self = self else { return }
+
+            self.handleShoppingProducts(products: products)
+            self.isRefreshRequstStillResume = false /// 새로고침 끝 flag
+            self.refreshControlCompelted.onNext(()) /// "완료" 이벤트 전달
+						...
+        })
+        .disposed(by: disposeBag)
+}
+```
+
+<br>
+
+- 새로고침 제어가 트리거되는 즉시, 이전 요청이 취소되고 이전 데이터 삭제
+
+```swift
+private func refreshControlTriggered() {
+    isPaginationRequestStillResume = false
+    pageCounter = 0
+    shoppingList.accept([])
+    populateShoppingProducts(offset: pageCounter,
+                             isRefreshControl: true)
+}
+```
+
+<br>
+
+[ShoppingMallViewController]
+
+- 새로고침 이벤트 발생 시, refreshControlAction에 이벤트 전달(onNext)
+- ShopingMallViewModel에서 refreshControlCompelted 이벤트를 받으면 새로고침 중단(endRefreshing)
+
+```swift
+private let refreshControl = UIRefreshControl()
+
+...
+private func binding() {
+		refreshControl.rx
+        .controlEvent(.valueChanged)
+        .bind { [weak self] _ in
+            guard let self = self else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.viewModel.refreshControlAction.onNext(())
+            }
+        }
+        .disposed(by: disposeBag)
+
+    viewModel.refreshControlCompelted
+        .subscribe { [weak self] _ in
+            guard let self = self else { return }
+            self.refreshControl.endRefreshing()
+        }
+        .disposed(by: disposeBag)
+}
+```
+
+<br>
+
+### 이미지 캐싱
+
+
+- UIImageView를 확장하여 **setImage(with:)** 메서드 생성
+- ImageCache의 **retrieveImage(forKey:, options:)** 메서드를 호출
+    - default로 저장된 키에 캐시가 존재하는 경우, 그 이미지 그대로 사용
+    - 캐시가 존재하지 않는 경우, 이미지를 다운하고 해당 키에 저장
+
+```swift
+import Kingfisher
+
+extension UIImageView {
+    func setImage(with urlString: String) {
+        ImageCache.default.retrieveImage(forKey: urlString, options: nil) { result in
+            switch result {
+            case .success(let value):
+                if let image = value.image { /// 캐시가 존재하는 경우
+                    self.image = image
+                } else {                     /// 캐시가 존재하지 않는 경우
+                    guard let url = URL(string: urlString) else { return }
+                    let resource = ImageResource(downloadURL: url, cacheKey: urlString)
+                    self.kf.setImage(with: resource)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+}
+```
 	
-<img src = "https://user-images.githubusercontent.com/93528918/149971523-e6c13f4b-322e-4835-a459-fd855b06188b.gif" width="30%" height="30%">
-
-
-
-
-<br>
-<br>
-
-> Search
- 
-
 	
-- **SkeletonView** 라이브러리를 통해 검색한 데이터를 받아오는 동안 로딩 View 구현
-- Cell을 선택하면 해당 기사 본문 페이지로 이동
- 
-<br>
-
-<img src = "https://user-images.githubusercontent.com/93528918/149971528-35fd604a-68c0-41d9-ae2c-8385da279827.gif" width="30%" height="30%">
-
-
-
-<br>
-<br>
-
-> Category
-
-
 	
-- **Tabman, Pageboy** 라이브러리를 통해 카테고리 별 탭페이징 구현
-- **하나의 View, Cell, Controller 재사용**
-- Section별 하단에 **전체보기 버튼**을 추가하여, Section별로 받아오는 데이터 전체를 표시하는 View로 이동
- 
- <br>
-
-<img src = "https://user-images.githubusercontent.com/93528918/149971533-0e9f8dde-712f-49b0-962e-a226f48d359a.gif" width="30%" height="30%">
-
-
-
-<br>
-<br>
-
-> 기사 본문
- 
-
 	
- - **ScrollView**를 적용하여 각 기사의 본문 길이만큼 동적인 높이 조정
-
- <br>
-
-<img src = "https://user-images.githubusercontent.com/93528918/149971537-27026971-fa90-48e8-99eb-2d8853e17e19.gif" width="30%" height="30%">
-
-
-
-<br />
-<br />
-<br />
-
-
-
-
-## 버전
-
-> [v1.0.1](https://www.notion.so/v1-0-1-2285257857644e7b8916099eb816309a)
-
-- Date값 Format 오류 수정
-- 21/12/08 업데이트 완료
-
-<br>
-
-> [v1.0.2](https://www.notion.so/v1-0-2-57a5662ca6c44d94a1c306df9d3b5083)
-
-- Firebase [Analytics, Crashlytics] 적용
-- 코드 리펙토링 (API 호출 메서드, Custom View)
-- 21/01/10 업데이트 완료
-
-
-<br>
-
-> [v1.0.3](https://www.notion.so/v1-0-3-a15eb71a45364214adb2073999176486)
-
-- [IAMPopup](https://github.com/camosss/IAMPopup) 라이브러리 적용으로 SlideView 코드 리펙토링
-- Category [Entertainment, Sports] - HTTP Headers 이슈
-    - HTTP에서 디폴드로 전달되는 헤더가 변경이 되었는데, `accept-language`를 지정해주고 오류 해결
-- 21/02/12 업데이트 완료
-
