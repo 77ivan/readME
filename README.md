@@ -4,7 +4,7 @@ RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애�
 
 ![화면 기록 2022-04-22 오후 2 52 37](https://user-images.githubusercontent.com/93528918/164646856-7611a0b7-6424-4153-8a2a-e4e3f60f637b.gif)
 
-[[ㄲㄱ]](https://github.com/77ivan/readME)
+
 
 <br>
 
@@ -49,7 +49,7 @@ RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애�
 ## Rest API 핸들링
 
 
-[ShoppingTarget]
+[[ShoppingTarget]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Network/Shopping/ShoppingTarget.swift)
 
 **Moya**
 
@@ -57,7 +57,7 @@ RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애�
 
 <br>
 
-[ShoppingAPI]
+[[ShoppingAPI]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Network/Shopping/ShoppingAPI.swift)
 
 **프로토콜 (ShoppingAPIProtocol)**
 
@@ -67,7 +67,9 @@ RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애�
 
 **Generic 타입을 사용하여 request 코드 재사용**
 
-- 에러 핸들링을 위해 request를 **Single**로 wrapping해서 사용, 응답값 또는 에러를 발행 (구독 시, success와 error 두 가지 이벤트 처리)
+- 에러 핸들링을 위해 request를 **Single**로 wrapping해서 사용, 응답값 또는 에러를 발행
+
+- 구독 시, success와 error 두 가지 이벤트 처리
 
 <br>
 
@@ -80,7 +82,7 @@ RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애�
 <br>
 <br>
 
-[ShopingMallViewModel]
+[[ShopingMallViewModel]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Presentation/TabBar/ShoppingMall/ShopingMallViewModel.swift)
 
 - 상품 목록
 
@@ -105,6 +107,7 @@ func populateShoppingProducts(offset: Int) {
 
 ## 페이지네이션
 
+[[ShopingMallViewModel]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Presentation/TabBar/ShoppingMall/ShopingMallViewModel.swift)
 
 - 즉각적인 트리거를 수신하기 위한 PublishSubjects(**fetchMoreDatas**) 구독
 
@@ -173,7 +176,7 @@ private func handleShoppingProducts(products: Products) {
 <br>
 <br>
 
-[ShoppingMallViewController]
+[[ShoppingMallViewController]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Presentation/TabBar/ShoppingMall/ShoppingMallViewController.swift)
 
 - **스크롤이 최하단에 도달**
 	
@@ -248,8 +251,8 @@ private lazy var dataSource = RxCollectionViewSectionedReloadDataSource<Shopping
 <br>
 <br>
 
-[ShopingMallViewModel]
-
+[[ShopingMallViewModel]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Presentation/TabBar/ShoppingMall/ShopingMallViewModel.swift)
+  
 - 즉각적인 트리거를 수신하기 위한 PublishSubjects(**isLoadingSpinnerAvaliable**)
 	
 - CollectionView의 Footer Section 띄울지 여부 판단하기 위함
@@ -280,8 +283,8 @@ private func populateShoppingProducts(offset: Int, isRefreshControl: Bool) {
 <br>
 <br>
 
-[ShoppingMallViewController]
-
+[[ShoppingMallViewController]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Presentation/TabBar/ShoppingMall/ShoppingMallViewController.swift)
+  
 - Footer Section에 띄울 Indicator 생성
 
 ```swift
@@ -321,8 +324,8 @@ private func binding() {
 ## Pull Refresh(새로고침)
 
 
-[ShopingMallViewModel]
-
+[[ShopingMallViewModel]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Presentation/TabBar/ShoppingMall/ShopingMallViewModel.swift)
+  
 - 새로고침 **실행 여부**를 수신하기 위한 PublishSubjects(**refreshControlAction**)
 - 새로고침 **완료 여부**를 수신하기 위한 PublishSubjects(**refreshControlCompelted**)
 
@@ -390,7 +393,8 @@ private func refreshControlTriggered() {
 <br>
 <br>
 
-[ShoppingMallViewController]
+[[ShoppingMallViewController]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Presentation/TabBar/ShoppingMall/ShoppingMallViewController.swift)
+
 
 - 새로고침 이벤트 발생 시, refreshControlAction에 이벤트 전달(onNext)
 - ShopingMallViewModel에서 refreshControlCompelted 이벤트를 받으면 새로고침 중단(endRefreshing)
@@ -423,7 +427,8 @@ private func binding() {
 
 ## 이미지 캐싱
 
-
+[[UIImageView+Extension]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Extension/UIImageView%2BExtension.swift)
+  
 - UIImageView를 확장하여 **setImage(with:)** 메서드 생성
 
 - ImageCache의 **retrieveImage(forKey:, options:)** 메서드를 호출
@@ -455,7 +460,8 @@ extension UIImageView {
     }
 }
 ```
-	
+
+<br>
 	
 	
 	
