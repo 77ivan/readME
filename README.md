@@ -214,12 +214,12 @@ collectionView.rx.didScroll
 	
     - pageCounter += 1 에서 상품이 *0~19* 다음 *1~20*으로 중복을 가져오는 이슈
 	
-<img src = "https://user-images.githubusercontent.com/93528918/164889248-fa109d4f-16db-4059-8ec9-a90b8d8d529c.png" width="70%" height="70%">
+<img src = "https://user-images.githubusercontent.com/93528918/164889248-fa109d4f-16db-4059-8ec9-a90b8d8d529c.png" width="50%" height="50%">
 
 
 - **커서 기반 페이지 방식**이기 때문에 limit로 정한 20을 기준으로 pageCounter에 + limit
 	
-<img src = "https://user-images.githubusercontent.com/93528918/164889255-c285a95c-ae68-47ab-b9ab-aa8f679cf1f8.png" width="70%" height="70%">
+<img src = "https://user-images.githubusercontent.com/93528918/164889255-c285a95c-ae68-47ab-b9ab-aa8f679cf1f8.png" width="50%" height="50%">
 
 	
 
