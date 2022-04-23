@@ -313,7 +313,7 @@ private func binding() {
         .subscribe { [weak self] isAvailable in
             guard let isAvailable = isAvailable.element,
                   let self = self else { return }
-            self.layout.footerReferenceSize = isAvailable || self.viewModel.pageCounter == 0 ?
+            self.layout.footerReferenceSize = isAvailable || self.viewModel.cursorCounter == 0 ?
             CGSize.zero :
             CGSize(width: self.collectionView.bounds.width, height: 100)
         }
