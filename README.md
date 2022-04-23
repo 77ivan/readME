@@ -114,7 +114,9 @@ func populateShoppingProducts(offset: Int) {
 ```swift
 let fetchMoreDatas = PublishSubject<Void>()
 
-private var pageCounter = 0 /// offset(페이지)
+var cursorCounter = 0 /// offset
+private let limit = 20
+
 private var isPaginationRequestStillResume = false /// 페이지네이션 시작 여부
 
 ...
@@ -122,7 +124,7 @@ private func bind() {
     fetchMoreDatas
 	.subscribe { [weak self] _ in
 	    guard let self = self else { return }
-	    self.populateShoppingProducts(offset: self.pageCounter)
+	    self.populateShoppingProducts(offset: self.cursorCounter)
         }
 	.disposed(by: disposeBag)
 }
@@ -169,7 +171,7 @@ private func handleShoppingProducts(products: Products) {
 	/// 기존 값을 유지하면서 새로운 값을 accept
         shoppingList.accept(oldDatas + products.products)
     }
-    pageCounter += 1 /// 요청 페이지 +1
+    pageCounter += limit /// 다음 row 
 }
 ```
 
