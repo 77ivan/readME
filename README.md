@@ -346,7 +346,7 @@ private func bind() {
     fetchMoreDatas
         .subscribe { [weak self] _ in
             guard let self = self else { return }
-            self.populateShoppingProducts(offset: self.pageCounter,
+            self.populateShoppingProducts(offset: self.cursorCounter,
                                           isRefreshControl: false)
         }
         .disposed(by: disposeBag)
@@ -385,9 +385,9 @@ private func populateShoppingProducts(offset: Int, isRefreshControl: Bool) {
 ```swift
 private func refreshControlTriggered() {
     isPaginationRequestStillResume = false
-    pageCounter = 0
+    cursorCounter = 0
     shoppingList.accept([])
-    populateShoppingProducts(offset: pageCounter,
+    populateShoppingProducts(offset: cursorCounter,
                              isRefreshControl: true)
 }
 ```
