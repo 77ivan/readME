@@ -1,10 +1,10 @@
 # 쇼핑몰 상품 목록
 
-RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애플리케이션
+> RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애플리케이션
 
+<br>
 
-![화면 기록 2022-04-23 오후 6 46 43](https://user-images.githubusercontent.com/93528918/164889464-a571c5f1-94e9-4de7-8009-a5d8f48aafb3.gif)
-
+![화면 기록 2022-04-24 오전 12 23 20](https://user-images.githubusercontent.com/74236080/164912518-d4154468-1fb3-48c9-bdb5-252445c4b5dd.gif)
 
 
 <br>
@@ -18,6 +18,7 @@ RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애�
 - [footerView indicator](#footerView-indicator)
 - [Pull Refresh(새로고침)](#Pull-Refresh(새로고침))
 - [이미지 캐싱](#이미지-캐싱)
+- [네트워크 대응](#네트워크-대응)
 
 <br>
 
@@ -30,6 +31,8 @@ RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애�
 - 로딩 indicator
 - 페이지네이션 (footerView indicator)
 - 최상단 이동 버튼
+- 다크모드 대응
+- 네트워크 대응
 
 <br>
 
@@ -115,9 +118,8 @@ func populateShoppingProducts(offset: Int) {
 ```swift
 let fetchMoreDatas = PublishSubject<Void>()
 
-var cursorCounter = 0 /// offset
-private let limit = 20
-
+var cursorCounter = 0 /// pagination offset
+private let limit = 20 /// pagination limit
 private var isPaginationRequestStillResume = false /// 페이지네이션 시작 여부
 
 ...
@@ -172,7 +174,7 @@ private func handleShoppingProducts(products: Products) {
 	/// 기존 값을 유지하면서 새로운 값을 accept
         shoppingList.accept(oldDatas + products.products)
     }
-    cursorCounter += limit /// 다음 row 
+    cursorCounter += limit /// 요청
 }
 ```
 
@@ -203,29 +205,27 @@ collectionView.rx.didScroll
 ```
 
 <br>
-	
-	
+
 > issue
 
 **커서 기반 페이지네이션 (Cursor-based Pagination)**
 
 - 기존에 **오프셋 기반 페이지 방식**으로 구현
-	
+    
     - '페이지' 단위로 구분하여 요청한다고 생각
-	
+    
     - pageCounter += 1 에서 상품이 *0~19* 다음 *1~20*으로 중복을 가져오는 이슈
-	
+    
 <img src = "https://user-images.githubusercontent.com/93528918/164889248-fa109d4f-16db-4059-8ec9-a90b8d8d529c.png" width="50%" height="50%">
 
 <br>
 
 
-- **커서 기반 페이지 방식**이기 때문에 limit로 정한 20을 기준으로 pageCounter에 + limit
-	
+- **커서 기반 페이지 방식**이기 때문에 limit로 정한 20을 기준으로 cursorCounter(rename)에 + limit
+    
 <img src = "https://user-images.githubusercontent.com/93528918/164889255-c285a95c-ae68-47ab-b9ab-aa8f679cf1f8.png" width="50%" height="50%">
 
 <br>
-	
 
 
 ## footerView indicator
@@ -288,12 +288,12 @@ private lazy var dataSource = RxCollectionViewSectionedReloadDataSource<Shopping
 let isLoadingSpinnerAvaliable = PublishSubject<Bool>()
 
 private func populateShoppingProducts(offset: Int, isRefreshControl: Bool) {
-	...
+        ...
 
         isPaginationRequestStillResume = true
         isLoadingSpinnerAvaliable.onNext(true) /// FooterView -> O
 
-        if cursorCounter == 0 {
+        if pageCounter == 0 {
             isLoadingSpinnerAvaliable.onNext(false)
         }
 
@@ -410,7 +410,7 @@ private func populateShoppingProducts(offset: Int, isRefreshControl: Bool) {
 ```swift
 private func refreshControlTriggered() {
     isPaginationRequestStillResume = false
-    cursorCounter = 0
+    pageCounter = 0
     shoppingList.accept([])
     populateShoppingProducts(offset: cursorCounter,
                              isRefreshControl: true)
@@ -491,4 +491,34 @@ extension UIImageView {
 <br>
 	
 	
-	
+## 네트워크 대응
+
+
+[[NetworkMoniter]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Network/Supportings/NetworkMoniter.swift)
+
+**NWPathMonitor** 내부 라이브러리를 통해 인터넷 상태 변경 감지
+
+<br>
+
+[[BaseViewController]](https://github.com/camosss/MommyTalk_ShoppingMall/blob/main/MommyTalk_ShoppingMall/Presentation/BaseView/BaseViewController.swift)
+
+ 
+
+`viewWillAppear` 생명주기에 네트워크 모니터 연결
+
+- view가 나타날 때마다 인터넷 상태 변경 감지
+
+```swift
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    NetworkMoniter.shared.networkMoniter {
+        DispatchQueue.main.async {
+            self.view.makeToast(NetworkError.No_Internet.description,
+                                position: .center)
+        }
+    }
+}
+```
+
+<br>
+<br>
