@@ -164,14 +164,14 @@ private func populateShoppingProducts(offset: Int) {
 	
 ```swift
 private func handleShoppingProducts(products: Products) {
-    if pageCounter == 0 {
+    if cursorCounter == 0 {
         shoppingList.accept(products.products)
     } else {
         let oldDatas = shoppingList.value
 	/// 기존 값을 유지하면서 새로운 값을 accept
         shoppingList.accept(oldDatas + products.products)
     }
-    pageCounter += limit /// 다음 row 
+    cursorCounter += limit /// 다음 row 
 }
 ```
 
