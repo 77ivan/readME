@@ -2,7 +2,8 @@
 
 RxSwift와 MVVM 패턴을 사용한 쇼핑몰 상품 목록 클라이언트 애플리케이션
 
-![화면 기록 2022-04-22 오후 2 52 37](https://user-images.githubusercontent.com/93528918/164646856-7611a0b7-6424-4153-8a2a-e4e3f60f637b.gif)
+
+![화면 기록 2022-04-23 오후 6 46 43](https://user-images.githubusercontent.com/93528918/164889464-a571c5f1-94e9-4de7-8009-a5d8f48aafb3.gif)
 
 
 
