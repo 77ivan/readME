@@ -268,7 +268,7 @@ private func populateShoppingProducts(offset: Int, isRefreshControl: Bool) {
         isPaginationRequestStillResume = true
         isLoadingSpinnerAvaliable.onNext(true) /// FooterView -> O
 
-        if pageCounter == 0 {
+        if cursorCounter == 0 {
             isLoadingSpinnerAvaliable.onNext(false)
         }
 
