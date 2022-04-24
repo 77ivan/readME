@@ -16,7 +16,7 @@
 - [Rest API 핸들링](#Rest-API-핸들링)
 - [페이지네이션](#페이지네이션)
 - [footerView indicator](#footerView-indicator)
-- [Pull to Refresh(새로고침)](#Pull-to-Refresh(새로고침))
+- [Pull to Refresh](#Pull-to-Refresh(새로고침))
 - [이미지 캐싱](#이미지-캐싱)
 - [네트워크 대응](#네트워크-대응)
 
