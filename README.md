@@ -175,7 +175,7 @@ private func populateMovieList(cursor: Int) {
     
     - 페이지네이션을 진행하여 새로운 페이지를 요청할 때, **기존 값에 새로운 값을 accept**
 
-- **커서 기반 페이지네이션 (Cursor-based Pagination)**으로 limit으로 정한 display 파라미터의 값만큼 startCounter에 더해줘서 새로운 데이터 요청
+- 커서 기반 페이지네이션 (Cursor-based Pagination)으로 limit으로 정한 display 파라미터의 값만큼 startCounter에 더해줘서 새로운 데이터 요청
     
     - 클라이언트가 가져간 마지막 row의 순서상 다음 row들을 n(display)개 요청
 
@@ -242,9 +242,10 @@ tableView.rx
 let isLoadingSpinnerAvaliable = PublishSubject<Bool>() /// 페이지네이션, footerView indicator
 ```
 
+<br>
+
 [[SearchMovieViewController]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift)
 
-<br>
 
 - FooterView에 띄울 Indicator 생성
 
@@ -269,8 +270,7 @@ private func bind() {
             self.tableView.tableFooterView = isAvailable ? self.viewSpinner : UIView(frame: .zero)
         }
         .disposed(by: disposeBag)
-
-		...
+    ...
 }
 ```
 
@@ -292,6 +292,8 @@ let searchButtonTapped = PublishRelay<Void>()
 ```
 
 <br>
+
+> bind
 
 - 키보드의 검색 버튼을 눌렀을 때, **searchButtonTapped**이 이벤트가 발생한 걸 알 수 있도록 bind
 
@@ -324,7 +326,7 @@ private func bind() {
 
 - 커스텀 SearchBar의 **searchButtonTapped**을 통해 **shouldLoadResult**가 최신 text(query)를 방출
 
-- 구독 이후의 이벤트만 제공하고, 메인스트림에서 실행하며 error를 방출하지 않아 UI이벤트를 다루는데에 적합하기에 **asSignal()**을 사용하여 **emit()** 연산자를 통해 이벤트 방출
+- 구독 이후의 이벤트만 제공하고, 메인스트림에서 실행하며 error를 방출하지 않아 UI이벤트를 다루는데에 적합하기에 asSignal()을 사용하여 **emit()** 연산자를 통해 이벤트 방출
 
 ```swift
 private let searchBar = SearchBar()
@@ -365,6 +367,8 @@ func searchResultTriggered(query: String) {
 
 API 요청을 통해 데이터를 받아오는 동안 로딩 indicator 구현
 
+<br>
+
 [[SearchMovieViewModel]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift)
 
 - 로딩 실행 여부를 수신하기 위한 PublishSubject(**isLoadingAvaliable**)
@@ -374,28 +378,27 @@ API 요청을 통해 데이터를 받아오는 동안 로딩 indicator 구현
     - 검색 결괏값 0일 때, EmptyView를 로드하는데, 로딩 indicator를 띄우는 동안 emptyView는 사라지게 하기 위함
     
 <details>
-<summary> dataSource (configureCell, configureSupplementaryView) 코드 </summary>
+<summary> 코드 </summary>
 
 <br>
 	
-    ```swift
-    /// SearchMovieViewController
+```swift
+/// SearchMovieViewController
     
-    viewModel.movieList
-        .map { return $0.count <= 0 && !self.viewModel.isLoadingRequstStillResume }
-        .bind(to: tableView.rx.isEmpty(
-            title: "영화를 검색해보세요!",
-            imageName: "film")
-        )
-        .disposed(by: disposeBag)
-    ```
+viewModel.movieList
+    .map { return $0.count <= 0 && !self.viewModel.isLoadingRequstStillResume }
+    .bind(to: tableView.rx.isEmpty(
+        title: "영화를 검색해보세요!",
+        imageName: "film")
+    )
+    .disposed(by: disposeBag)
+```
 				  
 <br>
 	
 </div>
 </details>			  
     
-
 
 ```swift
 let isLoadingAvaliable = PublishSubject<Bool>() /// 검색, indicator
@@ -465,6 +468,7 @@ viewModel.isLoadingAvaliable
 **Realm**을 사용하여 즐겨찾기 목록 구현
 
 [[MovieCell]](https://github.com/camosss/MovieProject/blob/main/MovieProject/View/MovieCell.swift) 
+
 [[DetailHeaderView]](https://github.com/camosss/MovieProject/blob/main/MovieProject/View/DetailHeaderView.swift)
 
 - StarButton의 isSelected(Bool)값 이벤트를 수신하기 위한 PublishSubject(**isStarred**)
@@ -480,6 +484,8 @@ isStarred
     .emit(to: starButton.rx.isSelected)
     .disposed(by: disposeBag)
 ```
+
+<br>
 
 - starButton의 tap 이벤트를 isSelected(Bool)값으로 매핑
 - isSelected(Bool)값에 따른 스타버튼 로직 처리 (Star/UnStar)
@@ -515,11 +521,11 @@ starButton.rx.tap
 
 - 데이터 객체에 따로 ID값이 없기 때문에 **link**를 **primaryKey**로 등록
     
-    - **code**값으로 식별
+    - **code**값으로 식별 ()
     
-    https://movie.naver.com/movie/bi/mi/basic.nhn?**code=187347**
+    https://movie.naver.com/movie/bi/mi/basic.nhn?code=187347
     
-    https://movie.naver.com/movie/bi/mi/basic.nhn?**code=134898**
+    https://movie.naver.com/movie/bi/mi/basic.nhn?code=134898
     
 
 ```swift
@@ -557,9 +563,11 @@ class Movie: Object, Codable {
 
 <br>
 
-[MovieCell]
+[MovieCell](https://github.com/camosss/MovieProject/blob/main/MovieProject/View/MovieCell.swift)
 
 - Realm에 저장된 데이터를 불러와서 **movie.link*** 값을 비교(filter)하여 즐겨찾기 목록에 추가 및 삭제
+
+<br>
 
 > issue
 > 
@@ -571,6 +579,8 @@ StarButton을 반복적으로 눌러서 저장, 삭제를 반복하면 해당 �
 JSON 데이터를 Realm Object로 변환하면 DB에 연결되지 않은 인스턴스가 생성되는데, 그 객체를 같은 객체로 로컬 데이터베이스에서 추적한다.
 
 그래서 Movie를 즐겨찾기에 추가하고난 뒤, 삭제를 하게되면 해당 인스턴스는 참조가 사라져 **Invalid Object**가 되서 다시 한번 추가하려고 하면 해당 에러가 발생하는 것.
+
+<br>
 
 - 해결책
     
