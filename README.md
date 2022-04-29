@@ -176,7 +176,9 @@ private func populateMovieList(cursor: Int) {
     
     - 페이지네이션을 진행하여 새로운 페이지를 요청할 때, **기존 값에 새로운 값을 accept**
 
-- **커서 기반 페이지네이션** (Cursor-based Pagination)으로 limit으로 정한 display 파라미터의 값만큼 startCounter에 더해줘서 새로운 데이터 요청
+- **커서 기반 페이지네이션** (Cursor-based Pagination)
+
+    - limit으로 정한 display 파라미터의 값만큼 startCounter에 더해줘서 새로운 데이터 요청
     
     - 클라이언트가 가져간 마지막 row의 순서상 다음 row들을 n(display)개 요청
 
