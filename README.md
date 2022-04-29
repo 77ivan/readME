@@ -376,11 +376,16 @@ API 요청을 통해 데이터를 받아오는 동안 로딩 indicator 구현
 
 [[SearchMovieViewModel]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift)
 
+```swift
+let isLoadingAvaliable = PublishSubject<Bool>() /// 검색, indicator
+var isLoadingRequstStillResume = false /// 로딩 indicator와 emptyView를 구분하기 위한 flag
+```
+
 - 로딩 실행 여부를 수신하기 위한 PublishSubject(**isLoadingAvaliable**)
 
 - **isLoadingRequstStillResume**는 로딩 indicator와 emptyView를 구분하기 위한 flag
     
-    - 검색 결괏값 0일 때, EmptyView를 로드하는데, 로딩 indicator를 띄우는 동안 emptyView는 사라지게 하기 위함
+    - 검색 결괏값 0일 때, EmptyView를 로드하는데 로딩 indicator를 띄우는 동안 emptyView는 사라지게 하기 위함
     
 <details>
 <summary> 코드 </summary>
@@ -404,11 +409,6 @@ viewModel.movieList
 </div>
 </details>			  
     
-
-```swift
-let isLoadingAvaliable = PublishSubject<Bool>() /// 검색, indicator
-var isLoadingRequstStillResume = false /// 로딩 indicator와 emptyView를 구분하기 위한 flag
-```
 
 <br>
 
