@@ -317,7 +317,7 @@ private func bind() {
         .emit(to: self.rx.endEditing) /// 키보드 내려가는 이벤트 방출
         .disposed(by: disposeBag)
 
-		/// SearchButtonTapped가 ShouldLoadResult의 트리거
+    /// SearchButtonTapped가 ShouldLoadResult의 트리거
     self.shouldLoadResult = searchButtonTapped
         .withLatestFrom(self.rx.text) { $1 ?? "" } /// 최신 text를 전달
         .filter { !$0.isEmpty } // 비어있지 않은 경우만
