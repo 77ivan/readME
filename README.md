@@ -14,7 +14,7 @@
 ## TODO
 
 - [Rest API 핸들링](#Rest-API-핸들링)
-- [페이지네이션(footerView indicator](#페이지네이션(footerView indicator))
+- [페이지네이션(footerView indicator)](#페이지네이션(footerView indicator))
 - [검색 기능](#검색-기능)
 - [로딩 indicator](#로딩-indicator)
 - [즐겨찾기 기능](#즐겨찾기-기능)
