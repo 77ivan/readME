@@ -37,7 +37,7 @@
 
 ## Rest API 핸들링
 
-[[SearchMovieTarget]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Network/SearchMovie/SearchMovieTarget.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Network/SearchMovie/SearchMovieTarget.swift))
+[[SearchMovieTarget]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Network/SearchMovie/SearchMovieTarget.swift)
 
 **Moya**
 
@@ -45,7 +45,7 @@
 
 <br>
 
-[[SearchMovieAPI]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Network/SearchMovie/SearchMovieAPI.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Network/SearchMovie/SearchMovieAPI.swift))
+[[SearchMovieAPI]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Network/SearchMovie/SearchMovieAPI.swift)
 
 **프로토콜 (SearchMovieAPIProtocol)**
 
@@ -61,7 +61,7 @@
 
 <br>
 
-[[SearchMovieViewModel]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift))
+[[SearchMovieViewModel]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift)
 
 - 영화 목록
 
@@ -98,7 +98,7 @@ Infinite Scroll 구현
 
 <br>
 
-[[SearchMovieViewModel]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift))
+[[SearchMovieViewModel]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift)
 
 - 즉각적인 트리거를 수신하기 위한 PublishSubjects(**fetchMoreDatas**) 구독
 
@@ -196,7 +196,7 @@ private func handleStartCounter(movies: Movies) {
 
 <br>
 
-[[SearchMovieViewController]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift))
+[[SearchMovieViewController]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift)
 
 - **스크롤이 최하단에 도달**
     
@@ -232,7 +232,7 @@ tableView.rx
 
 <br>
 
-[[SearchMovieViewModel]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift))
+[[SearchMovieViewModel]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift)
 
 - 이전 **isPaginationRequestStillResume** (페이지네이션 flag)를 PublishSubject(**isLoadingSpinnerAvaliable**)로 대체
 
@@ -242,7 +242,7 @@ tableView.rx
 let isLoadingSpinnerAvaliable = PublishSubject<Bool>() /// 페이지네이션, footerView indicator
 ```
 
-[[SearchMovieViewController]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift))
+[[SearchMovieViewController]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift)
 
 <br>
 
@@ -278,7 +278,7 @@ private func bind() {
 
 ## 검색 기능
 
-[[SearchBar]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Custom/SearchBar.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Custom/SearchBar.swift)) - 커스텀 SearchBar 
+[[SearchBar]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Custom/SearchBar.swift) - 커스텀 SearchBar 
 
 - 검색 버튼이 눌려진 후 SearchBar의 text를 상위 뷰로 전달하는 **shouldLoadResult** 이벤트 시퀀스
 
@@ -320,7 +320,7 @@ private func bind() {
 
 <br>
 
-[[SearchMovieViewController]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift))
+[[SearchMovieViewController]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift)
 
 - 커스텀 SearchBar의 **searchButtonTapped**을 통해 **shouldLoadResult**가 최신 text(query)를 방출
 
@@ -341,7 +341,7 @@ searchBar.shouldLoadResult
 
 <br>
 
-[[SearchMovieViewModel]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift))
+[[SearchMovieViewModel]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift)
 
 - startCounter를 1로 맞추고 movieList를 빈 배열로 accept
 
@@ -365,7 +365,7 @@ func searchResultTriggered(query: String) {
 
 API 요청을 통해 데이터를 받아오는 동안 로딩 indicator 구현
 
-[[SearchMovieViewModel]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift))
+[[SearchMovieViewModel]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift)
 
 - 로딩 실행 여부를 수신하기 위한 PublishSubject(**isLoadingAvaliable**)
 
@@ -440,7 +440,7 @@ searchMovieAPI
 
 <br>
 
-[[SearchMovieViewController]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift))
+[[SearchMovieViewController]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewController.swift)
 
 - **isLoadingAvaliable**을 구독하여 isAvailable(Bool)값에 따라 indicator start/stop Animating
 
@@ -464,7 +464,8 @@ viewModel.isLoadingAvaliable
 
 **Realm**을 사용하여 즐겨찾기 목록 구현
 
-[[MovieCell]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/View/MovieCell.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/View/MovieCell.swift)) [[DetailHeaderView]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/View/DetailHeaderView.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/View/DetailHeaderView.swift))
+[[MovieCell]](https://github.com/camosss/MovieProject/blob/main/MovieProject/View/MovieCell.swift) 
+[[DetailHeaderView]](https://github.com/camosss/MovieProject/blob/main/MovieProject/View/DetailHeaderView.swift)
 
 - StarButton의 isSelected(Bool)값 이벤트를 수신하기 위한 PublishSubject(**isStarred**)
 
@@ -508,7 +509,7 @@ starButton.rx.tap
 > **Star 로직**
 > 
 
-[[Movie]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Network/SearchMovie/Model/Movie.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Network/SearchMovie/Model/Movie.swift))
+[[Movie]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Network/SearchMovie/Model/Movie.swift)
 
 - Realm에 저장할 데이터 객체(Movie) 재정의
 
@@ -558,7 +559,7 @@ class Movie: Object, Codable {
 
 [MovieCell]
 
-- Realm에 저장된 데이터를 불러와서 [movie.link](http://movie.link) 값을 비교(filter)하여 즐겨찾기 목록에 추가 및 삭제
+- Realm에 저장된 데이터를 불러와서 **movie.link*** 값을 비교(filter)하여 즐겨찾기 목록에 추가 및 삭제
 
 > issue
 > 
@@ -614,7 +615,7 @@ extension MovieCell {
 
 ## 즐겨찾기 새로고침
 
-[[FavoritesViewModel]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/Favorites/FavoritesViewModel.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/Favorites/FavoritesViewModel.swift))
+[[FavoritesViewModel]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/Favorites/FavoritesViewModel.swift)
 
 - 새로고침 **실행 여부**를 수신하기 위한 PublishSubjects(**refreshControlAction**)
 
@@ -651,7 +652,7 @@ private func refreshControlTriggered() {
 
 <br>
 
-[[FavoritesViewController]]([https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/Favorites/FavoritesViewController.swift](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/Favorites/FavoritesViewController.swift))
+[[FavoritesViewController]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/Favorites/FavoritesViewController.swift)
 
 - 새로고침 이벤트 발생 시, refreshControlAction에 이벤트 전달(onNext)
 
