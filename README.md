@@ -472,6 +472,8 @@ viewModel.isLoadingAvaliable
 
 **Realm**을 사용하여 즐겨찾기 목록 구현
 
+<br>
+
 [[MovieCell]](https://github.com/camosss/MovieProject/blob/main/MovieProject/View/MovieCell.swift) 
 
 [[DetailHeaderView]](https://github.com/camosss/MovieProject/blob/main/MovieProject/View/DetailHeaderView.swift)
