@@ -64,11 +64,11 @@
 
 [[SearchMovieViewModel]](https://github.com/camosss/MovieProject/blob/main/MovieProject/Presentation/SearchMovie/SearchMovieViewModel.swift)
 
-- 영화 목록
+영화 목록
 
-**BehaviorRelay**: 기존 값을 유지하면서 새로운 값을 accept
+- **BehaviorRelay**: 기존 값을 유지하면서 새로운 값을 accept
 
-**Relay** : completed, error를 발생하지 않고 Dispose되기 전까지 계속 작동하기 때문에 UI Event에서 사용
+- **Relay** : completed, error를 발생하지 않고 Dispose되기 전까지 계속 작동하기 때문에 UI Event에서 사용
 
 ```swift
 var movieList = BehaviorRelay<[Movie]>(value: [])
