@@ -572,7 +572,7 @@ class Movie: Object, Codable {
 
 [[MovieCell]](https://github.com/camosss/MovieProject/blob/main/MovieProject/View/MovieCell.swift)
 
-- Realm에 저장된 데이터를 불러와서 **movie.link*** 값을 비교(filter)하여 즐겨찾기 목록에 추가 및 삭제
+- Realm에 저장된 데이터를 불러와서 **movie.link** 값을 비교(filter)하여 즐겨찾기 목록에 추가 및 삭제
 
 <br>
 
