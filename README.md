@@ -528,7 +528,7 @@ starButton.rx.tap
 
 - 데이터 객체에 따로 ID값이 없기 때문에 **link**를 **primaryKey**로 등록
     
-    - **code**값으로 식별 ()
+    - **code**값으로 식별 (예시)
     
     https://movie.naver.com/movie/bi/mi/basic.nhn?code=187347
     
