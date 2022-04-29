@@ -82,7 +82,7 @@ init(searchMovieAPI: SearchMovieAPIProtocol = SearchMovieAPI()) {
 }
 
 private func bind() {
-		searchMovieAPI
+    searchMovieAPI
         .populateMovieList(query: query, start: cursor)
         .subscribe { [weak self] movies in
             self.movieList.accept(movies.items) /// 새로운 값을 accept
