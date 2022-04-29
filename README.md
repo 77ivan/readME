@@ -302,7 +302,9 @@ let searchButtonTapped = PublishRelay<Void>()
 
 - **searchButtonTapped** 이벤트가 발생하면 키보드가 내려가는 이벤트 발생
 
-- **searchButtonTapped** 실행 → 검색 text를 전달하는 shouldLoadResult 실행 (SearchButtonTapped가 ShouldLoadResult의 트리거)
+- **searchButtonTapped** 실행 → 검색 text를 전달하는 shouldLoadResult 실행
+
+	- SearchButtonTapped가 ShouldLoadResult의 트리거
 
 ```swift
 private func bind() {
