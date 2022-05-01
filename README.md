@@ -44,13 +44,9 @@ https://user-images.githubusercontent.com/93528918/166146941-8345c5f3-2777-4560-
 **영화 검색**
 
 - Rest API 핸들링
-
 - 페이지네이션
-
 - footerView indicator
-
 - 검색 기능
-
 - 빈 화면(Empty View) 구성
 
 <br>
@@ -58,9 +54,7 @@ https://user-images.githubusercontent.com/93528918/166146941-8345c5f3-2777-4560-
 **즐겨찾기**
 
 - Realm CRUD
-
 - 즐겨찾기 기능
-
 - 새로고침
 
 <br>
