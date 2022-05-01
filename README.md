@@ -5,7 +5,7 @@
 <br>
 
 - 최소 버전: iOS 13
-- AutoLayout
+- AutoLayout (Code Base)
 - 다크모드 대응
 - 이미지 캐싱
 
