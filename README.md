@@ -4,6 +4,12 @@
 
 <br>
 
+- 최소 버전: iOS 13
+- AutoLayout
+- 다크모드 대응
+- 이미지 캐싱
+
+<br>
 
 **영화 검색, 결과 목록, 영화 내용 상세 화면**
 
@@ -14,26 +20,6 @@ https://user-images.githubusercontent.com/93528918/166146939-9fca7c33-f2ec-4ad7-
 **즐겨찾기 모음 화면**
 
 https://user-images.githubusercontent.com/93528918/166146941-8345c5f3-2777-4560-9109-0740d94bc3ac.mov
-
-
-
-<br>
-
-- 최소 버전: iOS 13
-- 다크모드 대응
-- 이미지 캐싱
-
-<br>
-
-## TODO
-
-- [Rest API 핸들링](https://github.com/77ivan/readME/issues/1)
-- [페이지네이션](#페이지네이션)
-- [footerView indicator](#footerView-indicator)
-- [검색 기능](#검색-기능)
-- [로딩 indicator](#로딩-indicator)
-- [즐겨찾기 기능](#즐겨찾기-기능)
-- [즐겨찾기 새로고침](#즐겨찾기-새로고침)
 
 <br>
 
@@ -47,6 +33,25 @@ https://user-images.githubusercontent.com/93528918/166146941-8345c5f3-2777-4560-
 - [SnapKit](https://github.com/SnapKit/SnapKit)
 - [Then](https://github.com/devxoul/Then)
 - [Toast](https://github.com/scalessec/Toast-Swift)
+
+<br>
+
+
+
+
+
+
+## TODO
+
+- [Rest API 핸들링](https://github.com/77ivan/readME/issues/1)
+- [페이지네이션](#페이지네이션)
+- [footerView indicator](#footerView-indicator)
+- [검색 기능](#검색-기능)
+- [로딩 indicator](#로딩-indicator)
+- [즐겨찾기 기능](#즐겨찾기-기능)
+- [즐겨찾기 새로고침](#즐겨찾기-새로고침)
+
+
 
 <br>
 
