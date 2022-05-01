@@ -13,7 +13,7 @@
 
 ## TODO
 
-- [Rest API 핸들링](#Rest-API-핸들링)
+- [Rest API 핸들링](https://github.com/77ivan/readME/issues/1)
 - [페이지네이션](#페이지네이션)
 - [footerView indicator](#footerView-indicator)
 - [검색 기능](#검색-기능)
