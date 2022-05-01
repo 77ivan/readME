@@ -1,7 +1,21 @@
 ## 네이버 영화 API를 활용한 영화 검색
 
 > **RxSwift**와 **MVVM** 패턴을 사용한 영화 검색 클라이언트 애플리케이션
-> 
+
+<br>
+
+
+**영화 검색, 결과 목록, 영화 내용 상세 화면**
+
+https://user-images.githubusercontent.com/93528918/166146939-9fca7c33-f2ec-4ad7-9492-2676f8c66633.mov
+
+<br>
+
+**즐겨찾기 모음 화면**
+
+https://user-images.githubusercontent.com/93528918/166146941-8345c5f3-2777-4560-9109-0740d94bc3ac.mov
+
+
 
 <br>
 
