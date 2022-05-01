@@ -30,6 +30,7 @@ https://user-images.githubusercontent.com/93528918/166146941-8345c5f3-2777-4560-
 - [ProgressHUD](https://github.com/relatedcode/ProgressHUD)
 - [Realm](https://github.com/realm/realm-swift)
 - [RxSwift, RxCocoa](https://github.com/ReactiveX/RxSwift)
+- [RxDataSources](https://github.com/RxSwiftCommunity/RxDataSources)
 - [SnapKit](https://github.com/SnapKit/SnapKit)
 - [Then](https://github.com/devxoul/Then)
 - [Toast](https://github.com/scalessec/Toast-Swift)
